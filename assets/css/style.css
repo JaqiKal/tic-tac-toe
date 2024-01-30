@@ -69,6 +69,126 @@ main {
     justify-content: center;
     align-items: center; 
 
+/* Initially hide the how to play container */
+.hidden {
+    display: none;
+}
+
+/* Instruction container */
+#howtoplayContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: start;
+    max-width: 90%;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 4px 4px 10px 2px #2D013F;
+    margin: 30px 0 15px;
+    padding: 20px;
+    font-size: 1rem;
+}
+
+/* Gameboard style */
+#gameBoard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 2px; 
+    /* Responsive width based on viewport width */
+    width: 80vw; 
+    max-width: 300px;
+    /* Maintain square aspect ratio for the board */
+    aspect-ratio: 1 / 1; 
+    margin: 20px 0;
+
+
+/*  Row Style */
+/* Let the children participate in the grid layout - See README Issue-01 */
+/* Due to the ARIA issue I encountered (see Gameboard grid comment in index). */
+/* I had to find a way to display the grid. Ended in long learning session about */
+/* attribute selectors and ARIA, this snippet is amended from */
+/* https://www.w3schools.com/css/css_attribute_selectors.asp */
+
+[role="row"] {
+    display: contents; 
+}
+
+/* Cell styles */
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    aspect-ratio: 1 / 1; /* Maintain square aspect ratio for each cell */
+    transition: background-color 0.3s ease;
+    border: 0.2px solid rgba(45, 1, 63, 0.365);
+    box-shadow: inset 6px 6px 12px rgba(45, 1, 63, 0.753), 
+                inset -4px -4px 8px rgba(167, 7, 159, 0.2);
+    border-radius: 10px;
+
+    width: 100%; /* Full width of the grid column */
+    padding-top: 100%; /* Padding-top as percentage of the width to maintain square shape */
+}
+
+.cell:hover, .cell:focus {
+    background-color: #fffb08; /* Hover effect */
+
+
+/* General button styles in INDEX and FORM */
+.button {
+    margin: 0 5px 0;
+    background: rgba(45, 1, 63);
+    color:#fff;
+    padding: 10px 20px;
+    border: 2px ridge #8b349c;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px 2px #2D013F;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 10px 0;
+    text-decoration: none;
+}
+
+/* How to play button - INDEX */
+#toggleButtonhowto {
+    background:#fff;
+    color:rgba(45, 1, 63, 1);
+}
+
+/* Reset button - INDEX */
+#toggleButtonreset {
+    background:#fff;
+    color:rgba(45, 1, 63, 1);
+}
+
+/* Feedback button - INDEX */
+#toggleButtonfeedb {
+    background: #1111fa;
+    color:#fff;
+}
+
+.button:hover {
+    transform: scale(1.05);
+}
+
+/* FORM PAGE */
+
+
+
+
+
+
+
+/* FOOTER STYLES  */
+footer {
+    width: 100%; /* Ensures footer spans the full width */
+    text-align: center; /* Centers text inside footer */
+    margin-top: 60px;
+    color: #2D013F;
+}
 
 
 /* RESPONSIVENESS */

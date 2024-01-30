@@ -46,6 +46,10 @@
             </div>
 
             <!-- Gameboard Grid -->
+            <!-- I wanted an accessible grid structure, learned to use button instead of 'div'. -->
+            <!-- That resulted in an ARIA role warning, pls see README/Bugs for further details --> 
+            <!-- till why the structure looks like this, also impacted how to display the grid,  -->
+            <!-- pls see CSS on comments about how to 'display the grid'. Also see README Issue-01 -->
             <section>
                 <h2 class="hidden-heading">Gameboard</h2>
                 <div id="gameBoard" role="grid" aria-label="Tic-Tac-Toe game board">
