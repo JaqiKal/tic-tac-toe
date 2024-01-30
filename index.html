@@ -14,7 +14,7 @@
         <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
         <!-- Stylesheet -->
-        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="/assets/css/style.css">
     </head>
     <!-- Index/Landing page-->
     <body>
@@ -54,19 +54,19 @@
                 <h2 class="hidden-heading">Gameboard</h2>
                 <div id="gameBoard" role="grid" aria-label="Tic-Tac-Toe game board">
                     <div role="row">
-                        <button class="cell X" id="cell0" role="gridcell" aria-label="Cell 1"></button>
-                        <button class="cell O" id="cell1" role="gridcell" aria-label="Cell 2"></button>
-                        <button class="cell" id="cell2" role="gridcell" aria-label="Cell 3"></button>
+                        <button class="cell X" id="square1" aria-label="Cell 1"></button>
+                        <button class="cell O" id="square2" aria-label="Cell 2"></button>
+                        <button class="cell" id="square3" aria-label="Cell 3"></button>
                     </div>
                     <div role="row">
-                        <button class="cell" id="cell3" role="gridcell" aria-label="Cell 4"></button>
-                        <button class="cell" id="cell4" role="gridcell" aria-label="Cell 5"></button>
-                        <button class="cell" id="cell5" role="gridcell" aria-label="Cell 6"></button>
+                        <button class="cell" id="square4" aria-label="Cell 4"></button>
+                        <button class="cell" id="square5" aria-label="Cell 5"></button>
+                        <button class="cell" id="square6" aria-label="Cell 6"></button>
                     </div>
                     <div role="row">
-                        <button class="cell" id="cell6" role="gridcell" aria-label="Cell 7"></button>
-                        <button class="cell" id="cell7" role="gridcell" aria-label="Cell 8"></button>
-                        <button class="cell" id="cell8" role="gridcell" aria-label="Cell 9"></button>
+                        <button class="cell" id="square7" aria-label="Cell 7"></button>
+                        <button class="cell" id="square8" aria-label="Cell 8"></button>
+                        <button class="cell" id="square9" aria-label="Cell 9"></button>
                     </div>
                 </div>
             </section>
@@ -76,27 +76,15 @@
                 <button id="toggleButtonreset" class="button">Reset Game</button>
             </div>
     
-            <div id="feedback-btn-container"><a href="/form.html">
-                <button id="toggleButtonfeedb" class="button">Give us feed-back!</button></a>
+            <div id="feedback-btn-container">
+                <button id="toggleButtonfeedb" class="button">Feedback</button>
             </div>
-            
-            <!-- 
-            <-- Modal content for Game Conclusion --
-            <div class="modal-container">
-                <div class="modal-content">
-                    <h3>Congratulations Player X</h3>
-                    <--How to make emoji accessible www.tiny.cloud/blog/emojis-and-accessibility/#accessible-emojis -- 
-                    <p>You are the winner <span role="img" aria-label="A celebration party popper, typically shown as a gold cone hat with stripes, angled at 45 degrees, bursting open with multicolored confetti and streamers.">&#127881;</span></p>
-                </div
-            </div>
-            -->
 
-
-        </main>
+       </main>
         <footer>
             <p class="made-by"> Made by: JaqiKal</p>
         </footer>
 
-        <script src="/assets/js/script.js"></script>    
+        <script src="/assets/js/script.js"></script>
     </body>
 </html>
