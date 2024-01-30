@@ -1,29 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Play Tic-Tac-Toe online! A classic, simple, and fun two-player game where players take turns marking Xs and Os on a 3x3 grid. Aim to align three of your symbols in a row to win.">
-        <meta name="keywords" content="feed-back, feedback, Tic-Tac-Toe feedback, Online Game, Free Tic Tac Toe, Play Tic Tac Toe, Xs and Os, Tic-Tac-Toe Game, Classic Game, Two-Player Game, Simple Game, Fun Game">
-        <title>Tic-Tac-Toe feedback</title>
-        <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-        <link rel="stylesheet" href="assets/css/style.css">
-    </head>
-    <!-- Feed-back page-->
-    <body>
-        <header>
 
-        </header>
-        <main>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Meta tags for search engines -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Play Tic-Tac-Toe online! A classic, simple, and fun two-player game where players take turns marking Xs and Os on a 3x3 grid. Aim to align three of your symbols in a row to win.">
+    <meta name="keywords" content="feed-back, feedback, Tic-Tac-Toe feedback, Online Game, Free Tic Tac Toe, Play Tic Tac Toe, Xs and Os, Tic-Tac-Toe Game, Classic Game, Two-Player Game, Simple Game, Fun Game">
+    <!-- Title -->
+    <title>Tic-Tac-Toe feedback</title>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <!-- Feed-back page-->
 
-        </main>
-        <footer>
-            <p class="made-by"> Made by: JaqiKal</p>
-        </footer>
+  <body id="formBody">
+    <!-- Header -->
+    <header>
 
-        <script src="/assets/js/script.js"></script>
-    </body>
+    </header>
+    <main>
+      <!-- Feed-back form -->
+      <div id="formContainer">
+        <form id="feedbackForm" action="#">
+          <h1>Feedback form</h1>
+          <h2>Tic-Tac-Toe</h2>
+          <label for="firstName">First name:</label>
+          <input name="firstName" id="firstName" type="text" class="text-input" autocomplete="given-name" required>
+          <br>
+          <label for="lastName">Last name:</label>
+          <input name="lastName" id="lastName" type="text" class="text-input" autocomplete="family-name" required>
+          <br>
+          <label for="email">Email address</label>
+          <input name="email" id="email" type="email" class="text-input" autocomplete="off" required>
+          <br>
+          <div>
+            <label for="textMsg">Your Feedback</label>
+            <textarea name="textMsg" id="textMsg" rows="10" cols="31" required></textarea>
+          </div>
+          <div id="feedbackbtnSubmit">
+            <button type="submit" class="button">Submit feed-back</button>
+            <!-- To render user feedback via js instead of separate ThankYou page-->
+            <p id="message"></p>
+          </div>
+        </form>
+      </div>
+    </main>
+    <!-- Footer section -->
+    <footer>
+      <p class="made-by"> Made by: JaqiKal</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/assets/js/script.js"></script>
+  </body>
+
 </html>
