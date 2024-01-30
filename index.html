@@ -25,7 +25,68 @@
                 <p id="p-head">Get set for Toe-to-Toe Tic-Tac-Toe! A classic game of wits where Xs and Os clash in a fun-filled grid. Gather your pals, choose your symbol, and jump into the tic-tac-tussle. Ready for the challenge? Let's see who conquers the grid!</p>
             </div>
         </header>
+
         <main>
+             <!-- Hide/close How To Play & Instructions -->
+             <div id="howtoplay-btn-container">
+                <button id="toggleButtonhowto" class="button">Hide/Show How To Play</button>
+            </div>
+            <div id="howtoplayContainer" class="hidden">
+                <h2 id="howtoplay">This is how you play!</h2>
+                <ul>
+                    <li>The gameboard grid is initially empty.</li>
+                    <li>One player uses "X" as their mark, and the other player uses "O."</li>
+                    <li>Players take turns, starting with the "X" player.</li>
+                    <li>Each cell can only be selected once.</li>
+                    <li>On their turn, a player selects an empty cell on the grid and places their mark ("X" or "O") in that cell.</li>
+                    <li>One player gets three of their marks in a row (horizontally, vertically, or diagonally). This player wins the game.</li>
+                    <li>The entire grid is filled with marks, and no player has three in a row. This results in a draw (a "cat's game").</li>
+                </ul>
+                <p>Use the Reset button to start over the game.</p>
+            </div>
+
+            <!-- Gameboard Grid -->
+            <section>
+                <h2 class="hidden-heading">Gameboard</h2>
+                <div id="gameBoard" role="grid" aria-label="Tic-Tac-Toe game board">
+                    <div role="row">
+                        <button class="cell X" id="cell0" role="gridcell" aria-label="Cell 1"></button>
+                        <button class="cell O" id="cell1" role="gridcell" aria-label="Cell 2"></button>
+                        <button class="cell" id="cell2" role="gridcell" aria-label="Cell 3"></button>
+                    </div>
+                    <div role="row">
+                        <button class="cell" id="cell3" role="gridcell" aria-label="Cell 4"></button>
+                        <button class="cell" id="cell4" role="gridcell" aria-label="Cell 5"></button>
+                        <button class="cell" id="cell5" role="gridcell" aria-label="Cell 6"></button>
+                    </div>
+                    <div role="row">
+                        <button class="cell" id="cell6" role="gridcell" aria-label="Cell 7"></button>
+                        <button class="cell" id="cell7" role="gridcell" aria-label="Cell 8"></button>
+                        <button class="cell" id="cell8" role="gridcell" aria-label="Cell 9"></button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Reset and Feedback button -->
+            <div id="reset-btn-container">
+                <button id="toggleButtonreset" class="button">Reset Game</button>
+            </div>
+    
+            <div id="feedback-btn-container"><a href="/form.html">
+                <button id="toggleButtonfeedb" class="button">Give us feed-back!</button></a>
+            </div>
+            
+            <!-- 
+            <-- Modal content for Game Conclusion --
+            <div class="modal-container">
+                <div class="modal-content">
+                    <h3>Congratulations Player X</h3>
+                    <--How to make emoji accessible www.tiny.cloud/blog/emojis-and-accessibility/#accessible-emojis -- 
+                    <p>You are the winner <span role="img" aria-label="A celebration party popper, typically shown as a gold cone hat with stripes, angled at 45 degrees, bursting open with multicolored confetti and streamers.">&#127881;</span></p>
+                </div
+            </div>
+            -->
+
 
         </main>
         <footer>
