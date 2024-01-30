@@ -38,6 +38,26 @@ h1, h2, h3, h4, h5, h6, p {
 
 /* INDEX PAGE */
 /* Header styles */
+#head-container {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 450px;
+    margin-top: 16px;
+    padding: 10px;
+    margin: 5px 15px 0;
+}
+
+/* Style the header paragraph */
+#p-head {
+    padding: 30px 10px; 
+    margin: 30px 50px 20px;
+    border-radius: 10px;
+    background-color: rgba(243, 238, 243, 0.596); 
+    box-shadow: 4px 4px 60px rgba(45, 1, 63, 0.685); 
+    font-weight: 600;
+}
 
 
 /* Main Content - INDEX PAGE */
