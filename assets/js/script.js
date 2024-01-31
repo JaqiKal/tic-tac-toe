@@ -64,6 +64,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+
+
+
+
+    /*
     // Modal functionality in FORM html 
     document.getElementById('feedbackForm').addEventListener('submit', function(event) {
         // Prevent form submission
@@ -77,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
         feedbackForm.reset();
     
         // Set the message and show the modal. Modal from w3schools
-        message.textContent = 'Thank you for your feedback!';
+        message.textContent = 'Thank you for your feedback! You will be sent back to the game in 60 seconds, or click to close and off you got to play some more!';
         modal.style.display = "block";
     
         // When the user clicks on <span> (x), close the modal. Modal from w3schools
@@ -96,7 +101,49 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(function(){
             modal.style.display = "none";
             window.location.href = 'index.html';
-        },  1200); // 1.2 seconds
+        },  2000); // 2 seconds
         
     });
+
+        */
+
+        // Modal functionality in FORM html 
+        document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+            // Prevent form submission
+            event.preventDefault();
+        
+            var modal = document.getElementById('feedbackModal');
+            var span = document.getElementsByClassName("close-button")[0];
+            var message = document.getElementById('modalMessage');
+            var modalContent = document.querySelector('.modal-content');
+
+            // Clear the form fields
+            feedbackForm.reset();
+        
+            // Set the message and show the modal
+            message.textContent = 'Thank you for your feedback! You will be sent back to the game in 60 seconds, or click to close and off you got to play some more!';
+            modal.style.display = "block";
+        
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+                modal.style.display = "none";
+            };
+
+            // When the user clicks anywhere outside or inside the modal content, close it
+            window.onclick = function(event) {
+                if (event.target === modal || event.target === modalContent) {
+                    modal.style.display = "none";
+                }
+            };
+        
+            // Timeout to hide modal after 60 seconds and redirect
+            setTimeout(function(){
+                modal.style.display = "none";
+                window.location.href = 'index.html';
+            }, 3000); // 3 seconds
+            
+        });
+
+
+    
 });

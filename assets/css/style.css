@@ -76,6 +76,10 @@ h1, h2, h3, h4, h5, h6, p {
     margin: 5px 15px 0;
 }
 
+#head-container h1 { 
+    font-size: inherit;
+}
+
 /* Style the header paragraph - INDEX */
 #p-head {
     padding: 30px 10px; 
@@ -149,6 +153,7 @@ section {
     /* Maintain square aspect ratio for the board */
     aspect-ratio: 1 / 1; 
     margin: 20px 0;
+    
 }
 
 /*  Row Style */
@@ -162,7 +167,7 @@ section {
     display: contents; 
 }
 
-/* Cell styles */
+/* Button (grid-cell) styles */
 .cell {
     display: flex;
     align-items: center;
@@ -175,9 +180,12 @@ section {
     box-shadow: inset 6px 6px 12px rgba(45, 1, 63, 0.753), 
                 inset -4px -4px 8px rgba(167, 7, 159, 0.2);
     border-radius: 10px;
-
-    width: 100%; /* Full width of the grid column */
-    padding-top: 100%; /* Padding-top as percentage of the width to maintain square shape */
+    width: 100%; 
+    /* Padding-top as percentage of the width to maintain square shape */
+    padding-top: 100%; 
+    /* To address the "Avoid large layout shifts" set fixed dimensions on buttons. Bug-03 */
+    width: 100px; 
+    height: 100px;
 }
 
 .cell:hover, .cell:focus {
@@ -185,7 +193,7 @@ section {
 }
 
 /* Button specific style */
-/* be placed here else the order of specificity will be incorrect */
+/* placed here else the order of specificity will be incorrect */
 
 /* Reset button */
 #toggleButtonreset {
@@ -199,8 +207,6 @@ section {
     color:#fff;
 }
 
-
-
 /* FORM PAGE */
 #formBody {
     display: flex;
@@ -208,6 +214,16 @@ section {
     align-items: center;
     min-height: 100vh;
     }
+
+/* Apply pointer cursor to all interactive elements within the formContainer */
+#formContainer input[type="text"],
+#formContainer input[type="email"],
+#formContainer textarea,
+#formContainer .button,
+#formContainer .modal-content,
+#formContainer .close-button {
+    cursor: pointer;
+}
 
 /* Form container style */
 #formContainer {
@@ -222,6 +238,12 @@ section {
     inset 4px 4px 8px rgba(45,1,36,0.60),
     inset 4px 4px 16px rgba(255,255,255,0.4),
     inset -4px -4px 12px rgba(45,1,36,0.7);
+}
+
+
+/* To address the "Avoid large layout shifts" set fixed dimensions on buttons. Bug-03 */
+#feedbackForm {
+    min-height: 300px; 
 }
 
 #feedbackForm > h1 {
@@ -323,9 +345,10 @@ label {
     text-align: center;
     border-radius: 10px;
     padding: 20px 5px;
-       border: 0.2px solid rgba(45, 1, 63, 0.365);
+    border: 0.2px solid rgba(45, 1, 63, 0.365);
     box-shadow: inset 6px 6px 12px rgba(45, 1, 63, 0.753), 
                 inset -4px -4px 8px rgba(167, 7, 159, 0.2);
+     cursor: pointer;
 }
 
 .close-button {
@@ -333,6 +356,7 @@ label {
     float: right;
     font-size: 28px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .close-button:hover,
