@@ -16,3 +16,44 @@
  * Date: 2024 Feb 15
  *
  */ 
+
+
+
+// EXTERNAL IMPORTS
+// No external imports are used in script
+
+// CONSTANTS
+// No explicit constants is defined in script
+
+
+// GLOBAL VARIABLES
+const toggleButtonhowto = document.getElementById('toggleButtonhowto');
+const howtoplayContainer = document.getElementById('howtoplayContainer');
+const feedbackForm = document.getElementById('feedbackForm');
+const messageElement = document.getElementById('message');
+
+
+// UTILITY or HELPER FUNCTIONS
+// No explicit utility functions is defined in script
+
+
+// MAIN CODE with EVENT LISTENERS embedded within
+// To display the rules when its button is clicked, and allow users to close these rules by clicking either inside or outside the container.
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize howtoplayContainer as hidden
+    howtoplayContainer.style.display = 'none';
+
+    // Toggle Hide/Show for 'howtoplayContainer'
+    toggleButtonhowto.addEventListener('click', function() {
+        howtoplayContainer.style.display = howtoplayContainer.style.display === 'none' ? 'block' : 'none';
+    });
+
+    // Event listener for clicks on the body
+    document.body.addEventListener('click', function(event) {
+        // Check if the click is outside 'howtoplayContainer' and not on the 'toggleButtonhowto'
+        if (!howtoplayContainer.contains(event.target) && event.target !== toggleButtonhowto) {
+            // Hide 'howtoplayContainer'
+            howtoplayContainer.style.display = 'none';
+        }
+    });
+});
