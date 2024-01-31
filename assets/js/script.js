@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function() {
             feedbackForm.reset();
         
             // Set the message and show the modal
-            message.textContent = 'Thank you for your feedback! You will be sent back to the game in 60 seconds, or click to close and off you got to play some more!';
+            message.textContent = 'Thank you for your feedback! You will be sent back to the game in 15 seconds, or click to close and off you go to play some more!';
             modal.style.display = "block";
         
             // When the user clicks on <span> (x), close the modal
@@ -136,11 +136,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             };
         
-            // Timeout to hide modal after 60 seconds and redirect
+            // Timeout to hide modal after n seconds and redirect
             setTimeout(function(){
                 modal.style.display = "none";
                 window.location.href = 'index.html';
-            }, 3000); // 3 seconds
+            }, 15000); // 15 seconds
             
         });
 

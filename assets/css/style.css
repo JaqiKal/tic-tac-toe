@@ -215,15 +215,6 @@ section {
     min-height: 100vh;
     }
 
-/* Apply pointer cursor to all interactive elements within the formContainer */
-#formContainer input[type="text"],
-#formContainer input[type="email"],
-#formContainer textarea,
-#formContainer .button,
-#formContainer .modal-content,
-#formContainer .close-button {
-    cursor: pointer;
-}
 
 /* Form container style */
 #formContainer {
