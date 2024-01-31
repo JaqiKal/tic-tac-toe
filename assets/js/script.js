@@ -11,13 +11,19 @@
  * - Win condition checking for rows, columns, and diagonals
  * - Detection of a draw (cat's game) when the board is full
  * - Resetting the game for a new round
+ * - Listen after feedback form submission and
+ *   - display message 
+ *   - clear form
+ *   - redirect to index
+ * 
+ * Other:
+ * - jshint esversion: 6, please see README.md for further details
  *
  * Author: Jacqueline Kalmár
  * Date: 2024 Feb 15
- *
- * - jshint esversion: 6, please see README.md for further details
  */ 
 
+/* jshint esversion: 6 */
 
 // EXTERNAL IMPORTS
 // No external imports are used in this script
@@ -68,10 +74,47 @@ document.addEventListener('DOMContentLoaded', function() {
             // Clear the form fields
             feedbackForm.reset();
             
-            // Redirect to 'index.html' after waiting n seconds
+            // Redirect to 'index.html' after waiting n seconds. Window setTimeout() from w3schools
             setTimeout(function() {
                 window.location.href = 'index.html';
             }, 3000); // 3 seconds delay
         });
     }
+
+    // Modal functionality in FORM html 
+    document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+    
+        var modal = document.getElementById('feedbackModal');
+        var span = document.getElementsByClassName("close-button")[0];
+        var message = document.getElementById('modalMessage');
+    
+        // Set the message and show the modal. Rules Modal from w3schools
+        message.textContent = 'Thank you for your feedback!';
+        modal.style.display = "block";
+    
+        // When the user clicks on <span> (x), close the modal. Rules Modal from w3schools
+        span.onclick = function() {
+            modal.style.display = "none";
+        };
+    
+        // When the user clicks anywhere outside of the modal, close it. Rules Modal from w3schools
+        window.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        };
+    
+        // You can also add a timeout to hide the modal after a few seconds. Window setTimeout()
+        setTimeout(function(){
+            modal.style.display = "none";
+        },  1200); // 1.2 seconds
+    });
+    
+
+
+
+
+
+
 });

@@ -29,13 +29,13 @@
                     <h1>Feedback form</h1>
                     <h2>Tic-Tac-Toe</h2>
                     <label for="firstName">First name:</label>
-                    <input name="firstName" id="firstName" type="text" class="text-input" autocomplete="given-name" required>
+                    <input name="firstName" id="firstName" type="text" class="text-input" placeholder="Enter a first name" autocomplete="given-name" onkeypress="return AvoidSpace(event) required>
                     <br>
                     <label for="lastName">Last name:</label>
-                    <input name="lastName" id="lastName" type="text" class="text-input" autocomplete="family-name" required>
+                    <input name="lastName" id="lastName" type="text" class="text-input" placeholder="Enter last name" autocomplete="family-name" required>
                     <br>
-                    <label for="email">Email address</label>
-                    <input name="email" id="email" type="email" class="text-input" autocomplete="off" required>
+                    <label for="email">Enter a valid email address</label>
+                    <input name="email" id="email" type="email" class="text-input" placeholder="Enter a valid email address" autocomplete="off" required>
                     <br>
                     <div>
                         <label for="textMsg">Your Feedback</label>
@@ -43,11 +43,18 @@
                     </div>
                     <div id="feedbackbtnSubmit">
                         <button type="submit" class="button">Submit feed-back</button>
-                        <!-- To render user feedback via js instead of separate ThankYou page-->
-                        <p id="message"></p>
                     </div>
                 </form>
             </div>
+
+            <!-- Feedback Modal -->
+            <div id="feedbackModal" class="modal">
+                <div class="modal-content">
+                    <span class="close-button">&times;</span>
+                    <p id="modalMessage"></p>
+                </div>
+            </div>
+
         </main>
         <!-- Footer section -->
         <footer>
