@@ -27,8 +27,22 @@
         </header>
 
         <main>
-             <!-- Hide/close How To Play & Instructions -->
-             <div id="howtoplay-btn-container">
+            <!-- Gameboard Grid -->
+            <h2 id="gameBoard_title" class="hidden-heading">Gameboard</h2>
+            <div id="gameBoard" class="game-board" aria-label="Tic-Tac-Toe game board">
+                <div class="cell" id="square1" aria-label="Top left cell "></div>
+                <div class="cell" id="square2" aria-label="Top center cell"></div>
+                <div class="cell" id="square3" aria-label="Top right cell"></div>
+                <div class="cell" id="square4" aria-label="Middle left cell"></div>
+                <div class="cell" id="square5" aria-label="Middle center cell"></div>
+                <div class="cell" id="square6" aria-label="Middle right cell"></div>
+                <div class="cell" id="square7" aria-label="Bottom left cell"></div>
+                <div class="cell" id="square8" aria-label="Bottom mid cell"></div>
+                <div class="cell" id="square9" aria-label="Bottom right cell"></div>
+            </div>
+            
+            <!-- Hide/close How To Play & Instructions -->
+            <div id="howtoplay-btn-container">
                 <button id="toggleButtonhowto" class="button">Hide/Show How To Play</button>
             </div>
             <div id="howtoplayContainer" class="hidden">
@@ -42,49 +56,22 @@
                     <li>One player gets three of their marks in a row (horizontally, vertically, or diagonally). This player wins the game.</li>
                     <li>The entire grid is filled with marks, and no player has three in a row. This results in a draw (a "cat's game").</li>
                 </ul>
-                <p>Use the Reset button to start over the game.</p>
-            </div>
-
-            <!-- Gameboard Grid -->
-            <!-- I wanted an accessible grid structure, learned to use button instead of 'div'. -->
-            <!-- That resulted in an ARIA role warning, pls see README/Bugs for further details --> 
-            <!-- till why the structure looks like this, also impacted how to display the grid,  -->
-            <!-- pls see CSS on comments about how to 'display the grid'. Also see README Issue-01 -->
-            <section>
-                <h2 class="hidden-heading">Gameboard</h2>
-                <div id="gameBoard" role="grid" aria-label="Tic-Tac-Toe game board">
-                    <div role="row">
-                        <button class="cell X" id="square1" aria-label="Cell 1"></button>
-                        <button class="cell O" id="square2" aria-label="Cell 2"></button>
-                        <button class="cell" id="square3" aria-label="Cell 3"></button>
-                    </div>
-                    <div role="row">
-                        <button class="cell" id="square4" aria-label="Cell 4"></button>
-                        <button class="cell" id="square5" aria-label="Cell 5"></button>
-                        <button class="cell" id="square6" aria-label="Cell 6"></button>
-                    </div>
-                    <div role="row">
-                        <button class="cell" id="square7" aria-label="Cell 7"></button>
-                        <button class="cell" id="square8" aria-label="Cell 8"></button>
-                        <button class="cell" id="square9" aria-label="Cell 9"></button>
-                    </div>
+                 <p>Use the Reset button to start over the game.</p>
                 </div>
-            </section>
-
-            <!-- Reset and Feedback button -->
-            <div id="reset-btn-container">
-                <button id="toggleButtonreset" class="button">Reset Game</button>
-            </div>
-    
-            <div id="feedback-btn-container">
-                <button id="toggleButtonfeedb" class="button">Feedback</button>
-            </div>
-
-       </main>
+                
+                <!-- Reset and Feedback button -->
+                <div id="reset-btn-container">
+                    <button id="toggleButtonreset" class="button">Reset Game</button>
+                </div>
+                <div id="feedback-btn-container">
+                    <button id="toggleButtonfeedb" class="button">Feedback</button>
+                </div>
+        </main>
+        
         <footer>
             <p class="made-by"> Made by: JaqiKal</p>
         </footer>
-
+        
         <script src="assets/js/script.js" defer></script>
     </body>
 </html>

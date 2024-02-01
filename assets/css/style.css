@@ -13,8 +13,7 @@
     color:#2D013F;
 }
 
-/* General styles in INDEX and FORM */
-
+/* General styles in LANDING and FORM page*/
 body {
     background: linear-gradient(#6f3ff59d, #f3cefa);
     display: flex;
@@ -31,7 +30,6 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6, p {
-    
     color: rgb(27, 1, 37);
     line-height: 1.5;
     padding-top: 5px;
@@ -39,8 +37,6 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 /* General style for buttons */
-/* must be placed here else the order */
-/* of specificity will be incorrect */
 .button {
     margin: 0 5px 0;
     background: rgba(45, 1, 63);
@@ -60,11 +56,8 @@ h1, h2, h3, h4, h5, h6, p {
     transform: scale(1.05);
 }
 
-
-
-
-/* INDEX PAGE */
-/* Header styles - INDEX */
+/* LANDING PAGE */
+/* Header styles */
 #head-container {
     display:flex;
     flex-direction: column;
@@ -76,11 +69,7 @@ h1, h2, h3, h4, h5, h6, p {
     margin: 5px 15px 0;
 }
 
-#head-container h1 { 
-    font-size: inherit;
-}
-
-/* Style the header paragraph - INDEX */
+/* Style the header paragraph */
 #p-head {
     padding: 30px 10px; 
     margin: 30px 50px 20px;
@@ -90,7 +79,7 @@ h1, h2, h3, h4, h5, h6, p {
     font-weight: 600;
 }
 
-/* Main Content - INDEX PAGE */
+/* Main Content */
 main {
     /* Ensures main content spans the full width */
     width: 100%; 
@@ -111,11 +100,38 @@ section {
 }
 */
 
+/* Gameboard style */
+#gameBoard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 2px; 
+    /* Responsive width based on viewport width */
+    width: 80vw; 
+    max-width: 300px;
+    /* Maintain square aspect ratio for the board */
+    aspect-ratio: 1 / 1; 
+    margin: 20px 0; 
+}
 
+/* Cell style */
+.cell {
+    background-color: white;
+    transition: background-color 0.3s ease;
+    border: 0.2px solid rgba(45, 1, 63, 0.365);
+    box-shadow: inset 6px 6px 12px rgba(45, 1, 63, 0.753), 
+                inset -4px -4px 8px rgba(167, 7, 159, 0.2);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Hover effect */
+.cell:hover, .cell:focus {
+    background-color: #fffb08; 
+    cursor: pointer;
+}
 
 /* How to play button  */
-/* Button specific style -must be placed here else */
-/* the order of specificity will be incorrect */
 #toggleButtonhowto {
     background:#fff;
     color:rgba(45, 1, 63, 1);
@@ -126,7 +142,7 @@ section {
     display: none;
 }
 
-/* Instruction container */
+/* How to play container */
 #howtoplayContainer {
     display: flex;
     flex-direction: column;
@@ -141,67 +157,13 @@ section {
     font-size: 1rem;
 }
 
-/* Gameboard style */
-#gameBoard {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-gap: 2px; 
-    /* Responsive width based on viewport width */
-    width: 80vw; 
-    max-width: 300px;
-    /* Maintain square aspect ratio for the board */
-    aspect-ratio: 1 / 1; 
-    margin: 20px 0;
-    
-}
-
-/*  Row Style */
-/* Let the children participate in the grid layout - See README Issue-01 */
-/* Due to the ARIA issue I encountered (see Gameboard grid comment in index). */
-/* I had to find a way to display the grid. Ended in long learning session about */
-/* attribute selectors and ARIA, this snippet is amended from */
-/* https://www.w3schools.com/css/css_attribute_selectors.asp */
-
-[role="row"] {
-    display: contents; 
-}
-
-/* Button (grid-cell) styles */
-.cell {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    aspect-ratio: 1 / 1; /* Maintain square aspect ratio for each cell */
-    transition: background-color 0.3s ease;
-    border: 0.2px solid rgba(45, 1, 63, 0.365);
-    box-shadow: inset 6px 6px 12px rgba(45, 1, 63, 0.753), 
-                inset -4px -4px 8px rgba(167, 7, 159, 0.2);
-    border-radius: 10px;
-    width: 100%; 
-    /* Padding-top as percentage of the width to maintain square shape */
-    padding-top: 100%; 
-    /* To address the "Avoid large layout shifts" set fixed dimensions on buttons. Bug-03 */
-    width: 100px; 
-    height: 100px;
-}
-
-.cell:hover, .cell:focus {
-    background-color: #fffb08; /* Hover effect */
-}
-
-/* Button specific style */
-/* placed here else the order of specificity will be incorrect */
-
-/* Reset button */
+/* Reset button style*/
 #toggleButtonreset {
     background:#fff;
     color:rgba(45, 1, 63, 1);
 }
 
-/* Feedback button */
+/* Feedback button style */
 #toggleButtonfeedb {
     background: #1111fa;
     color:#fff;
@@ -213,8 +175,7 @@ section {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    }
-
+}
 
 /* Form container style */
 #formContainer {
@@ -230,7 +191,6 @@ section {
     inset 4px 4px 16px rgba(255,255,255,0.4),
     inset -4px -4px 12px rgba(45,1,36,0.7);
 }
-
 
 /* To address the "Avoid large layout shifts" set fixed dimensions on buttons. Bug-03 */
 #feedbackForm {
@@ -275,7 +235,6 @@ label {
     font-weight: 550;
 }
 
-
 .text-input,
 #textMsg {
     transition: background-color 0.3s ease;
@@ -298,6 +257,7 @@ label {
     cursor: pointer;
 }
 
+/* Submit feedback button style */
 #feedbackbtnSubmit {
     display: flex;
     flex-direction: column;
@@ -312,7 +272,6 @@ label {
 }
 
 /* Modal style in Form */
-
 .modal {
     display: none;
     position: fixed;
