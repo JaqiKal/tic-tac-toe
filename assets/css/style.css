@@ -157,6 +157,20 @@ section {
     font-size: 1rem;
 }
 
+#howtoplayContainer ul  {
+    padding-left: 20px;
+}
+
+#howtoplayContainer ul li {
+    padding-left: 10px;
+}
+
+#howtoplayContainer.hidden p{
+    padding-top: 20px; /* Adjust the value as needed */
+    font-weight: 600;
+}
+
+
 /* Reset button style*/
 #toggleButtonreset {
     background:#fff;
