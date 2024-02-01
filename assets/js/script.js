@@ -23,20 +23,23 @@
  * Date: 2024 Feb 15
  */ 
 
-/* jshint esversion: 6 */
+// jshint esversion: 6 
 
-// GLOBAL VARIABLES
+// GLOBAL VARIABLES 
 const toggleButtonhowto = document.getElementById('toggleButtonhowto');
 const howtoplayContainer = document.getElementById('howtoplayContainer');
 const feedbackForm = document.getElementById('feedbackForm');
 const messageElement = document.getElementById('message');
+// Fetch the Feedback button using its ID
+const feedbackButton = document.getElementById('toggleButtonfeedb');
 
-// MAIN CODE with EVENT LISTENERS embedded within
+
+// Main code with EVENT LISTENERS embedded within
 document.addEventListener('DOMContentLoaded', function() {
     let isToggleClicked = false;
 
-    // Code for displaying the instrutions when 'How to Play' button is clicked in INDEX page, 
-    // and allowing users to close containre by clicking either inside or outside of it.
+    /* Code for displaying the instructions when 'How to Play' button is clicked in INDEX page, 
+       and allowing users to close container by clicking either inside or outside of it. */
     if (howtoplayContainer && toggleButtonhowto) {
         howtoplayContainer.style.display = 'none';
 
@@ -54,89 +57,57 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Feedback submission handling in FORM page
-    if (feedbackForm && messageElement) {
-        feedbackForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-            
-            // Display the thank you message
-            messageElement.textContent = 'Thank you for your feedback!';
-        });
-    }
-
-
-
-
-
-    /*
-    // Modal functionality in FORM html 
-    document.getElementById('feedbackForm').addEventListener('submit', function(event) {
-        // Prevent form submission
-        event.preventDefault();
-    
-        var modal = document.getElementById('feedbackModal');
-        var span = document.getElementsByClassName("close-button")[0];
-        var message = document.getElementById('modalMessage');
-
-        // Clear the form fields
-        feedbackForm.reset();
-    
-        // Set the message and show the modal. Modal from w3schools
-        message.textContent = 'Thank you for your feedback! You will be sent back to the game in 60 seconds, or click to close and off you got to play some more!';
-        modal.style.display = "block";
-    
-        // When the user clicks on <span> (x), close the modal. Modal from w3schools
-        span.onclick = function() {
-            modal.style.display = "none";
-        };
-    
-        // When the user clicks anywhere outside of the modal, close it. Modal from w3schools
-        window.onclick = function(event) {
-            if (event.target === modal) {
-                modal.style.display = "none";
-            }
-        };
-    
-        // Timeout to hide modal after a n seconds and redirect to 'index.html'. Window setTimeout() from w3schools
-        setTimeout(function(){
-            modal.style.display = "none";
-            window.location.href = 'index.html';
-        },  2000); // 2 seconds
-        
+    // Check if the feedbackButton exists to avoid null reference errors
+    if (feedbackButton) {
+        // Add click event listener to the feedback button
+        feedbackButton.addEventListener('click', function() {
+            // Redirect the user to the form.htm page
+            window.location.href = 'form.html';
     });
+}
 
-        */
-
-        // Modal functionality in FORM html 
+        // Modal functionality for submitting the form in the form.html 
         document.getElementById('feedbackForm').addEventListener('submit', function(event) {
             // Prevent form submission
             event.preventDefault();
-        
+            
+            // Declare and initialize variables here
             var modal = document.getElementById('feedbackModal');
             var span = document.getElementsByClassName("close-button")[0];
             var message = document.getElementById('modalMessage');
             var modalContent = document.querySelector('.modal-content');
-
+            
             // Clear the form fields
             feedbackForm.reset();
         
             // Set the message and show the modal
-            message.textContent = 'Thank you for your feedback! You will be sent back to the game in 15 seconds, or click to close and off you go to play some more!';
+            message.textContent = 'Thank you for trying out my feedback form! Currently, this function is not active as it is for demonstration purposes. In 15 seconds, you will be redirected back to the game. Alternatively, you can click anywhere on the page to return to the action.';
             modal.style.display = "block";
-        
-            // When the user clicks on <span> (x), close the modal
-            span.onclick = function() {
-                modal.style.display = "none";
-            };
 
-            // When the user clicks anywhere outside or inside the modal content, close it
+            // When the user clicks on <span> (x), close the modal. Modal from w3schools
+            span.onclick = function() {
+            modal.style.display = "none";
+            };
+        
+
+            // Add an event listener to the modal message element
+            message.addEventListener('click', function() {
+                 modal.style.display = "none";
+                // Redirect to 'index.html' when the user clicks on the modal message
+                window.location.href = 'index.html';
+            });
+
+          
+           // When the user clicks anywhere outside the modal content, close it. Modal from w3schools
             window.onclick = function(event) {
                 if (event.target === modal || event.target === modalContent) {
                     modal.style.display = "none";
+                    // Redirect to 'index.html' when the user clicks outside or inside the modal
+                    window.location.href = 'index.html';
                 }
             };
-        
-            // Timeout to hide modal after n seconds and redirect
+
+            // Timeout to hide modal after n seconds and redirect. Window setTimeout() from w3schools
             setTimeout(function(){
                 modal.style.display = "none";
                 window.location.href = 'index.html';
@@ -144,6 +115,5 @@ document.addEventListener('DOMContentLoaded', function() {
             
         });
 
-
-    
 });
+

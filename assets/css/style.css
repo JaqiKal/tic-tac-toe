@@ -17,6 +17,7 @@
 body {
     background: linear-gradient(#6f3ff59d, #f3cefa);
     display: flex;
+    
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -414,6 +415,24 @@ footer {
 
 /* Large devices (laptops and desktops, 1024px and up) */
 @media screen and (min-width: 1024px) {
+    #head-container {
+        margin: 30px 80px 20px 60px;
+        padding: 20px;
+    }
+
+    #p-head {
+        margin: 30px 90px 20px 75px;
+        padding: 20px;
+    }
+
+    #gameBoard, .game-board {
+        margin: 30px 60px 20px 50px;
+    }
+
+
+
+
+
      /*FORM PAGE */
     /* Modal box width */
     .modal-content {
