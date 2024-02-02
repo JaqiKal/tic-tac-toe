@@ -58,6 +58,11 @@ document.querySelectorAll('.error-message').forEach((elem) => {
     });
 
     
+  // Function to check if a string starts with whitespace
+  function startsWithWhitespace(string) {
+    return /^\s/.test(string);
+  }
+
     // Validating the 'fname' field
     if (startsWithWhitespace(fname.value)) {
     document.getElementById('fnameError').textContent = 'First name must not start with whitespace.';
@@ -70,11 +75,13 @@ document.querySelectorAll('.error-message').forEach((elem) => {
     isValid = false;
     }
 
-    // Validating the 'email' field   : This I've used GPT and PHIND and STACKOVERFLOW to solve but no luck
-    if (startsWithWhitespace(email.value) || !/\S+@\S+\.\S+/.test(email.value.trim())) {
-    document.getElementById('emailError').textContent = 'Email must not start with whitespace and must be a valid email address.';
+  // Validating the 'email' field for leading whitespace and valid format
+  // Trim leading whitespace before validation
+  email.value = email.value.trimStart(); 
+  if (!/\S+@\S+\.\S+/.test(email.value)) {
+    document.getElementById('emailError').textContent = 'Email must be a valid email address.';
     isValid = false;
-    }
+  }
 
 
     // Validating the 'textMsg' field
@@ -102,6 +109,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Prevent form submission
     event.preventDefault();
 
+
+   
     // Validate form before processing
     if (validateForm()) {
       // Clear the form fields only if validation passes
