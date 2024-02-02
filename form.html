@@ -29,20 +29,20 @@
                     <h1>Feedback form</h1>
                     <h2>Tic-Tac-Toe</h2>
                     <label for="first-name">First name:</label>
-                    <input name="first-name" id="fname" type="text" class="text-input" required placeholder="Enter a first name" autocomplete="given-name" onkeypress="return AvoidSpace(event)" >
+                    <input name="first-name" id="fname" type="text" class="text-input" required placeholder="Enter a first name" autocomplete="given-name" aria-label="Enter your first name">
                     <div class="error-message" id="fnameError" role="alert"></div>
                     <br>
                     <label for="last-name">Last name:</label>
-                    <input name="last-name" id="lname" type="text" class="text-input" required placeholder="Enter last name" autocomplete="family-name">
+                    <input name="last-name" id="lname" type="text" class="text-input" required placeholder="Enter last name" autocomplete="family-name" aria-label="Enter your last name">
                     <div class="error-message" id="lnameError" role="alert"></div>
                     <br>
                     <label for="email-address">Enter a valid email address</label>
-                    <input name="email-address" id="email" type="email" class="text-input" required placeholder="Enter a valid email address" autocomplete="email-address">
+                    <input name="email-address" id="email" type="email" class="text-input" pattern="\S+.*" required placeholder="Enter a valid email address" autocomplete="email-address" aria-label="Enter your email address">
                     <div class="error-message" id="emailError" role="alert"></div>
                     <br>
                     <div>
                         <label for="text-message">Your Feedback</label>
-                        <textarea name="text-message" id="textMsg" rows="10" cols="36" required placeholder="Enter your feedback" ></textarea>
+                        <textarea name="text-message" id="textMsg" rows="10" cols="36" required placeholder="Enter your feedback" aria-label="Enter your feed-back"></textarea>
                         <div class="error-message" id="textmsgError" role="alert"></div>
                     </div>
                     <div id="feedbackbtnSubmit">

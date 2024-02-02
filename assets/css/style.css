@@ -133,17 +133,33 @@ section {
     cursor: pointer;
 }
 
+
 /* Hover effect */
-.cell:hover, .cell:focus {
+/*.cell:hover, .cell:focus {
     background-color: #fffb08; 
     cursor: pointer;
 }
+*/
+
+.cell:hover, .cell:focus {
+background-color: #fffb08; 
+border: 2px ridge #2D013F;
+cursor: pointer;
+}
+
 
 /* How to play button  */
 #toggleButtonhowto {
     background:#fff;
     color:rgba(45, 1, 63, 1);
 }
+
+#toggleButtonhowto:hover,
+#toggleButtonhowto:focus {
+border: 4px ridge #2D013F;
+}
+
+
 
 /* Initially hide the how to play container */
 .hidden {
@@ -183,6 +199,11 @@ section {
 #toggleButtonreset {
     background:#fffb08; 
     color:rgba(45, 1, 63, 1);
+}
+
+#toggleButtonreset:hover,
+#toggleButtonreset:focus {
+border: 4px ridge #2D013F;
 }
 
 /* Feedback button style */
@@ -453,17 +474,16 @@ footer {
         padding: 20px;
     }
 
+    /* Style the header paragraph */
     #p-head {
-        margin: 30px 90px 20px 75px;
-        padding: 20px;
-    }
+    max-width: 400px;
+    padding: 30px 10px; 
+    margin: 30px 50px 20px 50px;
+}
 
     #gameBoard, .game-board {
         margin: 30px 60px 20px 50px;
     }
-
-
-
 
 
      /*FORM PAGE */
