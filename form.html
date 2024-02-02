@@ -28,18 +28,22 @@
                 <form id="feedbackForm">
                     <h1>Feedback form</h1>
                     <h2>Tic-Tac-Toe</h2>
-                    <label for="firstName">First name:</label>
-                    <input name="firstName" id="firstName" type="text" class="text-input" placeholder="Enter a first name" autocomplete="given-name" onkeypress="return AvoidSpace(event)" required>
+                    <label for="first-name">First name:</label>
+                    <input name="first-name" id="fname" type="text" class="text-input" required placeholder="Enter a first name" autocomplete="given-name" onkeypress="return AvoidSpace(event)" >
+                    <div class="error-message" id="fnameError" role="alert"></div>
                     <br>
-                    <label for="lastName">Last name:</label>
-                    <input name="lastName" id="lastName" type="text" class="text-input" placeholder="Enter last name" autocomplete="family-name" required>
+                    <label for="last-name">Last name:</label>
+                    <input name="last-name" id="lname" type="text" class="text-input" required placeholder="Enter last name" autocomplete="family-name">
+                    <div class="error-message" id="lnameError" role="alert"></div>
                     <br>
-                    <label for="email">Enter a valid email address</label>
-                    <input name="email" id="email" type="email" class="text-input" placeholder="Enter a valid email address" autocomplete="off" required>
+                    <label for="email-address">Enter a valid email address</label>
+                    <input name="email-address" id="email" type="email" class="text-input" required placeholder="Enter a valid email address" autocomplete="email-address">
+                    <div class="error-message" id="emailError" role="alert"></div>
                     <br>
                     <div>
-                        <label for="textMsg">Your Feedback</label>
-                        <textarea name="textMsg" id="textMsg" rows="10" cols="38" required></textarea>
+                        <label for="text-message">Your Feedback</label>
+                        <textarea name="text-message" id="textMsg" rows="10" cols="36" required placeholder="Enter your feedback" ></textarea>
+                        <div class="error-message" id="textmsgError" role="alert"></div>
                     </div>
                     <div id="feedbackbtnSubmit">
                         <button type="submit" class="button">Submit feed-back</button>
@@ -50,7 +54,7 @@
             <!-- Feedback Modal -->
             <div id="feedbackModal" class="modal">
                 <div class="modal-content">
-                    <span class="close-button">&times;</span>
+                 <!--   <span class="close-button">&times;</span>   -->
                     <p id="modalMessage"></p>
                 </div>
             </div>
@@ -61,6 +65,7 @@
             <p class="made-by"> Made by: JaqiKal</p>
         </footer>
         <!-- JavaScript -->
-        <script src="assets/js/script.js"></script>
+        <script src="assets/js/test-form-scripts.js"></script> 
+        <!-- <script src="assets/js/script.js"></script> -->
     </body>
 </html>

@@ -1,5 +1,9 @@
 # ta bort senare o lägg i readme
 
+## Noterat
+
+* [Forms shouldn’t be set to time-out](https://www.chhs.colostate.edu/accessibility/best-practices-how-tos/forms/)
+
 ## BUGS
 
 ### Bug-01

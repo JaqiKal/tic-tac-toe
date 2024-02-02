@@ -30,7 +30,13 @@ body {
     display: none;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
     color: rgb(27, 1, 37);
     line-height: 1.5;
     padding-top: 5px;
@@ -196,11 +202,12 @@ section {
 /* Form container style */
 #formContainer {
     position: relative;
-    width: 360px;
+    width: 345px;
     height: auto;
     padding: 25px 30px;
+    margin-top: 30px;
     border-radius: 20px;
-    background: #2d013f0a;
+    background: #f3cefa;
     box-shadow: 20px 20px 60px rgba(45,1,36,0.30),
     8px 8px 60px rgba(45,1,36,0.30),
     inset 4px 4px 8px rgba(45,1,36,0.60),
@@ -208,6 +215,7 @@ section {
     inset -4px -4px 12px rgba(45,1,36,0.7);
 }
 
+/* Feed-back form container content style */
 /* To address the "Avoid large layout shifts" set fixed dimensions on buttons. */
 #feedbackForm {
     min-height: 300px; 
@@ -251,6 +259,14 @@ label {
     font-weight: 550;
 }
 
+/* Display error when input field validation fails */
+.error-message {
+    color: #6f3ff59d; 
+    margin-top: 5px;
+    font-size: 0.875rem;
+}
+
+
 .text-input,
 #textMsg {
     transition: background-color 0.3s ease;
@@ -259,17 +275,15 @@ label {
                 inset -4px -4px 8px rgba(167, 7, 159, 0.2);
     border-radius: 10px;
     padding: 20px 5px;
+    width: 269px;
 }
 
-.text-input:hover,
-#textMsg:hover  {
-    background-color: #fffb08; /* Hover effect */
-    cursor: pointer;
-}
-
+/* Activated with a mouse or any mouse-emulating technology */
+.text-input:hover, 
 .text-input:focus,
-#textMsg:focus  {
-    background-color: #fffb08; /* Hover effect */
+#textMsg:hover, 
+#textMsg:focus   {
+    border: 2px ridge #2D013F;
     cursor: pointer;
 }
 
@@ -282,8 +296,12 @@ label {
     margin: 10px;
 }
 
-.button:hover {
+/* Activated with a mouse or any mouse-emulating technology *
+/* Activated with a keyboard or any keyboard-emulating technology */
+.button:hover, 
+.button:focus {
     transform: scale(1.05);
+    border: 2px solid #ffffff;
     cursor: pointer;
 }
 
@@ -370,7 +388,14 @@ footer {
         margin: 0 30px 0;
     }
 
-}
+    #formContainer {
+        position: relative;
+        width: 310px;
+        height: auto;
+        padding: 25px 20px;
+        margin: 20px 8px 0 6px;
+    }
+
 
 /* Media query: medium phones (360px and up) */
 @media screen and (min-width: 360px) {
@@ -389,6 +414,14 @@ footer {
     }
     
     /*FORM PAGE */
+    /* Form container style */
+    #formContainer {
+        position: relative;
+        width: 345px;
+        height: auto;
+        padding: 25px 30px;
+        margin: 20px, 30px, 25px, 30px;
+        }
     /* Modal box width */
     .modal-content {
         width: 80%;
@@ -442,4 +475,5 @@ footer {
 
 /* Large devices (laptops and desktops, 1440px and up) */
 @media screen and (min-width: 1440px) {
+}
 }

@@ -1,91 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <!-- Meta tags for search engines -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Play Tic-Tac-Toe online! A classic, simple, and fun two-player game where players take turns marking Xs and Os on a 3x3 grid. Aim to align three of your symbols in a row to win.">
-        <meta name="keywords" content="feed-back, feedback, Tic-Tac-Toe feedback, Online Game, Free Tic Tac Toe, Play Tic Tac Toe, Xs and Os, Tic-Tac-Toe Game, Classic Game, Two-Player Game, Simple Game, Fun Game">
-        <!-- Title -->
-        <title>Tic-Tac-Toe feedback</title>
-        <!-- Favicon -->
-        <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-        <!-- Stylesheet -->
-        <link rel="stylesheet" href="assets/css/style.css">
-    </head>
-    <!-- Index/Landing page-->
-    <body>
-        <!-- Header -->
-        <header>
-            <div id="head-container">
-                <h1>Welcome and play</h1>
-                <p id="p-head">Get set for Toe-to-Toe Tic-Tac-Toe! A classic game of wits where Xs and Os clash in a fun-filled grid. Gather your pals, choose your symbol, and jump into the tic-tac-tussle. Ready for the challenge? Let's see who conquers the grid!</p>
-            </div>
-        </header>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Meta tags for search engines -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Play Tic-Tac-Toe online! A classic, simple, and fun two-player game where players take turns marking Xs and Os on a 3x3 grid. Aim to align three of your symbols in a row to win.">
+    <meta name="keywords" content="feed-back, feedback, Tic-Tac-Toe feedback, Online Game, Free Tic Tac Toe, Play Tic Tac Toe, Xs and Os, Tic-Tac-Toe Game, Classic Game, Two-Player Game, Simple Game, Fun Game">
+    <!-- Title -->
+    <title>Tic-Tac-Toe feedback</title>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<!-- Index/Landing page-->
+<body>
+    <!-- Header -->
+    <header>
+        <div id="head-container">
+            <h1>Welcome and play</h1>
+            <p id="p-head">Get set for Toe-to-Toe Tic-Tac-Toe! A classic game of wits where Xs and Os clash in a fun-filled grid. Gather your pals, choose your symbol, and jump into the tic-tac-tussle. Ready for the challenge? Let's see who conquers the grid!</p>
+        </div>
+    </header>
 
-        <main>
-            <div class="players">
-                <div class="player">
-                    <h2>Player 1</h2>
-                    <div class="player__symbol">X</div>
-                </div>
-                <div class="player">
-                    <h2>Player 2</h2>
-                    <div class="player__symbol">O</div>
-                </div>
+    <main>
+        <div class="players">
+            <div class="player">
+                <h2>Player 1</h2>
+                <div class="player__symbol">X</div>
             </div>
+            <div class="player">
+                <h2>Player 2</h2>
+                <div class="player__symbol">O</div>
+            </div>
+        </div>
 
-            <!-- Gameboard Grid -->
-            <h2 id="gameBoard_title" class="hidden-heading">Gameboard</h2>
-            <div id="gameBoard" class="game-board" aria-label="Tic-Tac-Toe game board">
-                <div class="cell" id="square1" aria-label="Top left cell "></div>
-                <div class="cell" id="square2" aria-label="Top center cell"></div>
-                <div class="cell" id="square3" aria-label="Top right cell"></div>
-                <div class="cell" id="square4" aria-label="Middle left cell"></div>
-                <div class="cell" id="square5" aria-label="Middle center cell"></div>
-                <div class="cell" id="square6" aria-label="Middle right cell"></div>
-                <div class="cell" id="square7" aria-label="Bottom left cell"></div>
-                <div class="cell" id="square8" aria-label="Bottom mid cell"></div>
-                <div class="cell" id="square9" aria-label="Bottom right cell"></div>
-            </div>
-            
-            <!-- Hide/close How To Play & Instructions -->
-            <div id="howtoplay-btn-container">
-                <button id="toggleButtonhowto" class="button">Hide/Show How To Play</button>
-            </div>
-            <div id="howtoplayContainer" class="hidden">
-                <h2 id="howtoplay">This is how you play!</h2>
-                <ul>
-                    <li>The gameboard grid is initially empty.</li>
-                    <li>One player uses "X" as their mark, and the other player uses "O."</li>
-                    <li>Players take turns, starting with the "X" player.</li>
-                    <li>Each cell can only be selected once.</li>
-                    <li>On their turn, a player selects an empty cell on the grid and places their mark ("X" or "O") in that cell.</li>
-                    <li>One player gets three of their marks in a row (horizontally, vertically, or diagonally). This player wins the game.</li>
-                    <li>The entire grid is filled with marks, and no player has three in a row. This results in a draw (a "cat's game").</li>
-                </ul>
-                 <p id="howtoplayP">Use the Reset button to start over the game.</p>
-                </div>
-                
-                <!-- Reset and Feedback button -->
-                <div id="reset-btn-container">
-                    <button id="toggleButtonreset" class="button">Reset Game</button>
-                </div>
-                <div id="feedback-btn-container">
-                    <button id="toggleButtonfeedb" class="button">Feedback</button>
-                </div>
+        <!-- Gameboard Grid -->
+        <h2 id="gameBoard_title" class="hidden-heading">Gameboard</h2>
+        <div id="gameBoard" class="game-board" aria-label="Tic-Tac-Toe game board">
+            <div class="cell" id="square1" aria-label="Top left cell "></div>
+            <div class="cell" id="square2" aria-label="Top center cell"></div>
+            <div class="cell" id="square3" aria-label="Top right cell"></div>
+            <div class="cell" id="square4" aria-label="Middle left cell"></div>
+            <div class="cell" id="square5" aria-label="Middle center cell"></div>
+            <div class="cell" id="square6" aria-label="Middle right cell"></div>
+            <div class="cell" id="square7" aria-label="Bottom left cell"></div>
+            <div class="cell" id="square8" aria-label="Bottom mid cell"></div>
+            <div class="cell" id="square9" aria-label="Bottom right cell"></div>
+        </div>
 
-    
-                 
-        </main>
-        
-        <footer>
-            <p class="made-by"> Made by: JaqiKal</p>
-        </footer>
-        
-        <script src="assets/js/script.js" defer></script>
-    </body>
+        <!-- Hide/close How To Play & Instructions -->
+        <div id="howtoplay-btn-container">
+            <button id="toggleButtonhowto" class="button">Hide/Show How To Play</button>
+        </div>
+        <div id="howtoplayContainer" class="hidden">
+            <h2 id="howtoplay">This is how you play!</h2>
+            <ul>
+                <li>The gameboard grid is initially empty.</li>
+                <li>One player uses "X" as their mark, and the other player uses "O."</li>
+                <li>Players take turns, starting with the "X" player.</li>
+                <li>Each cell can only be selected once.</li>
+                <li>On their turn, a player selects an empty cell on the grid and places their mark ("X" or "O") in that cell.</li>
+                <li>One player gets three of their marks in a row (horizontally, vertically, or diagonally). This player wins the game.</li>
+                <li>The entire grid is filled with marks, and no player has three in a row. This results in a draw (a "cat's game").</li>
+            </ul>
+            <p id="howtoplayP">Use the Reset button to start over the game.</p>
+        </div>
+
+        <!-- Reset and Feedback button -->
+        <div id="reset-btn-container">
+            <button id="toggleButtonreset" class="button">Reset Game</button>
+        </div>
+        <div id="feedback-btn-container">
+            <button id="toggleButtonfeedb" class="button">Feedback</button>
+        </div>
+    </main>
+
+    <footer>
+        <p class="made-by"> Made by: JaqiKal</p>
+    </footer>
+
+    <script src="assets/js/script.js" defer></script>
+</body>
 </html>
