@@ -114,7 +114,7 @@ const winningCombinations = [
 
 // GAME LOGIC 
 
-// Event listener for player clicks on cells
+// Event listener for when player clicks on cells
 cells.forEach(cell => {
     cell.addEventListener('click', handleCellClick);
 });
@@ -160,8 +160,18 @@ function computerTurn() {
     }
 }
 
-
 // Check for win and draw
 
+
  // Reset function to clear the game
+ function resetGame() {
+    // Set the game as active (can be played)
+    gameActive = true;
+    // Clear the game state by filling it with empty strings
+    gameState.fill('');
+    // Clear the text content of all cells
+    cells.forEach(cell => cell.innerText = '');
+}
+
+
 
