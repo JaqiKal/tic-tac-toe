@@ -112,7 +112,7 @@ body {
   max-width: 450px;
   /* Maintain square aspect ratio for the board */
   aspect-ratio: 1 / 1;
-  margin: 20px 0;
+  margin: 20px;
 }
 
 /* Cell style */
