@@ -79,7 +79,7 @@ body {
   background: rgba(45, 1, 63);
   color: #fff;
   padding: 10px 20px;
-  border: 2px ridge #8b349c;
+  border: 1px ridge #8b349c;
   border-radius: 10px;
   box-shadow: 4px 4px 10px 2px #2D013F;
   font-size: 1rem;
@@ -87,6 +87,8 @@ body {
   cursor: pointer;
   margin: 10px 0;
   text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease, border 0.2s ease;
+
 }
 
 .button:hover {
@@ -132,6 +134,7 @@ body {
 .cell:focus {
   background-color: #fffb08;
   border: 2px ridge #2D013F;
+  transition: background-color 0.3s ease, transform 0.2s ease, border 0.2s ease;
   cursor: pointer;
 }
 
@@ -145,7 +148,7 @@ body {
 /* Activated with a keyboard or any keyboard-emulating technology */
 #toggleButtonreset:hover,
 #toggleButtonreset:focus {
-  border: 4px ridge #2D013F;
+  border: 2px ridge #2D013F;
 }
 
 /* How to play button style  */
@@ -158,7 +161,7 @@ body {
 /* Activated with a keyboard or any keyboard-emulating technology */
 #toggleButtonhowto:hover,
 #toggleButtonhowto:focus {
-  border: 4px ridge #2D013F;
+  border: 2px ridge #2D013F;
 }
 
 /* Initially hide the how to play container */
@@ -206,6 +209,13 @@ body {
 #toggleButtonfeedb {
   background: #1111fa;
   color: #fff;
+}
+
+/* Activated with a mouse or any mouse-emulating technology */
+/* Activated with a keyboard or any keyboard-emulating technology */
+#toggleButtonfeedb:hover,
+#toggleButtonfeedb:focus {
+  border: 2px ridge #fff;
 }
 
 /* FORM PAGE */
@@ -379,7 +389,6 @@ footer {
   margin-top: 80px;
   color: #2D013F;
 }
-
 
 /* RESPONSIVENESS */
 
