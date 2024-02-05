@@ -11,10 +11,8 @@
  * - Win condition checking for rows, columns, and diagonals
  * - Detection of a draw (cat's game) when the board is full
  * - Resetting the game for a new round
- * - Listen after feedback form submission and
- *   - display message 
- *   - clear form
- *   - redirect to index
+ * - Listen after feedback button submit and
+ *   - redirect to form.index
  * 
  * Credit:
  *  - Used MDN, w3school, Youtube & JavaScript & jQuery by Jon Ducket
@@ -164,6 +162,11 @@ function computerTurn() {
 
 
  // Reset function to clear the game
+ document.addEventListener('DOMContentLoaded', () => {
+    // Event listener for the reset game button
+    document.getElementById('toggleButtonreset').addEventListener('click', resetGame);
+  });
+
  function resetGame() {
     // Set the game as active (can be played)
     gameActive = true;

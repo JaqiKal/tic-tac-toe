@@ -125,6 +125,13 @@ body {
   border-radius: 10px;
   cursor: pointer;
   aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color:#2D013F;
+
 }
 
 /* Activated with a mouse or any mouse-emulating technology *
