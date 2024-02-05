@@ -54,16 +54,12 @@ function validateForm() {
 
   // Clear previous error messages
 document.querySelectorAll('.error-message').forEach((elem) => {
-    elem.textContent = ''; // Resetting error messages for each input field
+  // Resetting error messages for each input field
+    elem.textContent = ''; 
     });
 
     
-  // Function to check if a string starts with whitespace
-  function startsWithWhitespace(string) {
-    return /^\s/.test(string);
-  }
-
-    // Validating the 'fname' field
+   // Validating the 'fname' field
     if (startsWithWhitespace(fname.value)) {
     document.getElementById('fnameError').textContent = 'First name must not start with whitespace.';
     isValid = false;
