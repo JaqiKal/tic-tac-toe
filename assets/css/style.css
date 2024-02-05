@@ -1,33 +1,20 @@
 /* Google fonts import */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
 
 /* Global styles - optimized for mobile */
 /* Asterisk wildcard selector to override default styles added by the browser */
 /* Amended from LoveRunning */
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
-    color:#2D013F;
-}
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 
-/* General styles in LANDING and FORM page*/
-body {
-    background: linear-gradient(#6f3ff59d, #f3cefa);
-    display: flex;
-    
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    padding-top: 0px; 
-    padding-bottom: 0px; 
 }
 
 .hidden-heading {
-    display: none;
+  display: none;
 }
 
 h1,
@@ -37,463 +24,403 @@ h4,
 h5,
 h6,
 p {
-    color: rgb(27, 1, 37);
-    line-height: 1.5;
-    padding-top: 5px;
-    padding-bottom: 5px;
+  color: rgb(27, 1, 37);
+  line-height: 1.5;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+/* General styles in LANDING and FORM page*/
+body {
+  background: linear-gradient(#6f3ff59d, #f3cefa);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Open Sans', sans-serif;
+  color: #2D013F;
+  min-height: 100vh;
+  padding-top: 0px;
+  padding-bottom: 0px;
+
+}
+
+/* Header styles */
+#head-container {
+  max-width: 450px;
+  margin-top: 16px;
+  padding: 10px;
+  margin: 5px 25px 0;
+  text-align: center;
+}
+
+
+/* Style the header paragraph */
+#p-head {
+  max-width: 450px;
+  padding: 20px 10px;
+  margin-top: 30px;
+  border-radius: 10px;
+  background-color: rgba(243, 238, 243, 0.596);
+  box-shadow: 4px 4px 60px rgba(45, 1, 63, 0.685);
+  font-weight: 600;
+}
+
+#buttonSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
 /* General style for buttons */
 .button {
-    margin: 0 5px 0;
-    background: rgba(45, 1, 63);
-    color:#fff;
-    padding: 10px 20px;
-    border: 2px ridge #8b349c;
-    border-radius: 10px;
-    box-shadow: 4px 4px 10px 2px #2D013F;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    margin: 10px 0;
-    text-decoration: none;
+  margin: 0 5px 0;
+  background: rgba(45, 1, 63);
+  color: #fff;
+  padding: 10px 20px;
+  border: 2px ridge #8b349c;
+  border-radius: 10px;
+  box-shadow: 4px 4px 10px 2px #2D013F;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 10px 0;
+  text-decoration: none;
 }
 
 .button:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 /* LANDING PAGE */
-/* Header styles */
-#head-container {
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    width: 450px;
-    margin-top: 16px;
-    padding: 10px;
-    margin: 5px 25px 0;
-}
 
-/* Style the header paragraph */
-#p-head {
-    max-width: 360px;
-    padding: 30px 10px; 
-    margin: 30px 50px 20px 50px;
-    border-radius: 10px;
-    background-color: rgba(243, 238, 243, 0.596); 
-    box-shadow: 4px 4px 60px rgba(45, 1, 63, 0.685); 
-    font-weight: 600;
+/* Flex order  */
+.players-container {
+  display: flex;
+  flex-direction: column;
 }
-
-/* Main Content */
-main {
-    /* Ensures main content spans the full width */
-    width: 100%; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; 
-}
-
-/* 
-oklart om denna gör vare sig till eller ifrå mtp att main har dessa värden? *
-section {
-   /* display: flex;
-  /*  flex-direction: column;
-  /*  align-items: center;
-  /*  justify-content: center; *oklart om jag behöver denna, denna centrerar i sectionen, kanske en top.padding istället *
-  /*  height: 100vh; *
-}
-*/
 
 /* Gameboard style */
 #gameBoard {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-gap: 2px; 
-    /* Responsive width based on viewport width */
-    width: 80vw; 
-    max-width: 300px;
-    /* Maintain square aspect ratio for the board */
-    aspect-ratio: 1 / 1; 
-    margin: 20px 0; 
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2px;
+  /* Responsive width based on viewport width */
+  width: 90vw;
+  max-width: 450px;
+  /* Maintain square aspect ratio for the board */
+  aspect-ratio: 1 / 1;
+  margin: 20px 0;
 }
 
 /* Cell style */
 .cell {
-    background-color: white;
-    transition: background-color 0.3s ease;
-    border: 0.2px solid rgba(45, 1, 63, 0.365);
-    box-shadow: inset 6px 6px 12px rgba(45, 1, 63, 0.753), 
-                inset -4px -4px 8px rgba(167, 7, 159, 0.2);
-    border-radius: 10px;
-    cursor: pointer;
+  background-color: white;
+  transition: background-color 0.3s ease;
+  border: 0.2px solid rgba(45, 1, 63, 0.365);
+  box-shadow: inset 6px 6px 12px rgba(45, 1, 63, 0.753),
+    inset -4px -4px 8px rgba(167, 7, 159, 0.2);
+  border-radius: 10px;
+  cursor: pointer;
+  aspect-ratio: 1 / 1;
 }
 
-
-/* Hover effect */
-/*.cell:hover, .cell:focus {
-    background-color: #fffb08; 
-    cursor: pointer;
-}
-*/
-
-.cell:hover, .cell:focus {
-background-color: #fffb08; 
-border: 2px ridge #2D013F;
-cursor: pointer;
+/* Activated with a mouse or any mouse-emulating technology *
+/* Activated with a keyboard or any keyboard-emulating technology */
+.cell:hover,
+.cell:focus {
+  background-color: #fffb08;
+  border: 2px ridge #2D013F;
+  cursor: pointer;
 }
 
+/* Reset button style*/
+#toggleButtonreset {
+  background: #fffb08;
+  color: rgba(45, 1, 63, 1);
+}
 
-/* How to play button  */
+/* Activated with a mouse or any mouse-emulating technology */
+/* Activated with a keyboard or any keyboard-emulating technology */
+#toggleButtonreset:hover,
+#toggleButtonreset:focus {
+  border: 4px ridge #2D013F;
+}
+
+/* How to play button style  */
 #toggleButtonhowto {
-    background:#fff;
-    color:rgba(45, 1, 63, 1);
+  background: #fff;
+  color: rgba(45, 1, 63, 1);
 }
 
+/* Activated with a mouse or any mouse-emulating technology */
+/* Activated with a keyboard or any keyboard-emulating technology */
 #toggleButtonhowto:hover,
 #toggleButtonhowto:focus {
-border: 4px ridge #2D013F;
+  border: 4px ridge #2D013F;
 }
-
-
 
 /* Initially hide the how to play container */
 .hidden {
-    display: none;
+  display: none;
 }
 
 /* How to play container */
 #howtoplayContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    align-items: start;
-    max-width: 90%;
-    border-radius: 15px;
-    background-color: white;
-    box-shadow: 4px 4px 10px 2px #2D013F;
-    margin: 30px 0 15px;
-    padding: 20px;
-    font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  text-align:left;
+  max-width: 90%;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 4px 4px 10px 2px #2D013F;
+  margin: 30px 30px 15px;
+  padding: 20px;
+  font-size: 1rem;
 }
 
-#howtoplayContainer ul  {
-    padding-left: 20px;
+#howtoplayContainer ul {
+  padding-left: 20px;
 }
 
 #howtoplayContainer ul li {
-    padding-left: 10px;
+  padding-left: 10px;
 }
 
-#howtoplayContainer.hidden p{
-    padding-top: 20px; /* Adjust the value as needed */
-    font-weight: 600;
+#howtoplayContainer.hidden p {
+  padding-top: 20px;
+  /* Adjust the value as needed */
+  font-weight: 600;
 }
 
-
-/* Reset button style*/
-#toggleButtonreset {
-    background:#fffb08; 
-    color:rgba(45, 1, 63, 1);
-}
-
-#toggleButtonreset:hover,
-#toggleButtonreset:focus {
-border: 4px ridge #2D013F;
+/* Flex order */
+#button-container {
+  display: flex;
+  flex-direction: column;
 }
 
 /* Feedback button style */
 #toggleButtonfeedb {
-    background: #1111fa;
-    color:#fff;
+  background: #1111fa;
+  color: #fff;
 }
 
 /* FORM PAGE */
 #formBody {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 /* Form container style */
 #formContainer {
-    position: relative;
-    width: 345px;
-    height: auto;
-    padding: 25px 30px;
-    margin-top: 30px;
-    border-radius: 20px;
-    background: #f3cefa;
-    box-shadow: 20px 20px 60px rgba(45,1,36,0.30),
-    8px 8px 60px rgba(45,1,36,0.30),
-    inset 4px 4px 8px rgba(45,1,36,0.60),
-    inset 4px 4px 16px rgba(255,255,255,0.4),
-    inset -4px -4px 12px rgba(45,1,36,0.7);
+  position: relative;
+  width: 345px;
+  height: auto;
+  padding: 25px 30px;
+  margin-top: 30px;
+  border-radius: 20px;
+  background: #f3cefa;
+  box-shadow: 20px 20px 60px rgba(45, 1, 36, 0.30),
+    8px 8px 60px rgba(45, 1, 36, 0.30),
+    inset 4px 4px 8px rgba(45, 1, 36, 0.60),
+    inset 4px 4px 16px rgba(255, 255, 255, 0.4),
+    inset -4px -4px 12px rgba(45, 1, 36, 0.7);
 }
 
 /* Feed-back form container content style */
 /* To address the "Avoid large layout shifts" set fixed dimensions on buttons. */
 #feedbackForm {
-    min-height: 300px; 
+  min-height: 300px;
 }
 
-#feedbackForm > h1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; 
+#feedbackForm>h1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-#feedbackForm > h2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; 
-    margin-bottom: 30px;
+#feedbackForm>h2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
 }
 
 label {
-    font-weight: 600;
-    margin-bottom: 20px;
-   }
+  font-weight: 600;
+  margin-bottom: 20px;
+}
 
 .text-input {
-    background: #fbfafc;
-    width: 100%;
-    height: 25px;
-    margin: 5px 0 20px 0;
-    border: 1px solid #fafafa;
-    border-radius: 20px;
-    padding: 20px 5px;
-    font-weight: 550;
+  background: #fbfafc;
+  width: 100%;
+  height: 25px;
+  margin: 5px 0 20px 0;
+  border: 1px solid #fafafa;
+  border-radius: 20px;
+  padding: 20px 5px;
+  font-weight: 550;
 }
 
 #textMsg {
-    border: 1px solid #fafafa;
-    border-radius: 5px;
-    padding: 10px 5px;
-    font-weight: 550;
+  border: 1px solid #fafafa;
+  border-radius: 5px;
+  padding: 10px 5px;
+  font-weight: 550;
 }
 
 /* Display error when input field validation fails */
 .error-message {
-    color: #6f3ff59d; 
-    margin-top: 5px;
-    font-size: 0.875rem;
+  color: #6f3ff59d;
+  margin-top: 5px;
+  font-size: 0.875rem;
 }
 
 
 .text-input,
 #textMsg {
-    transition: background-color 0.3s ease;
-    border: 0.2px solid rgba(45, 1, 63, 0.365);
-    box-shadow: inset 6px 6px 12px rgba(45, 1, 63, 0.753), 
-                inset -4px -4px 8px rgba(167, 7, 159, 0.2);
-    border-radius: 10px;
-    padding: 20px 5px;
-    width: 269px;
-}
-
-/* Activated with a mouse or any mouse-emulating technology */
-.text-input:hover, 
-.text-input:focus,
-#textMsg:hover, 
-#textMsg:focus   {
-    border: 2px ridge #2D013F;
-    cursor: pointer;
-}
-
-/* Submit feedback button style */
-#feedbackbtnSubmit {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; 
-    margin: 10px;
+  transition: background-color 0.3s ease;
+  border: 0.2px solid rgba(45, 1, 63, 0.365);
+  box-shadow: inset 6px 6px 12px rgba(45, 1, 63, 0.753),
+    inset -4px -4px 8px rgba(167, 7, 159, 0.2);
+  border-radius: 10px;
+  padding: 20px 5px;
+  width: 269px;
 }
 
 /* Activated with a mouse or any mouse-emulating technology *
 /* Activated with a keyboard or any keyboard-emulating technology */
-.button:hover, 
+.text-input:hover,
+.text-input:focus,
+#textMsg:hover,
+#textMsg:focus {
+  border: 2px ridge #2D013F;
+  cursor: pointer;
+}
+
+/* Submit feedback button style */
+#feedbackbtnSubmit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+/* Activated with a mouse or any mouse-emulating technology *
+/* Activated with a keyboard or any keyboard-emulating technology */
+.button:hover,
 .button:focus {
-    transform: scale(1.05);
-    border: 2px solid #ffffff;
-    cursor: pointer;
+  transform: scale(1.05);
+  border: 2px solid #ffffff;
+  cursor: pointer;
 }
 
 /* Modal style in Form */
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color:  rgba(45, 1, 63, 0.85);
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(45, 1, 63, 0.85);
 }
 
 .modal-content {
-    background-color: #fbfafc;
-    transition: background-color 0.3s ease;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid rgba(45, 1, 63, 1);
-    width: 80%;
-    font-weight: 600;
-    text-align: center;
-    border-radius: 10px;
-    padding: 20px 5px;
-    border: 0.2px solid rgba(45, 1, 63, 0.365);
-    box-shadow: inset 6px 6px 12px rgba(45, 1, 63, 0.753), 
-                inset -4px -4px 8px rgba(167, 7, 159, 0.2);
-     cursor: pointer;
+  background-color: #fbfafc;
+  transition: background-color 0.3s ease;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid rgba(45, 1, 63, 1);
+  width: 80%;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 10px;
+  padding: 20px 5px;
+  border: 0.2px solid rgba(45, 1, 63, 0.365);
+  box-shadow: inset 6px 6px 12px rgba(45, 1, 63, 0.753),
+    inset -4px -4px 8px rgba(167, 7, 159, 0.2);
+  cursor: pointer;
 }
 
 .close-button {
-    color: rgba(45, 1, 63, 1);
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
+  color: rgba(45, 1, 63, 1);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
+/* Activated with a mouse or any mouse-emulating technology *
+/* Activated with a keyboard or any keyboard-emulating technology */
 .close-button:hover,
 .close-button:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 
 
 /* FOOTER STYLES  */
 footer {
-    width: 100%; 
-    text-align: center; 
-    margin-top: 80px;
-    color: #2D013F;
+  width: 100%;
+  text-align: center;
+  margin-top: 80px;
+  color: #2D013F;
 }
 
 
 /* RESPONSIVENESS */
 
-/* Media query: medium phones (320px and less) */
-@media screen and (min-width: 320px) {
-    #head-container h1{ 
-        font-size: 1.6rem;
-    }
+/* Media query: medium phones (260px and up) */
+@media screen and (min-width: 269px) {
 
-    #p-head {
-        margin: 30px 90px 20px 75px;
-        padding: 20px;
-    }
+  #formContainer {
+    position: relative;
+    width: 260px;
+    height: auto;
+    padding: 25px 20px;
+    margin: 20px 8px 0 6px;
+  }
 
-    #gameBoard, .game-board {
-        margin: 30px 60px 20px 50px;
-    }
+  #feedbackForm,
+  .text-input {
+    width: 100%;
+  }
 
-    #howtoplayContainer {
-        margin: 30px 35px 15px 5px;
-    }
-    #howtoplay-btn-container {
-        margin: 0 40px 0 30px; 
-    }
-    #toggleButtonreset {
-        margin: 0 30px 0;
-    }
-
-    #formContainer {
-        position: relative;
-        width: 310px;
-        height: auto;
-        padding: 25px 20px;
-        margin: 20px 8px 0 6px;
-    }
-
+  #textMsg {
+    width: 100%;
+  }
+}
 
 /* Media query: medium phones (360px and up) */
 @media screen and (min-width: 360px) {
-    #head-container {
-        margin: 30px 80px 20px 60px;
-        padding: 20px;
-    }
 
-    #p-head {
-        margin: 30px 90px 20px 75px;
-        padding: 20px;
-    }
+  /*FORM PAGE */
+  /* Form container style */
+  #formContainer {
+    position: relative;
+    width: 345px;
+    height: auto;
+    padding: 25px 30px;
+  }
 
-    #gameBoard, .game-board {
-        margin: 30px 60px 20px 50px;
-    }
-    
-    /*FORM PAGE */
-    /* Form container style */
-    #formContainer {
-        position: relative;
-        width: 345px;
-        height: auto;
-        padding: 25px 30px;
-               }
-
-    /* Modal box width */
-    .modal-content {
-        width: 80%;
-    }
+  /* Modal box width */
+  .modal-content {
+    width: 80%;
+  }
 }
 
-/* Media query: large phones (428px and up) */
-@media screen and (min-width: 428px) {
-     /*FORM PAGE */
-    /* Modal box width */
-    .modal-content {
-        width: 70%;
-    }
-}
-
-/* Media query: tablets and larger (768px and up) */
-@media screen and (min-width: 768px) {
-    /*FORM PAGE */
-    /* Modal box width */
-    .modal-content {
-        width: 50%;
-    }
-}
-
-/* Large devices (laptops and desktops, 1024px and up) */
-@media screen and (min-width: 1024px) {
-    #head-container {
-        margin: 30px 80px 20px 60px;
-        padding: 20px;
-    }
-
-    /* Style the header paragraph */
-    #p-head {
-    max-width: 400px;
-    padding: 30px 10px; 
-    margin: 30px 50px 20px 50px;
-}
-
-    #gameBoard, .game-board {
-        margin: 30px 60px 20px 50px;
-    }
-
-
-     /*FORM PAGE */
-    /* Modal box width */
-    .modal-content {
-        width: 30%;
-    }
-}
-
-/* Large devices (laptops and desktops, 1440px and up) */
-@media screen and (min-width: 1440px) {
-}
-}
+/* Media query: tablet & desktop (1024px and up) */
+@media screen and (min-width: 1024px) {}
