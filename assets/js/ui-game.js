@@ -2,7 +2,7 @@
  * Tic-Tac-Toe game
  * 
  * This script manages the functionality of a Tic-Tac-Toe game in a web application.
- * Players can take turns marking Xs and Os on a 3x3 grid with the objective of
+ * Player take turns aginst computer marking Xs on a 3x3 grid with the objective of
  * aligning three of their symbols in a row to win. The script handles player
  * interactions, win conditions, and game resets.
  *
@@ -15,6 +15,15 @@
  *   - display message 
  *   - clear form
  *   - redirect to index
+ * 
+ * Credit:
+ *  - Used MDN, w3school, Youtube & JavaScript & jQuery by Jon Ducket
+ * to understand loops&iteration:
+ *  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration
+ *  https://www.w3schools.com/js/js_loop_for.asp
+ *  https://www.youtube.com/watch?v=orAS-MBh5f4
+ *  https://javascriptbook.com/
+ *
  * 
  * Other:
  * - jshint esversion: 6, please see README.md for further details
@@ -134,7 +143,23 @@ function updateGameState(index, symbol) {
     cells[index].innerText = symbol; // Update the UI to show the move
 }
 
-// turnover control
+// The computer's turn, by choosing first available cell
+function computerTurn() {
+    // Find the first empty cell
+    let moveIndex = -1;
+    for (let i = 0; i < gameState.length; i++) {
+        if (gameState[i] === '') {
+            moveIndex = i;
+            break;
+        }
+    }
+
+    if (moveIndex !== -1) {
+        updateGameState(moveIndex, computerSymbol);
+        checkForOutcome();
+    }
+}
+
 
 // Check for win and draw
 

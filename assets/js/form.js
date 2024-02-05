@@ -22,6 +22,8 @@
  *    - form validation: https://blog.bitsrc.io/you-have-been-doing-form-validation-wrong-8b36430d63f6
  *    - Form validation: https://www.w3schools.com/js/js_validation.asp
  *    - For each loop: https://www.w3schools.com/jsref/jsref_foreach.asp
+ *    - Tutor service helped me with a bit of psudocode and thoughts how to trim whitespace:
+ *      if userInput.startsWith(" ") {action for error} 
  *
  * Author: JaqiKal
  * Date: February 2024
