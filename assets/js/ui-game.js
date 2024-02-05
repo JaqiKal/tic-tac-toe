@@ -103,11 +103,36 @@ const winningCombinations = [
 });
 
 
-// GAME LOGIC
+// GAME LOGIC 
 
-// Player interaction with game board.
- 
-// Update of game state when clicking on a cell
+// Event listener for player clicks on cells
+cells.forEach(cell => {
+    cell.addEventListener('click', handleCellClick);
+});
+
+function handleCellClick(event) {
+    // Get the index of the clicked cell from its data attribute
+    const clickedCellIndex = parseInt(event.target.getAttribute('data-index'));
+
+    // Check if the cell has already been played, or if the game is paused
+    if (gameState[clickedCellIndex] !== '' || !gameActive) {
+        return; // Don't do anything if the cell is not empty or the game is over
+    }
+
+    // Update the game state with the player's move
+    updateGameState(clickedCellIndex, playerSymbol);
+    // Check for a win or a draw after the player's move
+    checkForOutcome();
+
+    // Hand over to the computer to make its move
+    computerTurn();
+}
+
+// Update Game State
+function updateGameState(index, symbol) {
+    gameState[index] = symbol; // Update the internal game state
+    cells[index].innerText = symbol; // Update the UI to show the move
+}
 
 // turnover control
 
