@@ -105,3 +105,13 @@ const winningCombinations = [
 
 // GAME LOGIC
 
+// Player interaction with game board.
+ 
+// Update of game state when clicking on a cell
+
+// turnover control
+
+// Check for win and draw
+
+ // Reset function to clear the game
+
