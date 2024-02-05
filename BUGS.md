@@ -18,10 +18,12 @@ To address the warning, I added the following comment at the top of the JavaScri
 
 ### Bug-02
 
-When analysing index page with Lighthouse, the performance score was 77, further check showed that it was the Cumulative Layout Shift that was identified. The warning was 'Avoid large layout shifts' indicating that saving could be made when page is loading. The tool addressed
+When analysing index page with Lighthouse, the performance score have ben wavering between 77 and 93, further check showed that it was the Cumulative Layout Shift that was identified. The warning was 'Avoid large layout shifts' indicating that saving could be made when page is loading. The tool addressed
 the buttons in the Gameboard grid and the Feedback button as the problem areas.  
 
 #### Solution - 02
 
 These web articles [Cumulative Layout Shift (CLS)](https://web.dev/articles/cls)
-[Avoid Large Layout Shifts: 4 Tactics That Actually Work](https://wpshout.com/avoid-large-layout-shifts/#gref) led me to partially solve the problem with lowered performance by setting explicit dimensions for the parts that were indicated. For the buttons in the Gameboard grid', I set fixed width and height in px for selector div cell (.cell) and in selector id feedbackForm (#feedbackForm) I set min-height to 300 px. This resulted in a performance score of 98, the remaining 2 points can potentially be solved by 'minifying CSS and JavaScrip' and by enabling text compression.
+[Avoid Large Layout Shifts: 4 Tactics That Actually Work](https://wpshout.com/avoid-large-layout-shifts/#gref) led me to solve the problem partially with lowered performance by setting explicit dimensions for the parts that were indicated. For the buttons in the Gameboard grid', I set fixed width and height in px for selector div cell (.cell) and in selector id feedbackForm (#feedbackForm) I set min-height to 300 px. This resulted in a performance score of 98, the remaining 2 points can potentially be solved by 'minifying CSS and JavaScrip' and by enabling text compression.
+During coding, CLS has haunted me, I decided to leave the button style grid and make an ordinary div grid instead, and to use more narrow border lines on buttons, and to add a smoother transition effect to buttons and cells by using
+```` transition: background-color 0.3s ease, transform 0.2s ease, border 0.2s ease;``` and finally I got rid of the performace issue.
