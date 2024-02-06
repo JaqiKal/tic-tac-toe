@@ -1,6 +1,5 @@
 /* Google fonts import */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Open+Sans:wght@400;500;600;700&display=swap');
 
 /* Global styles - optimized for mobile */
 /* Asterisk wildcard selector to override default styles added by the browser */
@@ -129,9 +128,8 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 2rem;
-  font-weight: 700;
+  font-family: 'Acme', 'Open Sans', sans-serif;
   color:#2D013F;
-
 }
 
 /* Activated with a mouse or any mouse-emulating technology *
@@ -435,6 +433,15 @@ footer {
   .modal-content {
     width: 80%;
   }
+}
+
+/* Media query: tablet & desktop (768px and up) */
+@media screen and (min-width: 768px) {
+  /* INDEX */
+  .cell {
+    font-size: 2.5rem;
+  }
+
 }
 
 /* Media query: tablet & desktop (1024px and up) */
