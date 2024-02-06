@@ -41,6 +41,24 @@
       </div>
     </section>
   -->
+    <section id="buttonSection1">
+      <div id="howtoplay-btn-container">
+        <button id="toggleButtonhowto" class="button" aria-pressed="false">Hide/Show How To Play</button>
+      </div>
+      <div id="howtoplayContainer" class="hidden">
+        <h2 id="howtoplay">This is how you play!</h2>
+        <ul>
+          <li>The gameboard grid is initially empty.</li>
+          <li>One player uses "X" as their mark, and the other player uses "O."</li>
+          <li>Players take turns, starting with the "X" player.</li>
+          <li>Each cell can only be selected once.</li>
+          <li>On their turn, a player selects an empty cell on the grid and places their mark ("X" or "O") in that cell.</li>
+          <li>One player gets three of their marks in a row (horizontally, vertically, or diagonally). This player wins the game.</li>
+          <li>The entire grid is filled with marks, and no player has three in a row. This results in a draw (a "cat's game").</li>
+        </ul>
+        <p>Use the Reset button to start over the game.</p>
+      </div>
+    </section>
 
     <section id=gameSection>
       <!-- Container for the game board -->
@@ -58,37 +76,19 @@
         <div class="cell" data-index="7"></div>
         <div class="cell" data-index="8"></div>
       </div>
-
     </section>
 
-    <section id="buttonSection">
+    <section id="buttonSection2">
 
       <!-- Container for buttons -->
       <div id="button-container">
         <div id="reset-btn-container">
           <button id="toggleButtonreset" class="button">Reset Game</button>
         </div>
-        <div id="howtoplay-btn-container">
-          <button id="toggleButtonhowto" class="button" aria-pressed="false">Hide/Show How To Play</button>
-        </div>
-        <div id="howtoplayContainer" class="hidden">
-          <h2 id="howtoplay">This is how you play!</h2>
-          <ul>
-            <li>The gameboard grid is initially empty.</li>
-            <li>One player uses "X" as their mark, and the other player uses "O."</li>
-            <li>Players take turns, starting with the "X" player.</li>
-            <li>Each cell can only be selected once.</li>
-            <li>On their turn, a player selects an empty cell on the grid and places their mark ("X" or "O") in that cell.</li>
-            <li>One player gets three of their marks in a row (horizontally, vertically, or diagonally). This player wins the game.</li>
-            <li>The entire grid is filled with marks, and no player has three in a row. This results in a draw (a "cat's game").</li>
-          </ul>
-          <p>Use the Reset button to start over the game.</p>
-        </div>
         <div id="feedback-btn-container">
           <button id="toggleButtonfeedb" class="button">Feedback</button>
         </div>
       </div>
-
     </section>
 
 
