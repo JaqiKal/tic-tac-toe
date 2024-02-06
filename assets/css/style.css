@@ -37,7 +37,7 @@ body {
   justify-content: center;
   align-items: center;
   font-family: 'Open Sans', sans-serif;
-  color: #2D013F;
+  color: #1b0125;
   min-height: 100vh;
   padding-top: 0px;
   padding-bottom: 0px;
@@ -145,7 +145,7 @@ body {
 /* Reset button style*/
 #toggleButtonreset {
   background: #fffb08;
-  color: rgba(45, 1, 63, 1);
+  color: #1b0125;
 }
 
 /* Activated with a mouse or any mouse-emulating technology */
@@ -158,7 +158,7 @@ body {
 /* How to play button style  */
 #toggleButtonhowto {
   background: #fff;
-  color: rgba(45, 1, 63, 1);
+  color: #1b0125;
 }
 
 /* Activated with a mouse or any mouse-emulating technology */
@@ -211,7 +211,7 @@ body {
 
 /* Feedback button style */
 #toggleButtonfeedb {
-  background: #1111fa;
+  background: #0000ff;
   color: #fff;
 }
 
@@ -273,7 +273,7 @@ label {
 }
 
 .text-input {
-  background: #fbfafc;
+  background: #fff;
   width: 100%;
   height: 25px;
   margin: 5px 0 20px 0;
@@ -281,6 +281,11 @@ label {
   border-radius: 20px;
   padding: 20px 5px;
   font-weight: 550;
+  color: #2D013F;
+}
+
+.fieldtext {
+  color: #2D013F;
 }
 
 #textMsg {
@@ -292,9 +297,10 @@ label {
 
 /* Display error when input field validation fails */
 .error-message {
-  color: #6f3ff59d;
+  color:rgb(150, 2, 2);
   margin-top: 5px;
-  font-size: 0.875rem;
+  font-size: 0.9rem;
+  font-weight: 600;
 }
 
 
@@ -351,7 +357,7 @@ label {
 }
 
 .modal-content {
-  background-color: #fbfafc;
+  background-color: #fff;
   transition: background-color 0.3s ease;
   margin: 15% auto;
   padding: 20px;
