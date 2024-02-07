@@ -542,13 +542,16 @@ body.not-found-page {
   .not-found-container p {
     font-size: larger;
     font-weight: 500;
+  }
 }
 
-
-}
 /* Media query: tablet & desktop (1024px and up) */
 @media screen and (min-width: 1024px) {
-    /* 404 NOT FOUND PAGE */
+  /* INDEX */
+
+
+
+  /* 404 NOT FOUND PAGE */
     .not-found-container {
       max-width: 800px;
     }  
