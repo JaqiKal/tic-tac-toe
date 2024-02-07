@@ -91,11 +91,8 @@ body {
 }
 
 /* LANDING PAGE */
-/* Flex order  */
-.players-container {
-  display: flex;
-  flex-direction: column;
-}
+/* Center How to Play button */
+
 
 /* Gameboard style */
 #gameBoard {
@@ -169,6 +166,12 @@ body {
   display: none;
 }
 
+/* Center vertical howtoplay button container */
+#howtoplay-btn-container {
+  display: flex;
+  justify-content: center;
+}
+
 /* How to play container */
 #howtoplayContainer {
   display: flex;
@@ -203,6 +206,12 @@ body {
 #button-container {
   display: flex;
   flex-direction: column;
+}
+
+/* Center vertical feedback button container */
+#feedback-btn-container {
+  display: flex;
+  justify-content: center;
 }
 
 /* Feedback button style */
@@ -548,7 +557,6 @@ body.not-found-page {
 /* Media query: tablet & desktop (1024px and up) */
 @media screen and (min-width: 1024px) {
   /* INDEX */
-
 
 
   /* 404 NOT FOUND PAGE */

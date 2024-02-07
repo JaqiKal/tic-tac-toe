@@ -35,6 +35,7 @@
 
 
 // GLOBAL VARIABLES 
+
 // Tracks whether the 'how to play' button has been clicked
 let isToggleClicked = false;
 // Get a reference to the 'toggleButtonhowto' element in the HTML
@@ -68,6 +69,7 @@ const winningCombinations = [
 ];
 
  //  BUTTON UI
+ 
  // Wait for the HTML document to be fully loaded and parsed before running this code
  document.addEventListener('DOMContentLoaded', function() {
 

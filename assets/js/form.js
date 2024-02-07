@@ -73,8 +73,10 @@ document.querySelectorAll('.error-message').forEach((elem) => {
     isValid = false;
     }
 
-  // Validating the 'email' field for leading whitespace and valid format
-  // Trim leading whitespace before validation
+  /**
+   * Validating the 'email' field for leading whitespace and valid format.
+   * Trim leading whitespace before validation
+   */
   email.value = email.value.trimStart(); 
   if (!/\S+@\S+\.\S+/.test(email.value)) {
     document.getElementById('emailError').textContent = 'Email must be a valid email address.';
@@ -133,8 +135,10 @@ document.addEventListener('DOMContentLoaded', function() {
       setTimeout(closeModalAndRedirect, 30000); // 30 seconds
     }
 
-    // Add an event listener to the modal message element for click and keydown events.
-    // These event listeners are responsible for closing the modal and redirecting immediately if the user interacts
+    /**
+     * Add an event listener to the modal message element for click and keydown events.
+     * These event listeners are responsible for closing the modal and redirecting immediately if the user interacts
+     */
     message.addEventListener('click', closeModalAndRedirect);
     document.addEventListener('keydown', function(event) {
       // Check if the modal is displayed and the Enter key is pressed
