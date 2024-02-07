@@ -51,8 +51,8 @@ body {
   text-align: center;
 }
 
-#head-container, #indexTitle {
-  font-family: 'Mochiy Pop P One';
+#indexTitle {
+  font-family: 'Mochiy Pop P One', 'Open Sans', 'sans-serif';
 }
 
 /* Style the header paragraph */
