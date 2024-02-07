@@ -22,7 +22,6 @@ This is my second project, it has been built using HTML5, CSS3 & JavaScript for 
 
 * [Design](#design)
   * [Design and Colour Scheme](#design-and-colour-scheme)
-  * [Generic](#generic)
   * [Index page](#index-page)
   * [Form page](#form-page)
   * [Typography](#typography)
@@ -76,7 +75,7 @@ My primary aim was to develop a compelling Tic-Tac-Toe game that offers a twist 
 
 #### Frequent Visitor Goals
 
-* **User story 4: As a frequent visitor**
+* **User story 3: As a frequent visitor**
 
   * I am interested in providing feedback on my gaming experience through a simple and accessible form, hoping to see my suggestions or reported issues addressed in future updates to improve the game for myself and others.
 
@@ -104,7 +103,7 @@ The design focuses on distinguishing game elements while maintaining a cohesive 
 
  ![x](/documents/doc-images/body-gradient.webp)
 
- #### Colour palette
+#### Colour palette
 
  ![x](/documents/doc-images/colour-palette.webp)
 
@@ -294,13 +293,19 @@ Please refer to [TESTING.md](TESTING.md) file for all testing and trouble shooti
 
 ### Code Used
 
-* adg
-* dfag
-* dfg
-* To not letting the user to be able to put whitespace at the beginning/end of a textinput I found a code snippet at [Stack overflow](https://stackoverflow.com/questions/13766015/is-it-possible-to-configure-a-required-field-to-ignore-white-space), unforunately it doesn't work as intended.
+I have used different sources to get more information and understand how to code:
 
-* I wanted to highlight the giftcard images in shop with something more than scaling effect upon hover. Added dropshadow when hovering, amended from [mdn web doc](https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/drop-shadow).
-
+* In landing  page I have amended code from:
+  * Clock in footer [w3shools](https://www.w3schools.com/js/tryit.asp?filename=tryjs_timing_clock)
+  * yy
+* In form page I have amended code from:
+  * Event Handlers: [elated-com](https://www.elated.com/events-and-event-handlers/)
+  * vent Listeners: [w3school](https://www.w3schools.com/jsref/met_element_addeventlistener.asp)
+  * Modal Dialog: [w3school](https://www.w3schools.com/w3css/w3css_modal.asp)
+  * Form validation: [blog](https://blog.bitsrc.io/you-have-been-doing-form-validation-wrong-8b36430d63f6)
+  * Form validation: [w3school](https://www.w3schools.com/js/js_validation.asp)
+  * For each loop: [w3school](https://www.w3schools.com/jsref/jsref_foreach.asp)
+  * Tutor service helped me with a bit of psudocode and thoughts on how to trim whitespace in the form: ```if userInput.startsWith(" ") {action for error}```
 * [Favicon.io](https://favicon.io/favicon-converter/): Used to create the site Favicon and provided the code in the head of all pages.
 
 ### Content

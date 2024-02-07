@@ -395,19 +395,80 @@ footer {
   font-weight: 700;
 }
 
+/* 404 - NOT FOUND PAGE */
+/* General body styling */
+body.not-found-page {
+  text-align: center;
+  padding: 50px;
+}
+
+.not-found-container {
+  max-width: 360px;
+  margin: 0 auto;
+  padding: 20px;
+  border-style: ridge;
+  border-color: #2D013F;
+  border-width: 10px;
+  border-radius: 20px;
+  background: #f3cefa;
+  box-shadow: 20px 20px 60px rgba(45, 1, 36, 0.30),
+    8px 8px 60px rgba(45, 1, 36, 0.30),
+    inset 4px 4px 8px rgba(45, 1, 36, 0.60),
+    inset 4px 4px 16px rgba(255, 255, 255, 0.4),
+    inset -4px -4px 12px rgba(45, 1, 36, 0.7);
+}
+
+.not-found-container h1 {
+  font-size: 24px;
+  color: #2D013F;
+}
+
+.not-found-container p {
+  margin: 20px 0;
+  line-height: 1.6;
+  font-size: large;
+}
+
+.not-found-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.not-found-container ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.not-found-container a {
+  color: #0000ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.not-found-container a:hover, a:focus{
+  color: #1b0125;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Return to main game board button style  */
+#notFoundButton {
+  background: #fff;
+  color: #1b0125;
+}
+
+/* Return to main game board button style  */
+#notFoundFeedback {
+  background: #0000ff;
+  color: #fff;
+
+}
+
 /* RESPONSIVENESS */
 
-/* Media query: medium phones (260px and up) */
+/* Media query: medium phones (270px and up) */
 @media screen and (min-width: 269px) {
-
-  #formContainer {
-    position: relative;
-    width: 260px;
-    height: auto;
-    padding: 25px 20px;
-    margin: 20px 8px 0 6px;
-  }
-
+/* FORM PAGE */
   #feedbackForm,
   .text-input {
     width: 100%;
@@ -416,6 +477,17 @@ footer {
   #textMsg {
     width: 100%;
   }
+
+  /* 404 NOT FOUND PAGE */
+  body.not-found-page {
+    padding: 10px;
+    margin: 0 auto;
+  }
+
+  .not-found-container p {
+    font-size: small;   
+}
+
 }
 
 /* Media query: medium phones (360px and up) */
@@ -434,6 +506,21 @@ footer {
   .modal-content {
     width: 80%;
   }
+
+    /* 404 NOT FOUND PAGE */
+    body.not-found-page {
+      padding: 10px;
+      margin: 0 auto;
+    }
+  
+    .not-found-container {
+      max-width: 600px;
+    }
+  
+    .not-found-container p {
+            font-size: medium;
+  }
+
 }
 
 /* Media query: tablet & desktop (768px and up) */
@@ -442,8 +529,29 @@ footer {
   .cell {
     font-size: 2.5rem;
   }
+  /* 404 NOT FOUND PAGE */
+  body.not-found-page {
+    padding: 10px;
+    margin: 0 auto;
+  }
+
+  .not-found-container {
+    max-width: 600px;
+  }
+
+  .not-found-container p {
+    font-size: larger;
+    font-weight: 500;
+}
+
+
+}
+/* Media query: tablet & desktop (1024px and up) */
+@media screen and (min-width: 1024px) {
+    /* 404 NOT FOUND PAGE */
+    .not-found-container {
+      max-width: 800px;
+    }  
 
 }
 
-/* Media query: tablet & desktop (1024px and up) */
-@media screen and (min-width: 1024px) {}
