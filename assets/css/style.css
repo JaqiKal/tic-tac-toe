@@ -23,9 +23,65 @@ h5,
 h6,
 p {
   color: rgb(27, 1, 37);
-  line-height: 1.5;
+  line-height: 1.5rem;
   padding-top: 5px;
   padding-bottom: 5px;
+}
+
+
+
+
+/* Top navigation bar styles */
+.navBar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;   
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(243, 206, 250, 0.9);
+  padding: 5px 20px;
+  box-shadow: 4px 4px 60px rgba(45, 1, 63);
+  z-index: 1000;
+}
+
+.logo img {
+  width: 70px;
+  height:auto;
+  padding: 0;
+  flex-grow: 1;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-grow: 1;
+}
+
+/* Styling of the anchor tags in menu */
+.menu a {
+  text-decoration: none;
+  color: #1b0125;
+  padding: 5px 20px;
+  transition: transform 0.3s;
+  margin: 5px 0;
+  font-weight: 600;
+  border-radius: 15px;
+}
+
+.menu a:hover,
+.menu a:focus {
+  color: #0000ff;
+  transform: scale(1.1);
+}
+
+.active {
+  background-color: #6f3ff59d;
+  color: #1b0125;
+  border: 0.1rem ridge #1b0125;;
 }
 
 /* General styles in LANDING and FORM page*/
@@ -38,16 +94,20 @@ body {
   font-family: 'Open Sans', sans-serif;
   color: #1b0125;
   min-height: 100vh;
-  padding-top: 0px;
+  padding-top: 80px;
   padding-bottom: 0px;
+}
+
+#header section {
+  padding: 80px 20px;
 }
 
 /* Header styles */
 #head-container {
   max-width: 450px;
   margin-top: 16px;
-  padding: 10px;
-  margin: 5px 25px 0;
+  padding: 70px 20px 0;
+  margin: 2px 2px 0;
   text-align: center;
 }
 
@@ -59,11 +119,16 @@ body {
 #p-head {
   max-width: 450px;
   padding: 20px 10px;
-  margin-top: 30px;
+  margin: 30px 0;
   border-radius: 10px;
   background-color: rgba(243, 238, 243, 0.596);
   box-shadow: 4px 4px 60px rgba(45, 1, 63, 0.685);
   font-weight: 600;
+}
+
+#timeNow {
+  padding: 20px;
+  color: inherit;
 }
 
 #buttonSection {
@@ -405,7 +470,7 @@ footer {
   text-align: center;
   margin: 60px 0 40px 0;
   color: #2D013F;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 /* 404 - NOT FOUND PAGE */
@@ -481,6 +546,8 @@ body.not-found-page {
 
 /* Media query: medium phones (270px and up) */
 @media screen and (min-width: 269px) {
+  
+
 /* FORM PAGE */
   #feedbackForm,
   .text-input {
@@ -505,6 +572,17 @@ body.not-found-page {
 
 /* Media query: medium phones (360px and up) */
 @media screen and (min-width: 360px) {
+
+  .logo img {
+    width: 90px;
+    height:auto;
+    padding: 0;
+    flex-grow: 1;
+  }
+
+  body {
+     padding-top: 100px;
+  }
 
   /*FORM PAGE */
   /* Form container style */
@@ -536,13 +614,48 @@ body.not-found-page {
 
 }
 
-/* Media query: tablet & desktop (768px and up) */
-@media screen and (min-width: 768px) {
-  /* INDEX */
-  .cell {
-    font-size: 2.5rem;
-  }
+/* Media query: tablet & desktop (712px and up) */
+@media screen and (min-width: 712px) {
+  /* Top navigation bar styles */
+.navBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;   
+  align-items: center;
+   position: fixed;
+  
+}
+.logo img {
+  flex-grow: 1;
+  width: 50%;
+  height: auto;
+  padding-left: 15px;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-grow: 1;
+    font-size: larger;
+}
+
+body {
+  padding-top: 40px;
+}
+
+#headerSection {
+  margin-bottom: 40px;
+}
+
+#head-container h1 {
+  padding: 0 0 50px 0;  
+}
+
+ 
   /* 404 NOT FOUND PAGE */
+
   body.not-found-page {
     padding: 10px;
     margin: 0 auto;
@@ -558,10 +671,32 @@ body.not-found-page {
   }
 }
 
+#footerSection {
+  width: 100%;
+  text-align: center;
+  margin: 90px 0  0;
+  color: #2D013F;
+  font-weight: 600;
+}
+
 /* Media query: tablet & desktop (1024px and up) */
 @media screen and (min-width: 1024px) {
-  /* INDEX */
 
+  .menu {
+    font-size: x-large;
+}
+
+
+.logo img {
+  flex-grow: 1;
+  width: 60%;
+  height: auto;
+  padding-left: 15px;
+}
+
+body {
+  padding-top: 100px;
+}
 
   /* 404 NOT FOUND PAGE */
     .not-found-container {
