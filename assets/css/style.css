@@ -50,6 +50,20 @@ p {
   padding: 0;
 }
 
+/* Navbar logo hover effect */
+.logo img {
+  transition: transform 0.3s ease;
+  /* Smooth transition for scaling */
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+  /* Slightly increase size on hover */
+}
+
+
+
+
 .menu {
   display: flex;
   justify-content: flex-end;
