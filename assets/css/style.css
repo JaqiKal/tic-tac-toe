@@ -274,31 +274,36 @@ body {
   font-weight: 600;
 }
 
-
-
-
-/* The Result modal background */
+/* The Result modal style */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  /* Hidden by default */
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(45, 1, 63, 0.85);
 }
 
-/* Result modal Content */
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
+/* Result modal content */
+.modalResult-content {
+  background-color: #fff;
+  transition: background-color 0.3s ease;
+   /* 15% from the top and centered */
+  margin: 15% auto;
   padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-  border-radius: 10px; /* Optional: rounded corners */
+  border: 1px solid rgba(45, 1, 63, 1);
+  width: 80%; 
+  font-weight: 600;
+  text-align: center;
+  border-radius: 10px;
+  padding: 20px 5px;
+  border: 0.2px solid rgba(45, 1, 63, 0.365);
+  box-shadow: inset 6px 6px 12px rgba(45, 1, 63, 0.753), inset -4px -4px 8px rgba(167, 7, 159, 0.2);
+  cursor: pointer;
 }
 
 /* The Close Button */
@@ -315,13 +320,6 @@ body {
   text-decoration: none;
   cursor: pointer;
 }
-
-
-
-
-
-
-
 
 /* Flex order */
 #button-container {
@@ -489,14 +487,6 @@ label {
   padding: 20px 5px;
   border: 0.2px solid rgba(45, 1, 63, 0.365);
   box-shadow: inset 6px 6px 12px rgba(45, 1, 63, 0.753), inset -4px -4px 8px rgba(167, 7, 159, 0.2);
-  cursor: pointer;
-}
-
-.close-button {
-  color: rgba(45, 1, 63, 1);
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
   cursor: pointer;
 }
 
@@ -734,6 +724,18 @@ body.not-found-page {
     height: auto;
     padding-left: 15px;
   }
+
+  /* Result modal content */
+.modalResult-content {
+  width:30%; 
+}
+
+
+/* FORM PAGE */
+    /* Modal box width */
+    .modal-content {
+      width: 30%;
+    }
 
   /* 404 NOT FOUND PAGE */
   .not-found-container {
