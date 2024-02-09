@@ -1,28 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404: Game Not Found</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Meta tags for search engines -->
+    <meta name="description" content="404 page for, Play Tic-Tac-Toe online! A classic, simple, and fun two-player game where players take turns marking Xs and Os on a 3x3 grid. Aim to align three of your symbols in a row to win." />
+    <meta name="keywords" content="feedback, Tic-Tac-Toe feedback, Online Game, Free Tic Tac Toe, Play Tic Tac Toe, Xs and Os, Tic-Tac-Toe Game, Classic Game, Two-Player Game, Simple Game, Fun Game" />
+    <!-- Title -->
+    <title>404 not found</title>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png" />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
 
+  <!-- Main/Body-->
   <body class="not-found-page">
+
+    <!-- Navigation -->
+    <nav class="navBar" id="topNav">
+      <div class="logo">
+        <a href="index.html"><img src="assets/images/logo.webp" alt="website logo with link to home/game page" /></a>
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a href="index.html" aria-label="Link to home/game page">Game</a></li>
+          <li><a href="form.html" aria-label="Link to feed-back form">Feedback</a></li>
+        </ul>
+      </div>
+    </nav>
+
     <div class="not-found-container">
-        <h1>404: Game Piece Not Found</h1>
-        <p>Oops! Looks like you've made a move outside the Tic-Tac-Toe grid. This page is as elusive as a winning strategy against a Tic-Tac-Toe champion who doesn't make mistakes.</p>
-        <p>Remember, every master of Tic-Tac-Toe knows the importance of bouncing back from a stalemate. Let's navigate you back to where the real action is!</p> 
-        <button class="button" id="notFoundButton" a href="index.html">Return to the main game board</a></button>
-        <p>If you are done playing games, we appreciate your feed-back!</p>
-        <button class="button" id="notFoundFeedback" a href="form.html">Let us know what went wrong!</a></button>
-
-
+      <h1>404: Game Piece Not Found</h1>
+      <p>Oops! Looks like you've made a move outside the Tic-Tac-Toe grid. This page is as elusive as a winning strategy against a Tic-Tac-Toe champion who doesn't make mistakes.</p>
+      <p>Remember, every master of Tic-Tac-Toe knows the importance of bouncing back from a stalemate. Let's navigate back to where the real action is!</p>
+      <a href="index.html" aria-label="Link to game home/game page">Back to the Game</a>
+      <p>If you are done playing games, we appreciate your feed-back!</p>
+      <a href="form.html" aria-label="Link to feed-back form">Let us know what went wrong!</a>
+      </ul>
     </div>
-  </body>
-
-</html>
+      <!-- Footer section -->
+      <footer>
+        <p class="time" id="thanks">Thank You!</p>
+        <span id="clock"></span>
+      </footer>
+      <!-- JavaScript -->
+      <script src="assets/js/clock.js" defer></script>
+    </body>
+  </html>

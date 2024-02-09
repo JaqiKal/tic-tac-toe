@@ -1,44 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Play Tic-Tac-Toe online! A classic, simple, and fun two-player game where players take turns marking Xs and Os on a 3x3 grid. Aim to align three of your symbols in a row to win.">
-    <meta name="keywords" content="feedback, Tic-Tac-Toe feedback, Online Game, Free Tic Tac Toe, Play Tic Tac Toe, Xs and Os, Tic-Tac-Toe Game, Classic Game, Two-Player Game, Simple Game, Fun Game">
-    <title>Tic-Tac-Toe feedback</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Meta tags for search engines -->
+    <meta name="description" content="Play Tic-Tac-Toe online! A classic, simple, and fun two-player game where players take turns marking Xs and Os on a 3x3 grid. Aim to align three of your symbols in a row to win." />
+    <meta name="keywords" content="feedback, Tic-Tac-Toe feedback, Online Game, Free Tic Tac Toe, Play Tic Tac Toe, Xs and Os, Tic-Tac-Toe Game, Classic Game, Two-Player Game, Simple Game, Fun Game" />
+    <!-- Title -->
+    <title>Tic-Tac-Toe Game</title>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png" />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
 
   <body>
-    
+    <!-- Landing page-->
+
     <!-- Navigation -->
     <nav class="navBar" id="topNav">
-      <div class="logo"><a href="index.html"><img src="assets/images/logo.webp" alt="website logo"></a></div>
+      <div class="logo">
+        <a href="index.html"><img src="assets/images/logo.webp" alt="website logo" /></a>
+      </div>
       <div class="menu">
         <ul>
           <li><a href="index.html" class="active" aria-label="Link to game page">Game</a></li>
           <li><a href="form.html" aria-label="Link to feed-back form">Feedback</a></li>
-      </ul>
+        </ul>
       </div>
     </nav>
 
+    <!-- Container for page intro -->
     <section id="headerSection">
-      <!-- Container for page intro -->
       <div id="head-container">
-         <h1 id="indexTitle">Game On!</h1>
-        <p id="p-head">Get set for Toe-to-Toe Tic-Tac-Toe! A classic game of wits where Xs and Os clash in a fun-filled grid. Gather your pals, choose your symbol, and jump into the tic-tac-tussle. Ready for the challenge? Let's see who conquers the grid!</p>
-       </div>
-
+        <h1 id="indexTitle">Game On!</h1>
+        <p id="p-head">
+          Get set for Toe-to-Toe Tic-Tac-Toe! A classic game of wits where Xs and Os clash in a fun-filled grid. Gather your pals, choose your symbol, and jump into the tic-tac-tussle. Ready for the challenge? Let's see who conquers the grid!
+        </p>
+      </div>
     </section>
+
+    <!-- Section for How to Play intro -->
     <section id="buttonSection1">
       <h2 class="hidden">Button section 1</h2>
       <div id="howtoplay-btn-container">
-        <button id="toggleButtonhowto" class="button" aria-pressed="false">Hide/Show How To Play</button>
+        <button id="toggleButtonhowto" class="button" alt="Toogle hide and show">Hide/Show How To Play</button>
       </div>
       <div id="howtoplayContainer" class="hidden">
         <h2 id="howtoplay">This is how you play!</h2>
@@ -55,8 +64,8 @@
       </div>
     </section>
 
-    <section id=gameSection>
-      <!-- Container for the game board -->
+    <!-- Section for the game board -->
+    <section id="gameSection">
       <!-- Amended from https://www.youtube.com/watch?v=fPew9OI2PnA -->
       <div id="gameBoard" class="game-board">
         <h2 id="gameBoard_title" class="hidden-heading">Gameboard</h2>
@@ -73,10 +82,9 @@
       </div>
     </section>
 
+    <!-- Section for Restart and Feedback buttons -->
     <section id="buttonSection2">
       <h2 class="hidden">Button section 2</h2>
-
-      <!-- Container for buttons -->
       <div id="button-container">
         <div id="reset-btn-container">
           <button id="toggleButtonreset" class="button">Reset Game</button>
@@ -87,21 +95,27 @@
       </div>
     </section>
 
+    <!-- Outcome Modal -->
+    <section id="modalResult">
+    <div id="outcomeModal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <p id="outcomeMessage"></p>
+      </div>
+    </div>
+  </section>
 
-
+    <!-- Section for the footer -->
     <footer id="footerSection" class="site-footer">
-      <!-- Container for the footer -->
-
+      <!-- The clock -->
       <div class="footer-content">
         <p class="time"></p>
       </div>
-
       <p>Tick-tock, it's game o'clock!</p>
       <span id="clock"></span>
     </footer>
-
+    <!-- JavaScript -->
     <script src="assets/js/ui-game.js" defer></script>
     <script src="assets/js/clock.js" defer></script>
   </body>
-
 </html>

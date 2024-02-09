@@ -23,9 +23,9 @@ h5,
 h6,
 p {
   color: rgb(27, 1, 37);
-  line-height: 1.5rem;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  line-height: 1.2rem;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 /* Top navigation bar styles */
@@ -232,15 +232,16 @@ body {
   border: 2px ridge #2d013f;
 }
 
-/* Initially hide the how to play container */
-.hidden {
-  display: none;
-}
 
 /* Center vertical howtoplay button container */
 #howtoplay-btn-container {
   display: flex;
   justify-content: center;
+}
+
+/* Initially hide the how to play container */
+.hidden {
+  display: none;
 }
 
 /* How to play container */
@@ -272,6 +273,55 @@ body {
   /* Adjust the value as needed */
   font-weight: 600;
 }
+
+
+
+
+/* The Result modal background */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Result modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  border-radius: 10px; /* Optional: rounded corners */
+}
+
+/* The Close Button */
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
 
 /* Flex order */
 #button-container {
@@ -476,8 +526,9 @@ body.not-found-page {
 }
 
 .not-found-container {
-  max-width: 360px;
+  max-width: 350px;
   margin: 0 auto;
+  margin-top: 130px;
   padding: 20px;
   border-style: ridge;
   border-color: #2d013f;
@@ -495,55 +546,39 @@ body.not-found-page {
 .not-found-container p {
   margin: 20px 0;
   line-height: 1.6;
-  font-size: large;
 }
 
 .not-found-container ul {
   list-style-type: none;
   padding: 0;
-}
-
-.not-found-container ul li {
-  display: inline;
-  margin: 0 10px;
+  margin: 0;
 }
 
 .not-found-container a {
-  color: #0000ff;
-  text-decoration: none;
-  font-weight: bold;
+  color: #1b0125;
+  
 }
 
 .not-found-container a:hover,
-a:focus {
-  color: #1b0125;
-  text-decoration: none;
+.not-found-container a:focus {
+  color: #0000ff;
   cursor: pointer;
 }
 
-/* Return to main game board button style  */
-#notFoundButton {
-  background: #fff;
-  color: #1b0125;
-}
-
-/* Return to main game board button style  */
-#notFoundFeedback {
-  background: #0000ff;
-  color: #fff;
-}
-
 /* RESPONSIVENESS */
-
 /* Media query: medium phones (270px and up) */
 @media screen and (min-width: 269px) {
+  .logo img {
+    width: 50px;
+    height:auto;
+  }
+
   /* FORM PAGE */
 
   #formContainer {
     width: 98%;
     margin-left: 2px;
   }
-
 
   #feedbackForm,
   .text-input {
@@ -558,11 +593,17 @@ a:focus {
   body.not-found-page {
     padding: 10px;
     margin: 0 auto;
+
+  }
+
+  .not-found-container {
+    width: auto;
   }
 
   .not-found-container p {
     font-size: small;
   }
+
 }
 
 /* Media query: medium phones (360px and up) */
@@ -645,7 +686,7 @@ a:focus {
     padding: 0 0 50px 0;
   }
 
-    /*FORM PAGE */
+  /*FORM PAGE */
   /* Form container style */
   #formContainer {
     position: relative;
@@ -676,6 +717,7 @@ a:focus {
     font-weight: 500;
   }
 
+  /* FOOTER SECTION */
   #footerSection {
     width: 100%;
     text-align: center;
@@ -688,18 +730,52 @@ a:focus {
 /* Media query: tablet & desktop (1024px and up) */
 @media screen and (min-width: 1024px) {
   .logo img {
-    flex-grow: 1;
     width: 60%;
     height: auto;
     padding-left: 15px;
   }
 
-  body {
-    padding-top: 100px;
-  }
-
   /* 404 NOT FOUND PAGE */
   .not-found-container {
     max-width: 800px;
+  }
+
+  .navBar {
+    height: 110px;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-grow: 1;
+    font-size: larger;
+  }
+
+  body {
+    padding-top: 70px;
+  }
+
+  #headerSection {
+    margin-bottom: 40px;
+  }
+
+  #head-container h1 {
+    padding: 0 0 10px 0;
+  }
+
+  /* 404 NOT FOUND PAGE */
+
+  body.not-found-page {
+    padding: 10px;
+    margin: 0 auto;
+  }
+
+  .not-found-container {
+    max-width: 800px;
+  }
+
+  .not-found-container p {
+    line-height: 1.3rem;
   }
 }

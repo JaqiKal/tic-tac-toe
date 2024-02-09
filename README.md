@@ -101,11 +101,11 @@ The design focuses on distinguishing game elements while maintaining a cohesive 
 
 #### Body
 
- ![x](/documents/doc-images/body-gradient.webp)
+ ![x](/documentation/doc-images/body-gradient.webp)
 
 #### Colour palette
 
- ![x](/documents/doc-images/colour-palette.webp)
+ ![x](/documentation/doc-images/colour-palette.webp)
 
 ### Typography
 
@@ -116,15 +116,15 @@ The design focuses on distinguishing game elements while maintaining a cohesive 
 
 #### Body - Opens Sans: Regular 400, Medium 500, Bold 700
 
-![x](/documents/doc-images/opensans-400.webp)
+![x](/documentation/doc-images/opensans-400.webp)
 
-![x](/documents/doc-images/opensans-m500.webp)
+![x](/documentation/doc-images/opensans-m500.webp)
 
-![x](/documents/doc-images/opensans-b700.webp)
+![x](/documentation/doc-images/opensans-b700.webp)
 
 #### Game board cell input - Acme: Regular 400
 
-![x](/documents/doc-images/acme-xo-400.webp)
+![x](/documentation/doc-images/acme-xo-400.webp)
 
 ### Imagery
 
@@ -136,19 +136,19 @@ Wireframese created for mobile, tablet and desktop using 'Balsamiq'
 
 #### Mobile
 
-![x](/documents/wireframes/wireframe-mobile.webp)
+![x](/documentation/wireframes/wireframe-mobile.webp)
 
 #### Tablet
 
-![x](/documents/wireframes/wireframe-tablet.webp)
+![x](/documentation/wireframes/wireframe-tablet.webp)
 
 #### Desktop
 
-![x](/documents/wireframes/wireframe-desktop.webp)
+![x](/documentation/wireframes/wireframe-desktop.webp)
 
 #### Side-by-side
 
-![x](/documents/wireframes/wireframe-sidebyside.webp)
+![x](/documentation/wireframes/wireframe-sidebyside.webp)
 
 ### General features on each page
 
@@ -158,10 +158,13 @@ Wireframese created for mobile, tablet and desktop using 'Balsamiq'
 * A 24 hour clock is included in the footer of the index page.
 * A thank you note in the footer of the form page.
 
-The website comprises 3 pages.
+The website comprises 
+* 3 HTML pages 
+* 3 JavaScripts
+* 1 Stylesheet
 
 * Home page / landing page
-* * A 24 hour clock is included in the footer of the index page.
+
 
 Insert PIC!
 
@@ -178,6 +181,19 @@ Insert PIC!
 Insert PIC!
 
 * The favicon
+
+Insert PIC!
+
+* The Navbar
+
+Insert PIC!
+
+* Footer
+* * A 24 hour clock and a paragraph with different text is included in the footer of all the HTML pages
+
+Insert PIC!
+
+* A Logo
 
 Insert PIC!
 
