@@ -154,8 +154,11 @@ function computerTurn() {
         }
     }
 
+    // Check if an empty cell was found
     if (moveIndex !== -1) {
+         // If an empty cell exists, the computer marks its symbol in the first available spot
         updateGameState(moveIndex, computerSymbol);
+         // After the computer's move, check the game's outcome to see if the move resulted in a win, a draw, or if the game should continue
         checkForOutcome();
     }
 }
@@ -165,32 +168,43 @@ function checkForOutcome() {
     let roundWon = false;
     let winnerSymbol = '';
 
+     // Loop through all possible winning combinations to check if any has been achieved
     for (let i = 0; i < winningCombinations.length; i++) {
+        // Current winning condition to check
         const winCondition = winningCombinations[i];
+         // Retrieve the game state values for the current winning condition
         let a = gameState[winCondition[0]];
         let b = gameState[winCondition[1]];
         let c = gameState[winCondition[2]];
 
+         // If any of the spots are empty (i.e., not yet played), skip this combination
         if (a === '' || b === '' || c === '') {
             continue;
         }
+
+        // If all spots in the current winning condition are taken by the same symbol, declare a win
         if (a === b && b === c) {
+            // Set the win flag
             roundWon = true;
             // Capture the winning symbol
             winnerSymbol = a; 
+            // Exit the loop as we've found a winner
             break;
         }
     }
-
+     // If a win has been detected, announce the outcome and stop the game
     if (roundWon) {
+        // A message depending on the winner
         announceOutcome(winnerSymbol === playerSymbol ? "You Win!" : "Computer Wins!");
         gameActive = false;
         return;
     }
 
+     // Check if the game is a draw
     let roundDraw = !gameState.includes('');
     if (roundDraw) {
         announceOutcome("It's a Draw!");
+         // Mark the game as inactive
         gameActive = false;
         return;
     }
