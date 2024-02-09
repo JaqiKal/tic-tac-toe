@@ -1,69 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <!-- Meta tags for search engines -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Play Tic-Tac-Toe online! A classic, simple, and fun two-player game where players take turns marking Xs and Os on a 3x3 grid. Aim to align three of your symbols in a row to win.">
-        <meta name="keywords" content="feed-back, feedback, Tic-Tac-Toe feedback, Online Game, Free Tic Tac Toe, Play Tic Tac Toe, Xs and Os, Tic-Tac-Toe Game, Classic Game, Two-Player Game, Simple Game, Fun Game">
-        <!-- Title -->
-        <title>Tic-Tac-Toe feedback</title>
-        <!-- Favicon -->
-        <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-        <!-- Stylesheet -->
-        <link rel="stylesheet" href="assets/css/style.css">
-    </head>
-    <!-- Feed-back page-->
-    <body id="formBody">
-        <!-- Header -->
-        <header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Meta tags for search engines -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Play Tic-Tac-Toe online! A classic, simple, and fun two-player game where players take turns marking Xs and Os on a 3x3 grid. Aim to align three of your symbols in a row to win." />
+    <meta name="keywords" content="feed-back, feedback, Tic-Tac-Toe feedback, Online Game, Free Tic Tac Toe, Play Tic Tac Toe, Xs and Os, Tic-Tac-Toe Game, Classic Game, Two-Player Game, Simple Game, Fun Game" />
+    <!-- Title -->
+    <title>Tic-Tac-Toe feedback</title>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png" />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <!-- Feed-back page-->
+  <body id="formBody">
 
-        </header>
-        <main>
-            <!-- Feed-back form -->
-            <div id="formContainer">
-                <form id="feedbackForm">
-                    <h1>Feedback form</h1>
-                    <h2>Tic-Tac-Toe</h2>
-                    <label for="fname">First name:</label>
-                    <input name="first-name" id="fname" type="text" class="text-input" required placeholder="Enter a first name" autocomplete="given-name" aria-label="Enter your first name">
-                    <div class="error-message" id="fnameError" role="alert"></div>
-                    <br>
-                    <label for="lname">Last name:</label>
-                    <input name="last-name" id="lname" type="text" class="text-input" required placeholder="Enter last name" autocomplete="family-name" aria-label="Enter your last name">
-                    <div class="error-message" id="lnameError" role="alert"></div>
-                    <br>
-                    <label for="email">Enter a valid email address</label>
-                    <input name="email-address" id="email" type="email" class="text-input" pattern="\S+.*" required placeholder="Enter a valid email address" aria-label="Enter your email address">
-                    <div class="error-message" id="emailError" role="alert"></div>
-                    <br>
-                    <div>
-                        <label for="textMsg">Your Feedback</label>
-                        <textarea name="text-message" id="textMsg" rows="10" cols="36" required placeholder="Enter your feedback" aria-label="Enter your feed-back"></textarea>
-                        <div class="error-message" id="textmsgError" role="alert"></div>
-                    </div>
-                    <div id="feedbackbtnSubmit">
-                        <button type="submit" class="button">Submit feed-back</button>
-                    </div>
-                </form>
-            </div>
+    <!-- Navigation -->
+    <nav class="navBar" id="topNav">
+      <div class="logo">
+        <a href="index.html"><img src="assets/images/logo.webp" alt="website logo" /></a>
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a href="index.html" aria-label="Link to game page">Game</a></li>
+          <li><a href="form.html" class="active" aria-label="Link to feed-back form">Feedback</a></li>
+        </ul>
+      </div>
+    </nav>
 
-            <!-- Feedback Modal -->
-            <div id="feedbackModal" class="modal">
-                <div class="modal-content">
-                    <p id="modalMessage"></p>
-                </div>
-            </div>
+    <!-- Header -->
+    <header></header>
+    <main>
+      <!-- Feed-back form -->
+      <div id="formContainer">
+        <form id="feedbackForm">
+          <h1>Feedback form</h1>
+          <h2>Tic-Tac-Toe</h2>
+          <label for="fname">First name:</label>
+          <input name="first-name" id="fname" type="text" class="text-input" required placeholder="Enter a first name" autocomplete="given-name" aria-label="Enter your first name" />
+          <div class="error-message" id="fnameError" role="alert"></div>
+          <br />
+          <label for="lname">Last name:</label>
+          <input name="last-name" id="lname" type="text" class="text-input" required placeholder="Enter last name" autocomplete="family-name" aria-label="Enter your last name" />
+          <div class="error-message" id="lnameError" role="alert"></div>
+          <br />
+          <label for="email">Enter a valid email address</label>
+          <input name="email-address" id="email" type="email" class="text-input" pattern="\S+.*" required placeholder="Enter a valid email address" aria-label="Enter your email address" />
+          <div class="error-message" id="emailError" role="alert"></div>
+          <br />
+          <div>
+            <label for="textMsg">Your Feedback</label>
+            <textarea name="text-message" id="textMsg" rows="10" cols="36" required placeholder="Enter your feedback" aria-label="Enter your feed-back"></textarea>
+            <div class="error-message" id="textmsgError" role="alert"></div>
+          </div>
+          <div id="feedbackbtnSubmit">
+            <button type="submit" class="button">Submit feed-back</button>
+          </div>
+        </form>
+      </div>
 
-        </main>
-        <!-- Footer section -->
-        <footer>
-            <p id="thanks"> Thank You!</p>
-        </footer>
-        <!-- JavaScript -->
-        <script src="assets/js/form.js"></script> 
-    </body>
+      <!-- Feedback Modal -->
+      <div id="feedbackModal" class="modal">
+        <div class="modal-content">
+          <p id="modalMessage"></p>
+        </div>
+      </div>
+    </main>
+    <!-- Footer section -->
+    <footer>
+      <p class="time" id="thanks">Thank You!</p>
+      <span id="clock"></span>
+    </div>
+   
+    </footer>
+    <!-- JavaScript -->
+    <script src="assets/js/form.js"></script>
+    <script src="assets/js/clock.js" defer></script>
+  </body>
 </html>

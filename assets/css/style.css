@@ -48,7 +48,6 @@ p {
   width: 70px;
   height: auto;
   padding: 0;
-  flex-grow: 1;
 }
 
 .menu {
@@ -57,6 +56,7 @@ p {
   align-items: center;
   flex-grow: 1;
   transition: transform 0.3s;
+  padding-bottom: 5px;
 }
 
 .menu ul {
@@ -309,13 +309,13 @@ body {
 /* Form container style */
 #formContainer {
   position: relative;
-  width: 345px;
+  width: 300px;
   height: auto;
   padding: 25px 30px;
-  margin-top: 30px;
+  margin-top: 70px;
   border-radius: 20px;
   background: #f3cefa;
-  box-shadow: 20px 20px 60px rgba(45, 1, 36, 0.3), 8px 8px 60px rgba(45, 1, 36, 0.3), inset 4px 4px 8px rgba(45, 1, 36, 0.6), inset 4px 4px 16px rgba(255, 255, 255, 0.4), inset -4px -4px 12px rgba(45, 1, 36, 0.7);
+  box-shadow: 20px 20px 40px rgba(45, 1, 36, 0.3), 8px 8px 60px rgba(45, 1, 36, 0.3), inset 4px 4px 8px rgba(45, 1, 36, 0.6), inset 4px 4px 16px rgba(255, 255, 255, 0.4), inset -4px -4px 12px rgba(45, 1, 36, 0.7);
 }
 
 /* Feed-back form container content style */
@@ -538,6 +538,13 @@ a:focus {
 /* Media query: medium phones (270px and up) */
 @media screen and (min-width: 269px) {
   /* FORM PAGE */
+
+  #formContainer {
+    width: 98%;
+    margin-left: 2px;
+  }
+
+
   #feedbackForm,
   .text-input {
     width: 100%;
@@ -564,7 +571,6 @@ a:focus {
     width: 90px;
     height: auto;
     padding: 0;
-    flex-grow: 1;
   }
 
   body {
@@ -575,7 +581,7 @@ a:focus {
   /* Form container style */
   #formContainer {
     position: relative;
-    width: 345px;
+    width: 340px;
     height: auto;
     padding: 25px 30px;
   }
@@ -628,7 +634,7 @@ a:focus {
   }
 
   body {
-    padding-top: 40px;
+    padding-top: 70px;
   }
 
   #headerSection {
@@ -637,6 +643,21 @@ a:focus {
 
   #head-container h1 {
     padding: 0 0 50px 0;
+  }
+
+    /*FORM PAGE */
+  /* Form container style */
+  #formContainer {
+    position: relative;
+    width: 340px;
+    height: auto;
+    padding: 25px 30px;
+  }
+
+  /* Modal box width */
+  .modal-content {
+    margin-top: 200px;
+    width: 80%;
   }
 
   /* 404 NOT FOUND PAGE */
