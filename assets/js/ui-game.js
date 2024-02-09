@@ -160,50 +160,7 @@ function computerTurn() {
     }
 }
 
-
-/*
-/// Function to check for a win, draw, or continue the game.
-function checkForOutcome() {
-    // Initialize a variable to track if a round is won.
-    let roundWon = false;
-
-    // Loop through all winning combinations to check if any has been met.
-    for (let i = 0; i < winningCombinations.length; i++) {
-        // Current winning combination being checked.
-        const winCondition = winningCombinations[i];
-        // Check the game state against the winning combination.
-        let a = gameState[winCondition[0]];
-        let b = gameState[winCondition[1]];
-        let c = gameState[winCondition[2]];
-
-        // If any of the spots are empty, skip this combination.
-        if (a === '' || b === '' || c === '') {
-            continue; // Move to the next combination.
-        }
-        // If all spots in a combination match, the round is won.
-        if (a === b && b === c) {
-            roundWon = true;
-            // We have a winner, stop checking further.
-            break; 
-        }
-    }
-
-    // Check for a draw by seeing if there are no empty spots left.
-    let roundDraw = !gameState.includes('');
-    if (roundDraw) {
-        announceOutcome("It's a Draw!"); // Announce draw.
-        gameActive = false; // Stops the game.
-        return;
-    }
-
-    // If there's no win or draw, change the current player.
-    currentPlayer = currentPlayer === playerSymbol ? computerSymbol : playerSymbol;
-}
-*/
-
-
-
-/*
+// Check for a win, draw, or continue the game.
 function checkForOutcome() {
     let roundWon = false;
     let winnerSymbol = '';
@@ -219,48 +176,8 @@ function checkForOutcome() {
         }
         if (a === b && b === c) {
             roundWon = true;
-            winnerSymbol = a; // Capture the winning symbol
-            break;
-        }
-    }
-
-    if (roundWon) {
-        announceOutcome(winnerSymbol === playerSymbol ? "You Win!" : "Computer Wins!");
-        gameActive = false;
-        return;
-    }
-
-    let roundDraw = !gameState.includes('');
-    if (roundDraw) {
-        announceOutcome("It's a Draw!");
-        gameActive = false;
-        return;
-    }
-
-    currentPlayer = currentPlayer === playerSymbol ? computerSymbol : playerSymbol;
-}
-
-*/
-
-
-
-// Merged Function to check for a win, draw, or continue the game.
-function checkForOutcome() {
-    let roundWon = false;
-    let winnerSymbol = '';
-
-    for (let i = 0; i < winningCombinations.length; i++) {
-        const winCondition = winningCombinations[i];
-        let a = gameState[winCondition[0]];
-        let b = gameState[winCondition[1]];
-        let c = gameState[winCondition[2]];
-
-        if (a === '' || b === '' || c === '') {
-            continue;
-        }
-        if (a === b && b === c) {
-            roundWon = true;
-            winnerSymbol = a; // Capture the winning symbol
+            // Capture the winning symbol
+            winnerSymbol = a; 
             break;
         }
     }
@@ -281,11 +198,6 @@ function checkForOutcome() {
     // If there's no win or draw, continue the game.
     currentPlayer = currentPlayer === playerSymbol ? computerSymbol : playerSymbol;
 }
-
-
-
-
-
 
 
 
