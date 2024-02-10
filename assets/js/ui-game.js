@@ -287,21 +287,41 @@ outcomeModal.addEventListener("click", function() {
 
 }
 
-
-
 // Reset function to clear the game
 document.addEventListener("DOMContentLoaded", () => {
   // Event listener for the reset game button
   document.getElementById("toggleButtonreset").addEventListener("click", resetGame);
 });
 
+
+/*
 /**
  * Set the game as active (can be played).
  * Clear the game state by filling it with empty strings.
  * Clear the text content of all cells.
- */
+ *
 function resetGame() {
   gameActive = true;
   gameState.fill("");
   cells.forEach((cell) => (cell.innerText = ""));
+}
+*/
+function resetGame() {
+  // Set the game as active
+  gameActive = true;
+  
+  // Reset the game state to empty
+  gameState.fill("");
+  
+  // Reset the text and re-enable each cell for interaction
+  cells.forEach((cell) => {
+    cell.innerText = "";
+    cell.disabled = false; // Re-enable the cell if it was disabled
+  });
+  
+  // Close the outcome modal if it's open
+  const outcomeModal = document.getElementById("outcomeModal");
+  if (outcomeModal.style.display === "block") {
+    outcomeModal.style.display = "none";
+  }
 }
