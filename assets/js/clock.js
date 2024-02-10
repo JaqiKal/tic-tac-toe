@@ -11,6 +11,7 @@
  * - jshint esversion: 6, please see README.md for further details
  * - Code have been amended with the help of:
  *    - https://www.w3schools.com/js/tryit.asp?filename=tryjs_timing_clock
+ *    - https://www.elated.com/creating-a-javascript-clock/
  * 
  * 
  * Author: JaqiKal

@@ -61,7 +61,6 @@ p {
   /* Slightly increase size on hover */
 }
 
-
 .menu {
   display: flex;
   justify-content: flex-end;
@@ -99,7 +98,6 @@ p {
   border: 0.1rem ridge #1b0125;
 }
 
-/* General styles in LANDING and FORM page*/
 body {
   /*background: linear-gradient(#6f3ff59d, #f3cefa 80%);*/
   background: linear-gradient(#f3cefa, #6f3ff59d);
@@ -114,6 +112,22 @@ body {
   padding-bottom: 0px;
 }
 
+/* Footer style */
+
+#timeNow {
+  padding: 20px;
+  color: inherit;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  margin: 60px 0 40px 0;
+  color: #2d013f;
+  font-weight: 600;
+}
+
+/* LANDING PAGE */
 #header section {
   padding: 80px 20px;
 }
@@ -140,11 +154,6 @@ body {
   background-color: rgba(243, 238, 243, 0.596);
   box-shadow: 4px 4px 60px rgba(45, 1, 63, 0.685);
   font-weight: 600;
-}
-
-#timeNow {
-  padding: 20px;
-  color: inherit;
 }
 
 #buttonSection {
@@ -174,9 +183,6 @@ body {
 .button:hover {
   transform: scale(1.05);
 }
-
-/* LANDING PAGE */
-/* Center How to Play button */
 
 /* Gameboard style */
 #gameBoard {
@@ -244,7 +250,6 @@ body {
   border: 2px ridge #2d013f;
 }
 
-
 /* Center vertical howtoplay button container */
 #howtoplay-btn-container {
   display: flex;
@@ -305,7 +310,7 @@ body {
   background-color: #fff;
   transition: background-color 0.3s ease;
    /* 15% from the top and centered */
-  margin: 15% auto;
+  margin: 80% auto;
   padding: 20px;
   border: 1px solid rgba(45, 1, 63, 1);
   width: 80%; 
@@ -333,11 +338,6 @@ body {
   cursor: pointer;
 }
 
-/* Flex order */
-#button-container {
-  display: flex;
-  flex-direction: column;
-}
 
 /* Center vertical feedback button container */
 #feedback-btn-container {
@@ -379,7 +379,6 @@ body {
 }
 
 /* Feed-back form container content style */
-/* To address the "Avoid large layout shifts" set fixed dimensions on buttons. */
 #feedbackForm {
   min-height: 300px;
 }
@@ -489,7 +488,7 @@ label {
 .modal-content {
   background-color: #fff;
   transition: background-color 0.3s ease;
-  margin: 15% auto;
+  margin: 50% auto;
   padding: 20px;
   border: 1px solid rgba(45, 1, 63, 1);
   width: 80%;
@@ -509,15 +508,6 @@ label {
   color: black;
   text-decoration: none;
   cursor: pointer;
-}
-
-/* FOOTER STYLES  */
-footer {
-  width: 100%;
-  text-align: center;
-  margin: 60px 0 40px 0;
-  color: #2d013f;
-  font-weight: 600;
 }
 
 /* 404 - NOT FOUND PAGE */

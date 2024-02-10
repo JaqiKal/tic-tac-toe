@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Meta tags for search engines -->
-    <meta name="description" content="Play Tic-Tac-Toe online! A classic, simple, and fun two-player game where players take turns marking Xs and Os on a 3x3 grid. Aim to align three of your symbols in a row to win." />
-    <meta name="keywords" content="feedback, Tic-Tac-Toe feedback, Online Game, Free Tic Tac Toe, Play Tic Tac Toe, Xs and Os, Tic-Tac-Toe Game, Classic Game, Two-Player Game, Simple Game, Fun Game" />
+    <meta name="description" content="Play Tic-Tac-Toe online! A classic, simple, and fun two-player game where players take turns marking Xs and Os on a 3x3 grid. Aim to align three of your symbols in a row to win.">
+    <meta name="keywords" content="feedback, Tic-Tac-Toe feedback, Online Game, Free Tic Tac Toe, Play Tic Tac Toe, Xs and Os, Tic-Tac-Toe Game, Classic Game, Two-Player Game, Simple Game, Fun Game">
     <!-- Title -->
     <title>Tic-Tac-Toe Game</title>
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
   </head>
 
   <body>
@@ -23,7 +23,7 @@
     <!-- Navigation -->
     <nav class="navBar" id="topNav">
       <div class="logo">
-        <a href="index.html"><img src="assets/images/logo.webp" alt="website logo" /></a>
+        <a href="index.html"><img src="assets/images/logo.webp" alt="website logo"></a>
       </div>
       <div class="menu">
         <ul>
@@ -47,7 +47,7 @@
     <section id="buttonSection1">
       <h2 class="hidden">Button section 1</h2>
       <div id="howtoplay-btn-container">
-        <button id="toggleButtonhowto" class="button" alt="Toogle hide and show">Hide/Show How To Play</button>
+        <button id="toggleButtonhowto" class="button">Hide/Show How To Play</button>
       </div>
       <div id="howtoplayContainer" class="hidden">
         <h2 id="howtoplay">This is how you play!</h2>
@@ -95,7 +95,9 @@
     </section>
 
     <!-- Outcome Modal -->
+    <!-- Amended from w3schools.com/howto/howto_css_modals.asp -->
     <section id="modalResult">
+      <h2 class="hidden">Result pop-up</h2>
     <div id="outcomeModal" class="modal">
       <div class="modalResult-content">
         <span class="close-button"></span>
@@ -107,6 +109,8 @@
     <!-- Section for the footer -->
     <footer id="footerSection" class="site-footer">
       <!-- The clock -->
+      <!-- Amended from w3schools.com/js/tryit.asp?filename=tryjs_timing_clock -->
+      <!-- and elated.com/creating-a-javascript-clock/  -->
       <div class="footer-content">
         <p class="time"></p>
       </div>

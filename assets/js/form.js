@@ -75,7 +75,7 @@ document.querySelectorAll('.error-message').forEach((elem) => {
 
   /**
    * Validating the 'email' field for leading whitespace and valid format.
-   * Trim leading whitespace before validation
+   * Trim leading whitespace before validation.
    */
   email.value = email.value.trimStart(); 
   if (!/\S+@\S+\.\S+/.test(email.value)) {
