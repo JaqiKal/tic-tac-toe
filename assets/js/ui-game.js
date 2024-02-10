@@ -1,28 +1,33 @@
 /**
  * Tic-Tac-Toe game
  *
- * This script manages the functionality of a Tic-Tac-Toe game in a web application.
+ * This script manages the basic functionality of a Tic-Tac-Toe game in a web application.
  * Player take turns aginst computer marking Xs on a 3x3 grid with the objective of
- * aligning three of their symbols in a row to win. The script handles player
- * interactions, win conditions, and game resets.
+ * aligning three of their symbols in a row to win.  The script handles player
+ * interactions, win conditions, and game resets and basic blocking. This game is 
+ * functional but very basic. 
+ *
+ * I added detailed comments to help myself understand better.
  *
  * Features:
  * - Player turns and symbol tracking (X and O)
  * - Win condition checking for rows, columns, and diagonals
  * - Detection of a draw (cat's game) when the board is full
  * - Resetting the game for a new round
- * - Listen after feedback button submit and
- *   - redirect to form.index
+ * - Listen after feedback button submit and redirect to form.index
+ * - Basic blocking.
  *
  * Credit:
  *  - Used MDN, w3school, Youtube & JavaScript & jQuery by Jon Ducket
  * to understand loops&iteration:
- *  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration
- *  https://www.w3schools.com/js/js_loop_for.asp
- *  https://www.youtube.com/watch?v=orAS-MBh5f4
- *  https://javascriptbook.com/
- *
- *
+ *  - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration
+ *  - https://www.w3schools.com/js/js_loop_for.asp
+ *  - https://www.youtube.com/watch?v=orAS-MBh5f4
+ *  - https://javascriptbook.com/
+ * to understand the game logic in javascript: 
+ *  - https://dev.to/bornasepic/pure-and-simple-tic-tac-toe-with-javascript-4pgn
+ *  - https://www.youtube.com/watch?v=fPew9OI2PnA
+ * *
  * Other:
  * - jshint esversion: 6, please see README.md for further details
  *
@@ -71,45 +76,45 @@ const winningCombinations = [
   [2, 4, 6],
 ];
 
-//  BUTTON UI
+// ******** BUTTON UI
 
-// Wait for the HTML document to be fully loaded and parsed before running this code
+/**
+ * Wait for the HTML document to be fully loaded and parsed before running this code.
+ * Check if the 'howtoplayContainer' and 'toggleButtonhowto' elements exist in the HTML.
+ * Initially, hide the 'howtoplayContainer' by setting its display style to 'none'.
+ * Add a click event listener to the 'toggleButtonhowto' element.
+ * Toggle the display of the 'howtoplayContainer' between 'block' and 'none'.
+ * This allows showing and hiding the instructions on button click.
+ */
 document.addEventListener("DOMContentLoaded", function () {
-  // Check if the 'howtoplayContainer' and 'toggleButtonhowto' elements exist in the HTML
   if (howtoplayContainer && toggleButtonhowto) {
-    // Initially, hide the 'howtoplayContainer' by setting its display style to 'none'
     howtoplayContainer.style.display = "none";
-
-    // Add a click event listener to the 'toggleButtonhowto' element
     toggleButtonhowto.addEventListener("click", function () {
-      // Toggle the display of the 'howtoplayContainer' between 'block' and 'none'
-      // This allows showing and hiding the instructions on button click
       howtoplayContainer.style.display = howtoplayContainer.style.display === "none" ? "block" : "none";
       isToggleClicked = true;
     });
 
-    // Add a click event listener to the entire document body to detect clicks outside of 'howtoplayContainer'
+    /**
+     * Add a click event listener to the entire document body to detect clicks outside of 'howtoplayContainer'.
+     * Check if the click event occurred outside of 'howtoplayContainer' and not on 'toggleButtonhowto'.
+     * Also, check if the click occurred inside 'howtoplayContainer' but the button hasn't been clicked.
+     * If the conditions are met, hide the 'howtoplayContainer'.
+     * Reset the button click state.
+     */
     document.body.addEventListener("click", function (event) {
-      // Check if the click event occurred outside of 'howtoplayContainer' and not on 'toggleButtonhowto'
-      if (
-        (!howtoplayContainer.contains(event.target) && event.target !== toggleButtonhowto) ||
-        // Also, check if the click occurred inside 'howtoplayContainer' but the button hasn't been clicked
-        (howtoplayContainer.contains(event.target) && !isToggleClicked)
-      ) {
-        // If the conditions are met, hide the 'howtoplayContainer'
+      if ((!howtoplayContainer.contains(event.target) && event.target !== toggleButtonhowto) || (howtoplayContainer.contains(event.target) && !isToggleClicked)) {
         howtoplayContainer.style.display = "none";
       }
-      // Reset the button click state
       isToggleClicked = false;
     });
   }
 
-  // Check if the 'feedbackButton' element exists in the HTML
+  /** Check if the 'feedbackButton' element exists in the HTML.
+   * Add a click event listener to the 'feedbackButton'.
+   * Redirect the user to the 'form.html' page when the feedback button is clicked.
+   */
   if (feedbackButton) {
-    // Add a click event listener to the 'feedbackButton'
     feedbackButton.addEventListener("click", function () {
-      // Redirect the user to the 'form.html' page when the feedback button is clicked
-
       window.location.href = "form.html";
     });
   }
@@ -122,46 +127,81 @@ cells.forEach((cell) => {
   cell.addEventListener("click", handleCellClick);
 });
 
+/**
+ * Get the index of the clicked cell from its data attribute.
+ * Check if the cell has already been played, or if the game is paused.
+ * Don't do anything if the cell is not empty or the game is over.
+ * Update the game state with the player's move.
+ * Check for a win or a draw after the player's move.
+ * Hand over to the computer to make its move.
+ */
 function handleCellClick(event) {
-  // Get the index of the clicked cell from its data attribute
   const clickedCellIndex = parseInt(event.target.getAttribute("data-index"));
 
-  // Check if the cell has already been played, or if the game is paused
   if (gameState[clickedCellIndex] !== "" || !gameActive) {
-    return; // Don't do anything if the cell is not empty or the game is over
+    return;
   }
 
-  // Update the game state with the player's move
   updateGameState(clickedCellIndex, playerSymbol);
-  // Check for a win or a draw after the player's move
   checkForOutcome();
-
-  // Hand over to the computer to make its move
   computerTurn();
 }
 
-// Update Game State
+// Update Game State. Update the internal game state. Update the UI to show the move.
 function updateGameState(index, symbol) {
-  gameState[index] = symbol; // Update the internal game state
-  cells[index].innerText = symbol; // Update the UI to show the move
+  gameState[index] = symbol;
+  cells[index].innerText = symbol;
 }
 
-// The computer's turn, by choosing first available cell
+/**
+ * Function to find a blocking move, first check if the current player 
+ * can win in a row, column or diagonally, and if not, find the best 
+ * move to block the opponent from winning.
+ */
+function findBlockingMove() {
+  for (let i = 0; i < winningCombinations.length; i++) {
+    const winCondition = winningCombinations[i];
+    const a = gameState[winCondition[0]];
+    const b = gameState[winCondition[1]];
+    const c = gameState[winCondition[2]];
+
+    if ((a === b && a === playerSymbol && c === "") || 
+        (a === c && a === playerSymbol && b === "") || 
+        (b === c && b === playerSymbol && a === "")) {
+      if (a === "") return winCondition[0];
+      if (b === "") return winCondition[1];
+      if (c === "") return winCondition[2];
+    }
+  }
+  return -1; // No blocking move found
+}
+
+/**
+* Computer's turn, basic blocking (defensive gameplay).
+* First, it attempts to find a blocking move to prevent the player from winning.
+* If no such move is found, it defaults to choosing the first available empty cell.
+*/
 function computerTurn() {
-  // Find the first empty cell
-  let moveIndex = -1;
-  for (let i = 0; i < gameState.length; i++) {
-    if (gameState[i] === "") {
-      moveIndex = i;
-      break;
+    // Attempt to find a blocking move to prevent the player from winning.
+  let moveIndex = findBlockingMove();
+
+  // If no blocking move, find the first empty cell
+  if (moveIndex === -1) { 
+    for (let i = 0; i < gameState.length; i++) {
+      if (gameState[i] === "") {
+        moveIndex = i;
+        break;
+      }
     }
   }
 
-  // Check if an empty cell was found
+  /**
+   * If a valid move is identified, execute it and check the game's outcome.
+   * Mark the chosen cell with the computer's symbol.
+   * Evaluate the game state for a win, draw, or continuation.
+   */
   if (moveIndex !== -1) {
-    // If an empty cell exists, the computer marks its symbol in the first available spot
     updateGameState(moveIndex, computerSymbol);
-    // After the computer's move, check the game's outcome to see if the move resulted in a win, a draw, or if the game should continue
     checkForOutcome();
   }
 }
@@ -185,19 +225,21 @@ function checkForOutcome() {
       continue;
     }
 
-    // If all spots in the current winning condition are taken by the same symbol, declare a win
+    /**
+     * If all spots in the current winning condition are taken by the same symbol, declare a win.
+     *  Set the win flag.
+     *  Capture the winning symbol.
+     *  Exit the loop as there is a winner.
+     */
     if (a === b && b === c) {
-      // Set the win flag
       roundWon = true;
-      // Capture the winning symbol
       winnerSymbol = a;
-      // Exit the loop as we've found a winner
       break;
     }
   }
-  // If a win has been detected, announce the outcome and stop the game
+
+  // If a win has been detected, announce the outcome and stop the game. A message depending on the winner.
   if (roundWon) {
-    // A message depending on the winner
     announceOutcome(winnerSymbol === playerSymbol ? "You Win!" : "Computer Wins!");
     gameActive = false;
     return;
@@ -239,11 +281,13 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("toggleButtonreset").addEventListener("click", resetGame);
 });
 
+/**
+ * Set the game as active (can be played).
+ * Clear the game state by filling it with empty strings.
+ * Clear the text content of all cells.
+ */
 function resetGame() {
-  // Set the game as active (can be played)
   gameActive = true;
-  // Clear the game state by filling it with empty strings
   gameState.fill("");
-  // Clear the text content of all cells
   cells.forEach((cell) => (cell.innerText = ""));
 }
