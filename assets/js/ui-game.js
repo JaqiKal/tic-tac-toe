@@ -151,6 +151,9 @@ function handleCellClick(event) {
 function updateGameState(index, symbol) {
   gameState[index] = symbol;
   cells[index].innerText = symbol;
+  // Disable the button after it's marked
+  cells[index].disabled = true; 
+
 }
 
 /**

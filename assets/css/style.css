@@ -294,14 +294,14 @@ footer {
 /* The Result modal style */
 .modal {
   /* Hidden by default */
-  display: none; 
-  position: fixed; 
-  z-index: 1; 
+  display: none;
+  position: fixed;
+  z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: auto; 
+  width: 100%;
+  height: 100%;
+  overflow: auto;
   background-color: rgba(45, 1, 63, 0.85);
 }
 
@@ -309,11 +309,11 @@ footer {
 .modalResult-content {
   background-color: #fff;
   transition: background-color 0.3s ease;
-   /* 15% from the top and centered */
+  /* 15% from the top and centered */
   margin: 80% auto;
   padding: 20px;
   border: 1px solid rgba(45, 1, 63, 1);
-  width: 80%; 
+  width: 80%;
   font-weight: 600;
   text-align: center;
   border-radius: 10px;
@@ -337,7 +337,6 @@ footer {
   text-decoration: none;
   cursor: pointer;
 }
-
 
 /* Center vertical feedback button container */
 #feedback-btn-container {
@@ -548,7 +547,6 @@ body.not-found-page {
 
 .not-found-container a {
   color: #1b0125;
-  
 }
 
 .not-found-container a:hover,
@@ -562,8 +560,13 @@ body.not-found-page {
 @media screen and (min-width: 269px) {
   .logo img {
     width: 50px;
-    height:auto;
+    height: auto;
   }
+
+    /* Result modal content */
+    .modalResult-content {
+      width: 60%;
+      margin: 100% auto;
 
   /* FORM PAGE */
 
@@ -585,7 +588,6 @@ body.not-found-page {
   body.not-found-page {
     padding: 10px;
     margin: 0 auto;
-
   }
 
   .not-found-container {
@@ -595,7 +597,6 @@ body.not-found-page {
   .not-found-container p {
     font-size: small;
   }
-
 }
 
 /* Media query: medium phones (360px and up) */
@@ -728,16 +729,16 @@ body.not-found-page {
   }
 
   /* Result modal content */
-.modalResult-content {
-  width:30%; 
-}
+  .modalResult-content {
+    width: 50%;
+    margin: 65% auto;
+  }
 
-
-/* FORM PAGE */
-    /* Modal box width */
-    .modal-content {
-      width: 30%;
-    }
+  /* FORM PAGE */
+  /* Modal box width */
+  .modal-content {
+    width: 30%;
+  }
 
   /* 404 NOT FOUND PAGE */
   .not-found-container {
@@ -781,5 +782,14 @@ body.not-found-page {
 
   .not-found-container p {
     line-height: 1.3rem;
+  }
+}
+
+/* Media query: tablet & desktop (1024px and up) */
+@media screen and (min-width: 1024px) {
+  /* Result modal content */
+  .modalResult-content {
+    width: 40%;
+    margin: 35% auto;
   }
 }

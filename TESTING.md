@@ -141,7 +141,7 @@ All but one score-meter is in the green, achieving a scores from 99  till 100. M
 
 | TestCase ID | Feature | Expected Outcome | Testing Performed | Result Chrome| Result FireFox | Comment |
 | ---| --- | --- | --- | --- |--- | --- |
-| AUS-01 | Keyboard Accessibility | All interactive elements are accessible via keyboard | Navigate and interact using keyboard only | Partial PASS  | Partial PASS | Gameboard cell are not accessible|
+| AUS-01 | Keyboard Accessibility | All interactive elements are accessible via keyboard | Navigate and interact using keyboard only | Partial PASS  | Partial PASS | See "Failed  test cases  - now FIXED" |
 | AUS-02 | Screen Reader Compatibility | Screen readers correctly announce elements and actions | Use a screen reader to navigate the site | PASS  | PASS | |
 | AUS-03 | Contrast Ratio Compliance | Text and background contrasts meet accessibility guidelines | Check contrast ratios with a tool | PASS  | PASS | |
 | AUS-04 | Responsive Font Sizes | Font sizes adjust appropriately for different screen sizes| Change browser zoom and screen resolutions | PASS  | PASS ||
@@ -158,9 +158,9 @@ All but one score-meter is in the green, achieving a scores from 99  till 100. M
 
 ### Failed  test cases  - now FIXED
 
-| TestCase ID| Feature | Expected Outcome | Result | Result after correction|
-| ---| --- | --- | --- | --- |
-|  | |  |  |  |
+| TestCase ID| Feature | Expected Outcome | Result | Result after correction| See BUGS |
+| ---| --- | --- | --- | --- |--- |
+| AUS-01 |Keyboard Accessibility | All interactive elements are accessible via keyboard | Not possible to navigate with keyboard and cells not accessible | PASS | Bug-03 |
 
 ## BUGS
 
@@ -185,6 +185,17 @@ These web articles [Cumulative Layout Shift (CLS)](https://web.dev/articles/cls)
 [Avoid Large Layout Shifts: 4 Tactics That Actually Work](https://wpshout.com/avoid-large-layout-shifts/#gref) led me to solve the problem partially with lowered performance by setting explicit dimensions for the parts that were indicated. For the buttons in the Gameboard grid', I set fixed width and height in px for selector div cell (.cell) and in selector id feedbackForm (#feedbackForm) I set min-height to 300 px. This resulted in a performance score of 98, the remaining 2 points can potentially be solved by 'minifying CSS and JavaScrip' and by enabling text compression.
 During coding, CLS has haunted me, I decided to leave the button style grid and make an ordinary div grid instead, and to use more narrow border lines on buttons, and to add a smoother transition effect to buttons and cells by using
 ```` transition: background-color 0.3s ease, transform 0.2s ease, border 0.2s ease;``` and finally I got rid of the performace issue.
+
+### Bug-03
+
+The game board and its cells were not keyboard-navigable, making them inaccessible.
+
+#### Solution-Bug-03
+
+* Changed the game board cell from ```<div class="cell" data-index="0"></div>```  to ```<button class="cell" data-index="0" tabindex="0" aria-label="Cell 1"></button>```
+* Added ```aria-labelledby="gameBoard_title"``` in the div.game-board. This attribute refers to the id of the heading, improving the relationship between the heading and the board for screen reader users.
+* Changed 'div' elements for cells to 'button' elements. This automatically makes them focusable and interactive with the keyboard, removing the need for tabindex and simplifying event handling since buttons are inherently designed for user interaction.
+* Added aria-label to each button to provide a textual representation of each cell's position, enhancing the screen reader experience by making it clear what each button (cell) represents.
 
 ### UNSOLVED Bugs
 
