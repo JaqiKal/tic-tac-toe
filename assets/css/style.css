@@ -129,7 +129,7 @@ footer {
   padding: 2px;
   border-radius: 5px;
   margin: 15px;
-  }
+}
 
 /* LANDING PAGE */
 #header section {
@@ -376,7 +376,6 @@ main {
 
 /* Form container style */
 #formContainer {
-  position: relative;
   max-width: 295px;
   height: auto;
   padding: 25px 30px;
@@ -386,20 +385,22 @@ main {
   box-shadow: 20px 20px 40px rgba(45, 1, 36, 0.3), 8px 8px 60px rgba(45, 1, 36, 0.3), inset 4px 4px 8px rgba(45, 1, 36, 0.6), inset 4px 4px 16px rgba(255, 255, 255, 0.4), inset -4px -4px 12px rgba(45, 1, 36, 0.7);
 }
 
-#feedbackForm h1, h2, p { 
+#feedbackForm h1,
+h2,
+p {
   font-family: inherit;
   font-size: 1.2rem;
   line-height: 2rem;
 }
 
-#feedbackForm > h1 {
+#feedbackForm h1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-#feedbackForm > h2 {
+#feedbackForm h2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -529,7 +530,7 @@ body.not-found-page {
 .not-found-container {
   max-width: 350px;
   margin: 0 auto;
-  margin-top: 130px;
+  margin-top: 100px;
   padding: 20px;
   border-style: ridge;
   border-color: #2d013f;
@@ -542,11 +543,16 @@ body.not-found-page {
 .not-found-container h1 {
   font-size: 1.5rem;
   color: #2d013f;
+  line-height: 1.7rem;
 }
 
 .not-found-container p {
   margin: 20px 0;
   line-height: 1.6;
+}
+
+.not-found-container #thanks {
+  margin: 20px 0 0;
 }
 
 .not-found-container ul {
@@ -567,17 +573,17 @@ body.not-found-page {
 
 /* RESPONSIVENESS */
 /* Media query: medium phones (270px and up) */
-@media screen and (min-width: 269px) {
+@media screen and (min-width: 250px) {
   .logo img {
     width: 50px;
     height: auto;
   }
 
-    /* Result modal content */
-    .modalResult-content {
-      width: 60%;
-      margin: 100% auto;
-    }
+  /* Result modal content */
+  .modalResult-content {
+    width: 60%;
+    margin: 100% auto;
+  }
 
   /* 404 NOT FOUND PAGE */
   body.not-found-page {
@@ -628,15 +634,28 @@ body.not-found-page {
 
   .not-found-container {
     max-width: 600px;
+    margin-top: 130px;
   }
 
   .not-found-container p {
     font-size: medium;
   }
+  footer {
+    margin-top: 10px;
+  }
 }
+
+/* Media query: tablet & desktop (600px and up) */
+@media screen and (min-width: 600px) {
+  /* FORM PAGE */
+  #formContainer {
+    margin-top: 40px;
+  }
+
 
 /* Media query: tablet & desktop (712px and up) */
 @media screen and (min-width: 712px) {
+
   /* Top navigation bar styles */
   .navBar {
     display: flex;
@@ -677,15 +696,8 @@ body.not-found-page {
   #p-head {
     font-size: large;
   }
-
+  
   /*FORM PAGE */
-  /* Form container style */
-  #formContainer {
-    position: relative;
-    height: auto;
-    padding: 25px 30px;
-  }
-
   /* Modal box width */
   .modal-content {
     margin-top: 200px;
@@ -701,7 +713,7 @@ body.not-found-page {
 
   .not-found-container {
     max-width: 600px;
-  }
+    }
 
   .not-found-container p {
     font-size: larger;
@@ -711,6 +723,11 @@ body.not-found-page {
 
 /* Media query: tablet & desktop (1024px and up) */
 @media screen and (min-width: 1024px) {
+  body, html {
+    max-width: 100%;
+    overflow-y: hidden; /* Prevent horizontal scrollbar */
+  }
+
   .logo img {
     width: 60%;
     height: auto;
@@ -728,6 +745,7 @@ body.not-found-page {
   #formBody {
     margin: 30px;
   }
+
   .modal-content {
     width: 30%;
   }
@@ -771,4 +789,69 @@ body.not-found-page {
   .not-found-container p {
     line-height: 1.3rem;
   }
+}
+
+@media screen and (min-width: 1080px) {
+
+  /* FORM PAGE */
+  #formBody {
+    margin: 60px;
+  }
+
+  /* LANDING/GAME PAGE */
+  body {
+    padding-top: 40px;
+  }
+
+  #navBar {
+    padding: 0 20px 0;
+  }
+
+  #headerSection {
+    margin-bottom: 0;
+  }
+
+  #head-container {
+    max-width: 900px;
+  }
+
+  #p-head {
+    max-width: 900px;
+    font-size: 0.9rem;
+  }
+
+  #gameBoard {
+    max-width: 350px;
+  }
+
+.modalResult-content {
+  width: 50%;
+}
+
+  #footerSection {
+    margin-top: 5px;
+    font-size: 0.9rem;
+
+  }
+
+  #footerSection p {
+    font-size: 0.9rem;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
