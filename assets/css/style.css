@@ -287,13 +287,13 @@ footer {
   justify-content: center;
   align-items: start;
   text-align: left;
-  max-width: 90%;
   border-radius: 15px;
   background-color: white;
   box-shadow: 4px 4px 10px 2px #2d013f;
   margin: 30px 30px 15px;
   padding: 20px;
   font-size: 1rem;
+  width: 300px;
 }
 
 #howtoplayContainer ul {
@@ -374,9 +374,10 @@ main {
 
 /* Form container style */
 #formContainer {
-  max-width: 295px;
+ max-width: 400px;
+ width: 80%
   height: auto;
-  padding: 25px 30px;
+  padding: 25px 10px;
   margin-top: 0;
   border-radius: 20px;
   background: #f3cefa;
@@ -385,7 +386,6 @@ main {
               inset 4px 4px 8px rgba(45, 1, 36, 0.6),
               inset 4px 4px 16px rgba(255, 255, 255, 0.4),
               inset -4px -4px 12px rgba(45, 1, 36, 0.7);
-  width: 300px;
 }
 
 #feedbackForm h1,
@@ -418,7 +418,6 @@ label {
 
 .text-input {
   background: #fff;
-  width: 240px;
   height: 25px;
   margin: 5px 0 10px 0;
   border: 1px solid #fafafa;
@@ -455,8 +454,8 @@ label {
   border: 0.2px solid rgba(45, 1, 63, 0.365);
   box-shadow: inset 6px 6px 12px rgba(45, 1, 63, 0.753), inset -4px -4px 8px rgba(167, 7, 159, 0.2);
   border-radius: 10px;
-  padding: 20px 5px;
-  width: 245px;
+  padding: 20px 10px;
+  width: 254px;
 }
 
 /* Activated with a mouse or any mouse-emulating technology *
@@ -566,22 +565,27 @@ body.not-found-page {
 
 /* RESPONSIVENESS */
 /* Media query: medium phones (270px and up) */
-@media screen and (min-width: 250px) {
+@media screen and (min-width: 280px) {
   .logo img {
     width: 50px;
     height: auto;
   }
 
-    /* FORM PAGE */
-    #formContainer {
-      margin: 25px 15px;
-      width: 100%;
-    }
+  #howtoplayContainer {
+    width: 275px;
+    margin: 0 auto;
+  }
 
   /* Result modal content */
   .modalResult-content {
     width: 60%;
     margin: 100% auto;
+  }
+
+  /* FORM PAGE */
+  #formContainer {
+    margin: 25px 15px;
+    width: 70%;
   }
 
   /* 404 NOT FOUND PAGE */
@@ -608,16 +612,20 @@ body.not-found-page {
   }
 
   body {
-    padding-top: 100px;
+    padding-top: 95px;
+  }
+
+  #howtoplayContainer {
+    max-width: 90%;
+    margin: 0 auto;
   }
 
   /*FORM PAGE */
   /* Form container style */
-  #formContainer {
-    position: relative;
-    width: 340px;
-    height: auto;
-    padding: 25px 30px;
+
+  #text-input,
+  #text-msg {
+    width: 250px;
   }
 
   /* Modal box width */
@@ -694,6 +702,11 @@ body.not-found-page {
 
   #p-head {
     font-size: large;
+  }
+
+  #howtoplayContainer {
+    width: 600px;
+    margin: 0 auto;
   }
   
   /*FORM PAGE */
@@ -812,6 +825,11 @@ body.not-found-page {
   #p-head {
     max-width: 900px;
     font-size: 0.9rem;
+  }
+
+  #howtoplayContainer {
+    width: 600px;
+    margin: 0 auto;
   }
 
   #gameBoard {
