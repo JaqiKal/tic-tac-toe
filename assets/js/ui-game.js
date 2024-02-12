@@ -270,15 +270,6 @@ function announceOutcome(message) {
   // Show the modal
   outcomeModal.style.display = "block";
 
-/*
-  // Close the modal on click outside of it
-  window.onclick = function (event) {
-    if (event.target == outcomeModal) {
-      outcomeModal.style.display = "none";
-    }
-  };
-  */
-
 // Close the modal on click
 outcomeModal.addEventListener("click", function() {
   outcomeModal.style.display = "none";

@@ -363,19 +363,21 @@ footer {
 /* FORM PAGE */
 #formBody {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
 }
 
 main {
-  margin-right: 0 10px 0;
+  margin: 10px 0;
 }
 
 /* Form container style */
 #formContainer {
+  position: relative;
  max-width: 400px;
- width: 80%
+ width: 80%;
   height: auto;
   padding: 25px 10px;
   margin-top: 0;
@@ -564,8 +566,8 @@ body.not-found-page {
 }
 
 /* RESPONSIVENESS */
-/* Media query: medium phones (270px and up) */
-@media screen and (min-width: 280px) {
+/* Media query: medium phones (20px and up) */
+@media screen and (min-width: 250px) {
   .logo img {
     width: 50px;
     height: auto;
@@ -585,7 +587,14 @@ body.not-found-page {
   /* FORM PAGE */
   #formContainer {
     margin: 25px 15px;
-    width: 70%;
+    width: 275px;
+  }
+
+  #feedbackForm,
+  .text-input,
+  #textMsg {
+    width: 100%;
+
   }
 
   /* 404 NOT FOUND PAGE */
@@ -622,10 +631,16 @@ body.not-found-page {
 
   /*FORM PAGE */
   /* Form container style */
+    #formContainer {
+      margin: 25px 15px;
+      width: 320px;
+    }
 
-  #text-input,
-  #text-msg {
-    width: 250px;
+
+  #feedbackForm,
+  .text-input,
+  #textMsg {
+    width: 100%;
   }
 
   /* Modal box width */
@@ -652,14 +667,8 @@ body.not-found-page {
   }
 }
 
-/* Media query: tablet & desktop (600px and up) */
-@media screen and (min-width: 600px) {
-  /* FORM PAGE */
-  #formContainer {
-    margin-top: 40px;
-  }
 
-}
+
 /* Media query: tablet & desktop (712px and up) */
 @media screen and (min-width: 712px) {
 
@@ -710,6 +719,18 @@ body.not-found-page {
   }
   
   /*FORM PAGE */
+  
+  #formContainer {
+    position: relative;
+    margin: 25px 0;
+    width: 340px;
+  }
+
+  #text-input,
+  #text-msg {
+    width: 265px;
+  }
+
   /* Modal box width */
   .modal-content {
     margin-top: 200px;
@@ -741,6 +762,14 @@ body.not-found-page {
     padding-left: 15px;
   }
 
+  #headerSection {
+    margin-bottom: 40px;
+  }
+
+  #head-container h1 {
+    padding: 0 0 10px 0;
+  }
+  
   /* Result modal content */
   .modalResult-content {
     width: 50%;
@@ -762,6 +791,10 @@ body.not-found-page {
     max-width: 800px;
   }
 
+  .not-found-container p {
+    line-height: 1.3rem;
+  }
+
   .navBar {
     height: 110px;
   }
@@ -774,14 +807,6 @@ body.not-found-page {
     font-size: larger;
   }
 
-  #headerSection {
-    margin-bottom: 40px;
-  }
-
-  #head-container h1 {
-    padding: 0 0 10px 0;
-  }
-
   /* 404 NOT FOUND PAGE */
 
   body.not-found-page {
@@ -789,13 +814,7 @@ body.not-found-page {
     margin: 0 auto;
   }
 
-  .not-found-container {
-    max-width: 800px;
-  }
 
-  .not-found-container p {
-    line-height: 1.3rem;
-  }
 }
 
 @media screen and (min-width: 1080px) {
