@@ -115,7 +115,7 @@ All but one score-meter is in the green, achieving a scores from 99  till 100. M
 | LAP-08 | Win Condition Detection | The game correctly identifies a win condition | Align three symbols in a row/column/diagonal | PASS | PASS |
 | LAP-09 | Draw Condition Detection | The game correctly identifies a draw condition | Fill all cells without a winning alignment | PASS | PASS |
 | LAP-10 | Modal Outcome Display | Modal displays the correct outcome message at game end | Complete a game | PASS |PASS |
-| LAP-11 | Modal Close Functionality | Modal closes upon clicking outside its area or on the close button | Click outside modal or on close button | PASS | PASS |
+| LAP-11 | Modal Close Functionality | Modal closes upon clicking inside its area | Click on modal | PASS | PASS | 
 
 #### Form Page (FOP)
 
@@ -196,6 +196,14 @@ The game board and its cells were not keyboard-navigable, making them inaccessib
 * Added ```aria-labelledby="gameBoard_title"``` in the div.game-board. This attribute refers to the id of the heading, improving the relationship between the heading and the board for screen reader users.
 * Changed 'div' elements for cells to 'button' elements. This automatically makes them focusable and interactive with the keyboard, removing the need for tabindex and simplifying event handling since buttons are inherently designed for user interaction.
 * Added aria-label to each button to provide a textual representation of each cell's position, enhancing the screen reader experience by making it clear what each button (cell) represents.
+
+### Bug-04
+
+After feed-back from my friends testing the game, I decided to change LAP-11 from closing modal by clicking outside of it till on(inside) it. TThis adjustment either introduced a new issue or unveiled an existing one where the game board cells were not correctly re-enabled for interaction. Consequently, after completing a game and clicking the reset button, the board did not clear as expected.
+
+#### Solution-Bug-04
+
+ I added an updated version of the resetGame function that ensures cells are re-enabled for interaction, and the game is definitively set to an active state, allowing for new moves immediately after a reset without needing a page refresh.
 
 ### UNSOLVED Bugs
 

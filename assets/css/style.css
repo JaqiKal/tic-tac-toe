@@ -23,7 +23,7 @@ h5,
 h6,
 p {
   color: rgb(27, 1, 37);
-  line-height: 1.2rem;
+  line-height: 1.1rem;
   padding-top: 2px;
   padding-bottom: 2px;
 }
@@ -110,6 +110,7 @@ body {
   min-height: 100vh;
   padding-top: 80px;
   padding-bottom: 0px;
+  margin: 60px;
 }
 
 /* Footer style */
@@ -135,9 +136,9 @@ footer {
 /* Header styles */
 #head-container {
   max-width: 450px;
-  margin-top: 16px;
-  padding: 70px 20px 0;
-  margin: 2px 2px 0;
+  width: 95vw;
+  margin-top: 0;
+  padding: 0px 20px 0;
   text-align: center;
 }
 
@@ -148,12 +149,13 @@ footer {
 /* Style the header paragraph */
 #p-head {
   max-width: 450px;
-  padding: 20px 10px;
+  padding: 20px 10px 10px;
   margin: 30px 0;
   border-radius: 10px;
   background-color: rgba(243, 238, 243, 0.596);
   box-shadow: 4px 4px 60px rgba(45, 1, 63, 0.685);
   font-weight: 600;
+  font-size: 0.8rem;
 }
 
 #buttonSection {
@@ -365,21 +367,26 @@ footer {
   min-height: 100vh;
 }
 
+main {
+  margin-right: 0 10px 0;
+}
+
 /* Form container style */
 #formContainer {
   position: relative;
-  width: 300px;
+  max-width: 295px;
   height: auto;
   padding: 25px 30px;
-  margin-top: 70px;
+  margin-top: 0;
   border-radius: 20px;
   background: #f3cefa;
   box-shadow: 20px 20px 40px rgba(45, 1, 36, 0.3), 8px 8px 60px rgba(45, 1, 36, 0.3), inset 4px 4px 8px rgba(45, 1, 36, 0.6), inset 4px 4px 16px rgba(255, 255, 255, 0.4), inset -4px -4px 12px rgba(45, 1, 36, 0.7);
 }
 
-/* Feed-back form container content style */
-#feedbackForm {
-  min-height: 300px;
+#feedbackForm h1, h2, p { 
+  font-family: inherit;
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 #feedbackForm > h1 {
@@ -404,9 +411,9 @@ label {
 
 .text-input {
   background: #fff;
-  width: 100%;
+  width: 240px;
   height: 25px;
-  margin: 5px 0 20px 0;
+  margin: 5px 0 10px 0;
   border: 1px solid #fafafa;
   border-radius: 20px;
   padding: 20px 5px;
@@ -440,7 +447,7 @@ label {
   box-shadow: inset 6px 6px 12px rgba(45, 1, 63, 0.753), inset -4px -4px 8px rgba(167, 7, 159, 0.2);
   border-radius: 10px;
   padding: 20px 5px;
-  width: 269px;
+  width: 245px;
 }
 
 /* Activated with a mouse or any mouse-emulating technology *
@@ -567,22 +574,7 @@ body.not-found-page {
     .modalResult-content {
       width: 60%;
       margin: 100% auto;
-
-  /* FORM PAGE */
-
-  #formContainer {
-    width: 98%;
-    margin-left: 2px;
-  }
-
-  #feedbackForm,
-  .text-input {
-    width: 100%;
-  }
-
-  #textMsg {
-    width: 100%;
-  }
+    }
 
   /* 404 NOT FOUND PAGE */
   body.not-found-page {
@@ -683,7 +675,6 @@ body.not-found-page {
   /* Form container style */
   #formContainer {
     position: relative;
-    width: 340px;
     height: auto;
     padding: 25px 30px;
   }
@@ -709,15 +700,6 @@ body.not-found-page {
     font-size: larger;
     font-weight: 500;
   }
-
-  /* FOOTER SECTION */
-  #footerSection {
-    width: 100%;
-    text-align: center;
-    margin: 90px 0 0;
-    color: #2d013f;
-    font-weight: 600;
-  }
 }
 
 /* Media query: tablet & desktop (1024px and up) */
@@ -736,6 +718,9 @@ body.not-found-page {
 
   /* FORM PAGE */
   /* Modal box width */
+  #formBody {
+    margin: 30px;
+  }
   .modal-content {
     width: 30%;
   }
@@ -755,10 +740,6 @@ body.not-found-page {
     align-items: center;
     flex-grow: 1;
     font-size: larger;
-  }
-
-  body {
-    padding-top: 70px;
   }
 
   #headerSection {
@@ -782,14 +763,5 @@ body.not-found-page {
 
   .not-found-container p {
     line-height: 1.3rem;
-  }
-}
-
-/* Media query: tablet & desktop (1024px and up) */
-@media screen and (min-width: 1024px) {
-  /* Result modal content */
-  .modalResult-content {
-    width: 40%;
-    margin: 35% auto;
   }
 }

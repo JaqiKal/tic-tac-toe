@@ -306,12 +306,10 @@ function resetGame() {
   cells.forEach((cell) => (cell.innerText = ""));
 }
 */
+// Set the game as active. Reset the game state to empty
 function resetGame() {
-  // Set the game as active
-  gameActive = true;
-  
-  // Reset the game state to empty
-  gameState.fill("");
+    gameActive = true;
+    gameState.fill("");
   
   // Reset the text and re-enable each cell for interaction
   cells.forEach((cell) => {
