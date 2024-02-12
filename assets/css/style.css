@@ -723,11 +723,6 @@ body.not-found-page {
 
 /* Media query: tablet & desktop (1024px and up) */
 @media screen and (min-width: 1024px) {
-  body, html {
-    max-width: 100%;
-    overflow-y: hidden; /* Prevent horizontal scrollbar */
-  }
-
   .logo img {
     width: 60%;
     height: auto;
@@ -792,6 +787,12 @@ body.not-found-page {
 }
 
 @media screen and (min-width: 1080px) {
+  /* LANDING/GAME PAGE */
+  /* Rmove scrollbar */
+  body, html {
+    max-width: 100%;
+    overflow-y: hidden;
+  }
 
   /* FORM PAGE */
   #formBody {
@@ -831,27 +832,10 @@ body.not-found-page {
   #footerSection {
     margin-top: 5px;
     font-size: 0.9rem;
-
   }
 
   #footerSection p {
     font-size: 0.9rem;
   }
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
