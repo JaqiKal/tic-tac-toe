@@ -379,7 +379,12 @@ main {
   margin-top: 0;
   border-radius: 20px;
   background: #f3cefa;
-  box-shadow: 20px 20px 40px rgba(45, 1, 36, 0.3), 8px 8px 60px rgba(45, 1, 36, 0.3), inset 4px 4px 8px rgba(45, 1, 36, 0.6), inset 4px 4px 16px rgba(255, 255, 255, 0.4), inset -4px -4px 12px rgba(45, 1, 36, 0.7);
+  box-shadow: 20px 20px 40px rgba(45, 1, 36, 0.3),
+              8px 8px 60px rgba(45, 1, 36, 0.3),
+              inset 4px 4px 8px rgba(45, 1, 36, 0.6),
+              inset 4px 4px 16px rgba(255, 255, 255, 0.4),
+              inset -4px -4px 12px rgba(45, 1, 36, 0.7);
+  width: 300px;
 }
 
 #feedbackForm h1,
@@ -420,6 +425,7 @@ label {
   padding: 20px 5px;
   font-weight: 550;
   color: #2d013f;
+  font-family: inherit;
 }
 
 .fieldtext {
@@ -431,6 +437,7 @@ label {
   border-radius: 5px;
   padding: 10px 5px;
   font-weight: 550;
+  font-family: inherit;
 }
 
 /* Display error when input field validation fails */
@@ -563,6 +570,12 @@ body.not-found-page {
     width: 50px;
     height: auto;
   }
+
+    /* FORM PAGE */
+    #formContainer {
+      margin: 25px 15px;
+      width: 100%;
+    }
 
   /* Result modal content */
   .modalResult-content {
@@ -779,12 +792,6 @@ body.not-found-page {
     overflow-y: hidden;
   }
 
-  /* FORM PAGE */
-  #formBody {
-    margin: 60px;
-  }
-
-  /* LANDING/GAME PAGE */
   body {
     padding-top: 40px;
   }
@@ -821,6 +828,11 @@ body.not-found-page {
 
   #footerSection p {
     font-size: 0.9rem;
+  }
+
+  /* FORM PAGE */
+  #formBody {
+    margin: 50px 0 0;
   }
 
 }
