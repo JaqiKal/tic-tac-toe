@@ -95,7 +95,7 @@ p {
 .active {
   background-color: #6f3ff59d;
   color: #1b0125;
-  border: 0.1rem ridge #1b0125;
+  border: 1px ridge #1b0125;
 }
 
 body {
@@ -115,10 +115,6 @@ body {
 
 /* Footer style */
 
-#timeNow {
-  padding: 20px;
-  color: inherit;
-}
 
 footer {
   width: 100%;
@@ -127,6 +123,13 @@ footer {
   color: #2d013f;
   font-weight: 600;
 }
+
+#clock {
+  background-color: #f3cefa;
+  padding: 2px;
+  border-radius: 5px;
+  margin: 15px;
+  }
 
 /* LANDING PAGE */
 #header section {
@@ -329,7 +332,7 @@ footer {
 .close-button {
   color: #aaa;
   float: right;
-  font-size: 28px;
+  font-size: 1.7rem;
   font-weight: bold;
 }
 
@@ -385,7 +388,7 @@ main {
 
 #feedbackForm h1, h2, p { 
   font-family: inherit;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   line-height: 2rem;
 }
 
@@ -537,7 +540,7 @@ body.not-found-page {
 }
 
 .not-found-container h1 {
-  font-size: 24px;
+  font-size: 1.5rem;
   color: #2d013f;
 }
 
@@ -668,7 +671,11 @@ body.not-found-page {
   }
 
   #head-container h1 {
-    padding: 0 0 50px 0;
+    padding: 0 0 20px 0;
+  }
+
+  #p-head {
+    font-size: large;
   }
 
   /*FORM PAGE */

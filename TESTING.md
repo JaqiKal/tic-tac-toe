@@ -115,7 +115,7 @@ All but one score-meter is in the green, achieving a scores from 99  till 100. M
 | LAP-08 | Win Condition Detection | The game correctly identifies a win condition | Align three symbols in a row/column/diagonal | PASS | PASS |
 | LAP-09 | Draw Condition Detection | The game correctly identifies a draw condition | Fill all cells without a winning alignment | PASS | PASS |
 | LAP-10 | Modal Outcome Display | Modal displays the correct outcome message at game end | Complete a game | PASS |PASS |
-| LAP-11 | Modal Close Functionality | Modal closes upon clicking inside its area | Click on modal | PASS | PASS | 
+| LAP-11 | Modal Close Functionality | Modal closes upon clicking inside its area | Click on modal | PASS | PASS |
 
 #### Form Page (FOP)
 
