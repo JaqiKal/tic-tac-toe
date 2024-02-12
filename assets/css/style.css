@@ -117,7 +117,8 @@ body {
 .modal {
   /* Hidden by default */
   display: none;
-  position: fixed;
+  /* Allows to position modal absolutely within the game board */
+  position: relative;
   z-index: 1;
   left: 0;
   top: 0;
@@ -126,7 +127,6 @@ body {
   overflow: auto;
   background-color: rgba(45, 1, 63, 0.85);
 }
-
 
 /* Footer style */
 footer {
