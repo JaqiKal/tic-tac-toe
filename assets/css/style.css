@@ -314,8 +314,7 @@ footer {
 .modalResult-content {
   background-color: #fff;
   transition: background-color 0.3s ease;
-  /* 15% from the top and centered */
-  margin: 80% auto;
+  margin: 50% auto;
   width: 80%;
   font-weight: 600;
   text-align: center;
@@ -334,6 +333,8 @@ footer {
   font-weight: bold;
 }
 
+/* Activated with a mouse or any mouse-emulating technology *
+/* Activated with a keyboard or any keyboard-emulating technology */
 .close-button:hover,
 .close-button:focus {
   color: black;
@@ -770,10 +771,9 @@ body.not-found-page {
     padding: 0 0 10px 0;
   }
   
-  /* Result modal content */
+  /* Result modal content position */
   .modalResult-content {
-    width: 50%;
-    margin: 65% auto;
+    margin: 35% auto;
   }
 
   /* FORM PAGE */
@@ -856,7 +856,7 @@ body.not-found-page {
   }
 
 .modalResult-content {
-  width: 50%;
+  width: 30%;
 }
 
   #footerSection {

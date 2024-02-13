@@ -14,6 +14,7 @@ Visit the deployed site: [Tic-Tac-To ToGo](https://jaqikal.github.io/tic-tac-toe
 * [MANUAL TESTING](#manual-testing)
   * [Testing User Stories](#testing-user-stories)
   * [Full Testing](#full-testing)
+* [DEFECTS](#defects)
 
 Testing was ongoing throughout the entire build. I utilised Chrome developer tools whilst building to pinpoint and troubleshoot any issues as I went along.
 During development I made use of google developer tools to ensure everything was working correctly and to assist with troubleshooting when things were not working as expected.
@@ -182,10 +183,10 @@ All but one score-meter is in the green, achieving a scores from 99  till 100. M
 
 | TestCase ID| Feature | Expected Outcome | Result | Result after correction|  Comment |
 | ---| --- | --- | --- | --- |---|
-| AUS-01 | Keyboard Accessibility | All interactive elements are accessible via keyboard | Not possible to navigate with keyboard and cells not accessible | PASS | PASS | See Bug-03 |
+| AUS-01 | Keyboard Accessibility | All interactive elements are accessible via keyboard | Not possible to navigate with keyboard and cells not accessible | PASS | See Bug-03 |
 | FOP-08 | text input placeholder | All placeholder text have font-family 'Open-Sans' | Two different font families not selected by me| PASS| See Bug-04 |
 
-## BUGS
+## DEFECTS
 
 ### Bug-01
 
