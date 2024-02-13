@@ -2,11 +2,11 @@
 
 * REMEMEBER TO CHANGE PIC TO LATEST AND GREATEST!!!!
 
-![The website shown on a variety of screen sizes](/documents/doc-images/amiresponsive.webp)
+![The website shown on a variety of screen sizes](/documentation/doc-images/amiresponsive.webp)
 
-Visit the deployed site: [Tic-Tac-Toe](https://jaqikal.github.io/tic-tac-toe/)
+Visit the deployed site: [Tic-Tac-Toe](https://jaqikal.github.io/tic-tac-toe/index.html)
 
-Tic-Tac-Toe, also known as Noughts and Crosses, is a two-player game where the objective is to align three of your symbols (X or O) in a row, column, or diagonal to win the game. In this version, you'll not only challenge your strategic skills but also test them against a computer opponent. This web application manages player interactions, tracks the game state, and checks for win conditions or a draw.  
+Tic-Tac-Toe, also known as Noughts and Crosses, is a two-player game where the objective is to align three of your symbols (X or O) in a row, column, or diagonal to win the game. This web application manages player interactions, tracks the game state, and checks for win conditions or a draw.  It has a basic game logic. The aim was to make it functional, accessible and set a foundation for future enhancements.
 
 Get set for Toe-to-Toe Tic-Tac-Toe! No need to gather pals—just choose your symbol and jump into the tic-tac-tussle. Are you ready for the challenge? Let's see who conquers the grid!
 
@@ -158,13 +158,15 @@ Wireframese created for mobile, tablet and desktop using 'Balsamiq'
 * A 24 hour clock is included in the footer of the index page.
 * A thank you note in the footer of the form page.
 
-The website comprises 
-* 3 HTML pages 
+The website comprises
+
+* 3 HTML pages
 * 3 JavaScripts
 * 1 Stylesheet
 
-* Home page / landing page
+### Captured screenshots of the website
 
+* Home page / landing page
 
 Insert PIC!
 
@@ -214,22 +216,26 @@ In no specific priority order:
 
 While developing the website, I've focused on its accessibility. This goal was achieved through the following methods:
 
-* [Wave Web Accessibility Evaulation Tool](https://wave.webaim.org/)
-  * Using semantic HTML.
-  * Using a hover state on all buttons on the site to make it clear to the user if they are hovering over a button.
-  * Choosing a sans serif font for the site - these fonts are suitable for people with dyslexia.
-  * The use of aria-labelledby and aria-pressed attributes in the game's buttons and player sections improves the accessibility of dynamic content and interactive elements for users with screen readers.
-  * The CSS includes styles for :hover and :focus pseudo-classes on buttons and game cells
-  * The CSS media queries for different screen sizes and the flexible grid layout for the game board ensure that the game is usable across a variety of devices, including those with screen magnifiers.
-  * The game primarily uses textual content and CSS for styling, which naturally makes it more accessible.
-  * The use of colors is considered for visibility, and meets WCAG guidelines for text and interactive elements.
-  
+* Using semantic HTML.
+* Using a hover state on all buttons on the site to make it clear to the user if they are hovering over a button.
+* Choosing a sans serif font for the site - these fonts are suitable for people with dyslexia.
+* The use of aria-labelledby and attributes in the game's buttons and player sections improves the accessibility of dynamic content and interactive elements for users with screen readers.
+* The CSS includes styles for :hover and :focus pseudo-classes on buttons and game cells
+* The CSS media queries for different screen sizes and the flexible grid layout for the game board ensure that the game is usable across a variety of devices, including those with screen magnifiers.
+* The game primarily uses textual content and CSS for styling, which naturally makes it more accessible.
+* The use of colors is considered for visibility, and meets WCAG guidelines for text and interactive elements.
+* No contrast errors were detected in the page;
+
+  ![x](/documentation/doc-images/contrast-wave.webp)
+
+  * For more details pls see:
+    * [Wave Web Accessibility Evaulation Tool - INDEX.HTML](https://wave.webaim.org/report#/https://jaqikal.github.io/tic-tac-toe/index.html)
+    * [Wave Web Accessibility Evaulation Tool - FORM.HTML](https://wave.webaim.org/report#/https://jaqikal.github.io/tic-tac-toe/form.html)
+    * [Wave Web Accessibility Evaulation Tool - 404.HTML](https://wave.webaim.org/report#/https://jaqikal.github.io/tic-tac-toe/404.html)
+
 #### Accessibility improvements
 
-* List item
-  * some text
-  * some text
-  * some text
+* [Wave](https://wave.webaim.org/report#/https://jaqikal.github.io/tic-tac-toe/index.html) highlighted an alert indicating there's a "Redundant link" issue on my page, where both the logo and the 'game' menu item link to index.html, suggesting they lead to the same URL. The recommendation from the tool is to merge these overlapping links into a single link, advising to streamline redundant text or alt text for elements like images within the same link. Despite this suggestion, I've decided to leave it as is because I want the logo to remain clickable.
 
 - - -
 
@@ -311,18 +317,19 @@ Please refer to [TESTING.md](TESTING.md) file for all testing and trouble shooti
 
 I have used different sources to get more information and understand how to code:
 
+* [Favicon.io](https://favicon.io/favicon-converter/): Used to create the site Favicon and provided the code in the head of all pages.
 * In landing  page I have amended code from:
   * Clock in footer [w3shools](https://www.w3schools.com/js/tryit.asp?filename=tryjs_timing_clock)
   * yy
 * In form page I have amended code from:
   * Event Handlers: [elated-com](https://www.elated.com/events-and-event-handlers/)
-  * vent Listeners: [w3school](https://www.w3schools.com/jsref/met_element_addeventlistener.asp)
+  * Event Listeners: [w3school](https://www.w3schools.com/jsref/met_element_addeventlistener.asp)
   * Modal Dialog: [w3school](https://www.w3schools.com/w3css/w3css_modal.asp)
   * Form validation: [blog](https://blog.bitsrc.io/you-have-been-doing-form-validation-wrong-8b36430d63f6)
   * Form validation: [w3school](https://www.w3schools.com/js/js_validation.asp)
   * For each loop: [w3school](https://www.w3schools.com/jsref/jsref_foreach.asp)
   * Tutor service helped me with a bit of psudocode and thoughts on how to trim whitespace in the form: ```if userInput.startsWith(" ") {action for error}```
-* [Favicon.io](https://favicon.io/favicon-converter/): Used to create the site Favicon and provided the code in the head of all pages.
+* The remaining code in script.js was developed by me, drawing inspiration and assistance from extensive online research, including searching on Google and examining other developers' code. I selected ideas and snippets that seemed promising, adapted them, and integrated these modified snippets into my own code to ensure they worked seamlessly with my project.
 
 ### Content
 
