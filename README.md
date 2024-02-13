@@ -338,7 +338,7 @@ I have used different sources to get more information and understand how to code
   * For each loop: [w3school](https://www.w3schools.com/jsref/jsref_foreach.asp)
   * Tutor service helped me with a bit of psudocode and thoughts on how to trim whitespace in the form: ```if userInput.startsWith(" ") {action for error}```
 
-* The remaining code in script.js was developed by me, drawing inspiration and assistance from extensive online research, including searching on Google and examining other developers' code. I selected ideas and snippets that seemed promising, adapted them, and integrated these modified snippets into my own code to ensure they worked seamlessly with my project.
+* The remaining code was developed by me, drawing inspiration and assistance from extensive online research, including searching on Google and examining other developers' code. I selected ideas and snippets that seemed promising, adapted them, and integrated these modified snippets into my own code to ensure they worked seamlessly with my project.
 
 ### Content
 
