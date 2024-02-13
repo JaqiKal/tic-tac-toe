@@ -1,6 +1,6 @@
 # # Tic Tac Toe - A game for all times
 
-![The website shown on a variety of screen sizes](/documentation/doc-image/amiresponsive.png)
+![The website shown on a variety of screen sizes](/documentation/doc-images/amiresponsive.webp)
 
 Visit the deployed site: [Tic-Tac-To ToGo](https://jaqikal.github.io/tic-tac-toe/)
 
@@ -15,6 +15,8 @@ Visit the deployed site: [Tic-Tac-To ToGo](https://jaqikal.github.io/tic-tac-toe
   * [Testing User Stories](#testing-user-stories)
   * [Full Testing](#full-testing)
 * [DEFECTS](#defects)
+  * [Unsolved issue](#unsolved-issue)
+  * [Known issue](#known-issue)
 
 Testing was ongoing throughout the entire build. I utilised Chrome developer tools whilst building to pinpoint and troubleshoot any issues as I went along.
 During development I made use of google developer tools to ensure everything was working correctly and to assist with troubleshooting when things were not working as expected.
@@ -23,25 +25,27 @@ I have used google chrome developer tools & Firefox inspector tool to ensure tha
 ### Testing was performed on the following devices
 
 * Desktop:
- *Lenovo Legion T7
+  * Lenovo Legion T7
 * Screen:
-  *Samsung Odyssey G3 / 27" / 1920 x 1080 /
+  * Samsung Odyssey G3 / 27" / 1920 x 1080 /
 * Mobile Devices:
-  *Samsung Galaxy S20
+  * Samsung Galaxy S20
 
 ### Browser compability
 
-Each device tested the site using the following browsers:
+Desktop device tested the site using the following browsers:
 
 * Google Chrome, version 121.0.6167.86 (Official Build) (64-bit)
 
 * Firefox, version 122.0 (64-bit)
 
+Mobile tested the site using Google chrome, version 121.0.6167.86 (Official Build) (64-bit)
+
 ### Responsiveness
 
 * Tested on Galaxy S20, 27" Samsung screen
 * [Responsinator](http://www.responsinator.com/?url=https%3A%2F%2Fjaqikal.github.io%2Fwellness-therapy%2F)
-* [Am I Responsive](https://ui.dev/amiresponsive?url=https://jaqikal.github.io/wellness-therapy/)
+* [Am I Responsive](http://www.responsinator.com/?url=https%3A%2F%2Fjaqikal.github.io%2Ftic-tac-toe%2F)
 
 - - -
 
@@ -59,42 +63,68 @@ Each device tested the site using the following browsers:
 
 ### Lighthouse
 
-I used Lighthouse within the Chrome Developer Tools to test the performance, accessibility, best practices and SEO of the website.
-This was done only on Desktop
+I utilized Lighthouse in Chrome Developer Tools for evaluating the site's performance, accessibility, best practices, and SEO. Additionally, I conducted sanity checks using Firefox DevTools.
 
-All but one score-meter is in the green, achieving a scores from 99  till 100. Main issues are related to lesser performance due to bad image handling.
+This was done in both desktop and mobile environments.
+
+Main issues are related to lesser performance due to bad image handling.
 
 #### Lighthouse Index html
 
+* [Report on Index desktop](/documentation/lighthouse-index.pdf)
+
 ![x](/documentation/doc-images/lighthouse-index.webp)
 
-* [Report on Index](/documentation/lighthouse-index.pdf)
+* [Report on Index mobile](/documentation/lighthouse-mob-index.pdf)
+
+![x](/documentation/doc-images/lighthouse-index-m.webp)
+
+These DOM elements contribute most to the CLS of the page:
+
+* section#gameSection
+* section#buttonSection1
+* p#p-head
+* h1#indexTitle
+
+After reviewing the elements that significantly impact the page's Cumulative Layout Shift (CLS). I explored various approaches for optimization. I came across helpful guidelines on reducing [Cumulative Layout Shift](https://web.dev/articles/optimize-cls?utm_source=lighthouse&utm_medium=devtools#images-without-dimensions). However, after some thought, I've decided to keep the site unchanged for now and use this situation as a learning opportunity. It seems like a good balance between taking action and understanding the impact of such changes firsthand.  I have noted this as an unsolved issue, pls see [Bug-06](#unsolved-issue).
+
+![x](/documentation/doc-images/cls.webp)
 
 #### Lighthouse Form html
 
+* [Report on Form desktop](/documentation/lighthouse-form.pdf)
+
 ![x](/documentation/doc-images/lighthouse-form.webp)
 
-* [Report on Form](/documentation/lighthouse-form.pdf)
+* Form mobile, no report linked as result is close to desktop result.
+
+![x](/documentation/doc-images/lighthouse-form-m.webp)
 
 #### Lighthouse 404 Not found page
 
+* [Report on 404 desktop](/documentation/lighthouse-404.pdf)
+
 ![x](/documentation/doc-images/lighthouse-404.webp)
 
-* [Report on 404](/documentation/lighthouse-404.pdf)
+* 404 mobile, no report linked as result is close to desktop result.
+
+![x](/documentation/doc-images/lighthouse-404-m.webp)
 
 ### JSHint
 
-#### Desktop
+There are no warning in JSHint nor any warning or errors in Dev Tools.
 
-![404.htm](/documentation/doc-image/lighthouse-)
-![contact.html](/documentation/doc-image/lighthouse-)
-![cookies.html](/documentation/doc-image/lighthouse-)
+#### ui-game script
 
-#### Mobile
+![x](/documentation/doc-images/ui-game-js.webp)
 
-![404.htm](/documentation/doc-image/lighthouse-)
-![contact.html](/documentation/doc-image/lighthouse-)
-![cookies.html](/documentation/doc-image/lighthouse-)
+#### Form script
+
+![x](/documentation/doc-images/form-js.webp)
+
+#### clock script
+
+![x](/documentation/doc-images/clock-js.webp)
 
 ## MANUAL TESTING
 
@@ -200,6 +230,8 @@ To address the warning, I added the following comment at the top of the JavaScri
 
 ### Bug-02
 
+EDIT: this manifested early on, and the solution did help at that point, but since then I have changed the game board layout, so this bug is back, see Bug-06.
+
 When analysing index page with Lighthouse, the performance score have been wavering between 77 and 93, further check showed that it was the Cumulative Layout Shift that was identified. The warning was 'Avoid large layout shifts' indicating that saving could be made when page is loading. The tool addressed
 the buttons in the Gameboard grid and the Feedback button as the problem areas.  
 
@@ -237,13 +269,13 @@ The placeholder text within the form displayed two distinct font styles, Arial a
 
 I declared ```font-family: inherit;```  for  div class text-input and div id textMsg.
 
-### UNSOLVED Bugs
+### UNSOLVED issue
 
-|ID|Feature|Expected Outcome|Result|
-|---|---|---|---|
-|---|---|---|---|
+| ID | Feature | Description | Comment |
+| --- | --- | --- | --- |
+| Bug-06 | Lighthouse report on Index | There are 4 elements the impact the page's Cumulative Layout Shift (CLS) |Pls see [Lighthouse Index html](#lighthouse-index-html) for details. |
 
-### KNOWN ISSUES
+### KNOWN issue
 
 * Warning in CSS
 

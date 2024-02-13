@@ -3,9 +3,9 @@
  *
  * This script manages the basic functionality of a Tic-Tac-Toe game in a web application.
  * Player take turns aginst computer marking Xs on a 3x3 grid with the objective of
- * aligning three of their symbols in a row to win.  The script handles player
- * interactions, win conditions, and game resets and basic blocking. This game is 
- * functional but very basic. 
+ * aligning three of their symbols in a row to win. The script handles player
+ * interactions, win conditions, and game resets and basic blocking. This game is
+ * functional but very basic.
  *
  * I added detailed comments to help myself understand better.
  *
@@ -24,10 +24,13 @@
  *  - https://www.w3schools.com/js/js_loop_for.asp
  *  - https://www.youtube.com/watch?v=orAS-MBh5f4
  *  - https://javascriptbook.com/
- * to understand the game logic in javascript: 
+ * to understand the game logic in javascript:
  *  - https://dev.to/bornasepic/pure-and-simple-tic-tac-toe-with-javascript-4pgn
  *  - https://www.youtube.com/watch?v=fPew9OI2PnA
- * *
+ * To set up Modals:
+ *  - Modal Dialog: https://www.w3schools.com/w3css/w3css_modal.asp
+ *  - Modal box: https://www.w3schools.com/howto/howto_css_modals.asp
+ * 
  * Other:
  * - jshint esversion: 6, please see README.md for further details
  *
@@ -152,13 +155,12 @@ function updateGameState(index, symbol) {
   gameState[index] = symbol;
   cells[index].innerText = symbol;
   // Disable the button after it's marked
-  cells[index].disabled = true; 
-
+  cells[index].disabled = true;
 }
 
 /**
- * Function to find a blocking move, first check if the current player 
- * can win in a row, column or diagonally, and if not, find the best 
+ * Function to find a blocking move, first check if the current player
+ * can win in a row, column or diagonally, and if not, find the best
  * move to block the opponent from winning.
  */
 function findBlockingMove() {
@@ -168,9 +170,7 @@ function findBlockingMove() {
     const b = gameState[winCondition[1]];
     const c = gameState[winCondition[2]];
 
-    if ((a === b && a === playerSymbol && c === "") || 
-        (a === c && a === playerSymbol && b === "") || 
-        (b === c && b === playerSymbol && a === "")) {
+    if ((a === b && a === playerSymbol && c === "") || (a === c && a === playerSymbol && b === "") || (b === c && b === playerSymbol && a === "")) {
       if (a === "") return winCondition[0];
       if (b === "") return winCondition[1];
       if (c === "") return winCondition[2];
@@ -180,16 +180,16 @@ function findBlockingMove() {
 }
 
 /**
-* Computer's turn, basic blocking (defensive gameplay).
-* First, it attempts to find a blocking move to prevent the player from winning.
-* If no such move is found, it defaults to choosing the first available empty cell.
-*/
+ * Computer's turn, basic blocking (defensive gameplay).
+ * First, it attempts to find a blocking move to prevent the player from winning.
+ * If no such move is found, it defaults to choosing the first available empty cell.
+ */
 function computerTurn() {
-    // Attempt to find a blocking move to prevent the player from winning.
+  // Attempt to find a blocking move to prevent the player from winning.
   let moveIndex = findBlockingMove();
 
   // If no blocking move, find the first empty cell
-  if (moveIndex === -1) { 
+  if (moveIndex === -1) {
     for (let i = 0; i < gameState.length; i++) {
       if (gameState[i] === "") {
         moveIndex = i;
@@ -270,12 +270,10 @@ function announceOutcome(message) {
   // Show the modal
   outcomeModal.style.display = "block";
 
-// Close the modal on click
-outcomeModal.addEventListener("click", function() {
-  outcomeModal.style.display = "none";
-});
-
-
+  // Close the modal on click
+  outcomeModal.addEventListener("click", function () {
+    outcomeModal.style.display = "none";
+  });
 }
 
 // Reset function to clear the game
@@ -283,7 +281,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // Event listener for the reset game button
   document.getElementById("toggleButtonreset").addEventListener("click", resetGame);
 });
-
 
 /*
 /**
@@ -299,15 +296,15 @@ function resetGame() {
 */
 // Set the game as active. Reset the game state to empty
 function resetGame() {
-    gameActive = true;
-    gameState.fill("");
-  
+  gameActive = true;
+  gameState.fill("");
+
   // Reset the text and re-enable each cell for interaction
   cells.forEach((cell) => {
     cell.innerText = "";
     cell.disabled = false; // Re-enable the cell if it was disabled
   });
-  
+
   // Close the outcome modal if it's open
   const outcomeModal = document.getElementById("outcomeModal");
   if (outcomeModal.style.display === "block") {
