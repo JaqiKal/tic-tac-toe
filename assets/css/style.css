@@ -119,11 +119,13 @@ body {
   display: none;
   position: fixed;
   z-index: 1;
+  /* Location of the box */
+  padding-top: 100px; 
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
+  /*overflow: auto; */
   background-color: rgba(45, 1, 63, 0.85);
 }
 
@@ -314,7 +316,8 @@ footer {
 .modalResult-content {
   background-color: #fff;
   transition: background-color 0.3s ease;
-  margin: 50% auto;
+  /* x% from the top and centered */
+  margin: 20% auto;
   width: 80%;
   font-weight: 600;
   text-align: center;
@@ -493,6 +496,7 @@ label {
 .modal-content {
   background-color: #fff;
   transition: background-color 0.3s ease;
+  /* x% from the top and centered */
   margin: 50% auto;
   padding: 20px;
   border: 1px solid rgba(45, 1, 63, 1);
@@ -581,8 +585,7 @@ body.not-found-page {
 
   /* Result modal content */
   .modalResult-content {
-    width: 60%;
-    margin: 100% auto;
+    width: 70%;
   }
 
   /* FORM PAGE */
@@ -773,8 +776,8 @@ body.not-found-page {
   
   /* Result modal content position */
   .modalResult-content {
-    margin: 35% auto;
-  }
+    margin: 15% auto;
+   }
 
   /* FORM PAGE */
   /* Modal box width */
@@ -813,16 +816,12 @@ body.not-found-page {
     padding: 10px;
     margin: 0 auto;
   }
-
-
 }
 
 @media screen and (min-width: 1080px) {
   /* LANDING/GAME PAGE */
-  /* Rmove scrollbar */
-  body, html {
+   body, html {
     max-width: 100%;
-    overflow-y: hidden;
   }
 
   body {
@@ -856,7 +855,8 @@ body.not-found-page {
   }
 
 .modalResult-content {
-  width: 30%;
+  margin: 100px auto;
+  width: 35%;
 }
 
   #footerSection {
