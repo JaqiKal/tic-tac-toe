@@ -10,6 +10,7 @@ Visit the deployed site: [Tic-Tac-To ToGo](https://jaqikal.github.io/tic-tac-toe
 
 * [AUTOMATED TESTING](#automated-testing)
   * [W3C Validator](#w3c-validator)
+  * [JSHint](#jshint)
   * [Lighthouse](#lighthouse)
 * [MANUAL TESTING](#manual-testing)
   * [Testing User Stories](#testing-user-stories)
@@ -53,15 +54,42 @@ Mobile tested the site using Google chrome, version 121.0.6167.86 (Official Buil
 
 ### W3C Validator
 
-[W3C](https://validator.w3.org/) was used to validate the HTML on all pages of the website.
+* [W3C](https://validator.w3.org/) was used to validate the HTML on all pages of the website. Result is PASS.
+* [W3C](https://jigsaw.w3.org/css-validator/) was user to validate the CSS. Result is PASS
 
-* [index](/documentation/doc-image/w3-index.webp) - PASS
-* [form](/documentation/doc-image/w3-form.webp) - PASS
-* [404](/documentation/doc-image/w3-404.webp) - PASS
+#### Index - PASS
 
-[W3C](https://jigsaw.w3.org/css-validator/) was user to validate the CSS.
+![index](/documentation/doc-images/w3-index.webp)
 
-* [style.css](/documentation/doc-images/w3-css.webp) - PASS
+#### Form - PASS
+
+![form](/documentation/doc-images/w3-form.webp)
+
+#### 404 - PASS
+
+![404](/documentation/doc-images/w3-404.webp)
+
+#### css - PASS
+
+![style.css](/documentation/doc-images/w3-css.webp)
+
+### JSHint
+
+* [JSHint](https://jshint.com/about/) was used to validate the JavaScript. Result is PASS
+
+* There no warning or errors in Dev Tools.
+
+#### ui-game script
+
+![x](/documentation/doc-images/ui-game-js.webp)
+
+#### Form script
+
+![x](/documentation/doc-images/form-js.webp)
+
+#### clock script
+
+![x](/documentation/doc-images/clock-js.webp)
 
 - - -
 
@@ -113,22 +141,6 @@ After reviewing the elements that significantly impact the page's Cumulative Lay
 * 404 mobile, no report linked as result is close to desktop result.
 
 ![x](/documentation/doc-images/lighthouse-404-m.webp)
-
-### JSHint
-
-There are no warning in JSHint nor any warning or errors in Dev Tools.
-
-#### ui-game script
-
-![x](/documentation/doc-images/ui-game-js.webp)
-
-#### Form script
-
-![x](/documentation/doc-images/form-js.webp)
-
-#### clock script
-
-![x](/documentation/doc-images/clock-js.webp)
 
 ## MANUAL TESTING
 
