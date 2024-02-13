@@ -63,6 +63,26 @@ This was done only on Desktop
 
 All but one score-meter is in the green, achieving a scores from 99  till 100. Main issues are related to lesser performance due to bad image handling.
 
+#### Lighthouse Index html
+
+[x](/documentation/doc-images/lighthouse-index.webp)
+
+* [Report on Index](/documentation/lighthouse-index.html)
+
+#### Lighthouse Form html
+
+[x](/documentation/doc-images/lighthouse-form.webp)
+
+* [Report on Form](/documentation/lighthouse-form.html)
+
+#### Lighthouse 404 Not found page
+
+[x](/documentation/doc-images/lighthouse-404.webp)
+
+* [Report on 404](/documentation/lighthouse-404.html)
+
+### JSHint
+
 #### Desktop
 
 ![404.htm](/documentation/doc-image/lighthouse-)
@@ -215,13 +235,11 @@ The placeholder text within the form displayed two distinct font styles, Arial a
 
 I declared ```font-family: inherit;```  for  div class text-input and div id textMsg.
 
-
 ### UNSOLVED Bugs
 
 |TestCase ID|Feature|Expected Outcome|Result|Result after correction|
 |---|---|---|---|---|
 |---|---|---|---|---|
-
 
 ### KNOWN ISSUES
 
