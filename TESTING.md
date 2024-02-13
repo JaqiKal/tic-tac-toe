@@ -124,58 +124,59 @@ All but one score-meter is in the green, achieving a scores from 99  till 100. M
 #### Landing Page (LAP)
 
 | TestCase ID | Feature | Expected Outcome | Testing Performed | Result Chrome| Result FireFox | Comment |
-| ---| --- | --- | --- | --- |--- |
-| LAP-01 | Navigation to Game | Clicking "Game" reloads the landing page |Click "Game" link | PASS | PASS |--- |
-| LAP-02 | Navigation to Feedback Form |Clicking "Feedback" redirects to the feedback form | Click "Feedback" link | PASS | PASS |--- |
-| LAP-03 | Display of How To Play | "Hide/Show How To Play" toggles the visibility of game instructions | Click "Hide/Show How To Play" button | PASS | PASS |--- |
-| LAP-04 | Game Interaction | Clicking on an empty cell marks it with "X" or "O" | Click on game board cells |PASS | PASS |--- |
-| LAP-05 | Interaction with Occupied Cells | Clicking on a cell already marked with a player symbol does not alter the cell's state or symbol. | Attempt to click on cells already marked with 'X' or 'O'. |--- | PASS | PASS |
-| LAP-06 | Game Reset |Clicking "Reset Game" clears the game board | Click "Reset Game" button | PASS| PASS | Comment |--- |
-| LAP-07 | Dynamic Game Board Interaction | Each cell on the game board can only be clicked once per game | Attempt to click an already marked cell | PASS |PASS |--- |
-| LAP-08 | Win Condition Detection | The game correctly identifies a win condition | Align three symbols in a row/column/diagonal | PASS | PASS |--- |
-| LAP-09 | Draw Condition Detection | The game correctly identifies a draw condition | Fill all cells without a winning alignment | PASS | PASS |--- |
-| LAP-10 | Modal Outcome Display | Modal displays the correct outcome message at game end | Complete a game | PASS |PASS |--- |
-| LAP-11 | Modal Close Functionality | Modal closes upon clicking inside its area | Click on modal | PASS | PASS |--- |
+| ---| --- | --- | --- | --- |--- |--- |
+| LAP-01 | Navigation to Game | Clicking "Game" reloads the landing page |Click "Game" link | PASS | PASS | |
+| LAP-02 | Navigation to Feedback Form |Clicking "Feedback" redirects to the feedback form | Click "Feedback" link | PASS | PASS | |
+| LAP-03 | Display of How To Play | "Hide/Show How To Play" toggles the visibility of game instructions | Click "Hide/Show How To Play" button | PASS | PASS | |
+| LAP-04 | Game Interaction | Clicking on an empty cell marks it with "X" or "O" | Click on game board cells |PASS | PASS | |
+| LAP-05 | Interaction with Occupied Cells | Clicking on a cell already marked with a player symbol does not alter the cell's state or symbol. | Attempt to click on cells already marked with 'X' or 'O'. | PASS | PASS | |
+| LAP-05 | Interaction with Occupied Cells | Clicking on a cell already marked with a player symbol does not alter the cell's state or symbol. | Attempt to click on cells already marked with 'X' or 'O'. | PASS | PASS | |
+| LAP-06 | Game Reset |Clicking "Reset Game" clears the game board | Click "Reset Game" button | PASS| PASS | |
+| LAP-07 | Dynamic Game Board Interaction | Each cell on the game board can only be clicked once per game | Attempt to click an already marked cell | PASS |PASS | |
+| LAP-08 | Win Condition Detection | The game correctly identifies a win condition | Align three symbols in a row/column/diagonal | PASS | PASS | |
+| LAP-09 | Draw Condition Detection | The game correctly identifies a draw condition | Fill all cells without a winning alignment | PASS | PASS | |
+| LAP-10 | Modal Outcome Display | Modal displays the correct outcome message at game end | Complete a game | PASS |PASS | |
+| LAP-11 | Modal Close Functionality | Modal closes upon clicking inside its area | Click on modal | PASS | PASS | |
 
 #### Form Page (FOP)
 
 | TestCase ID | Feature | Expected Outcome | Testing Performed | Result Chrome| Result FireFox | Comment |
 | ---| --- | --- | --- | --- |--- |--- |
-| FOP-01 | Form Input Validation | Submitting an empty or invalid form shows error messages | Submit form without filling| PASS | PASS |--- |
-| FOP-02 | Field-specific Validation | Each field displays a specific error message for invalid input | Enter invalid data in each field separately | PASS | PASS |--- |
-| FOP-03 | Real-time Validation Feedback | Users can navigate through form fields using the keyboard | Fill each field and observe instant feedback | PASS | PASS |--- |
-| FOP-04 | Keyboard Navigation | Submitting an empty or invalid form shows error messages | Tab through fields and submit with Enter | PASS | PASS |--- |
-| FOP-05 | Successful Form Submission | Valid form submission shows a thank you message and redirects | Fill form and submit | PASS | PASS |--- |
-| FOP-06 | Navigation to Game | Clicking "Game" reloads the landing page | Click "Game" link | PASS |  PASS |--- |
-| FOP-07 | Feedback Button Functionality | "Submit feedback" button submits the form | Click "Submit feed-back" button | PASS| PASS |--- |
+| FOP-01 | Form Input Validation | Submitting an empty or invalid form shows error messages | Submit form without filling| PASS | PASS | |
+| FOP-02 | Field-specific Validation | Each field displays a specific error message for invalid input | Enter invalid data in each field separately | PASS | PASS | |
+| FOP-03 | Real-time Validation Feedback | Users can navigate through form fields using the keyboard | Fill each field and observe instant feedback | PASS | PASS | |
+| FOP-04 | Keyboard Navigation | Submitting an empty or invalid form shows error messages | Tab through fields and submit with Enter | PASS | PASS | |
+| FOP-05 | Successful Form Submission | Valid form submission shows a thank you message and redirects | Fill form and submit | PASS | PASS | |
+| FOP-06 | Navigation to Game | Clicking "Game" reloads the landing page | Click "Game" link | PASS |  PASS | |
+| FOP-07 | Feedback Button Functionality | "Submit feedback" button submits the form | Click "Submit feed-back" button | PASS| PASS | |
 | FOP-08 | text input placeholder | All placeholder text have font-family 'Open-Sans' | Occular check | PASS| PASS | See "Failed  test cases  - now FIXED" |
 
 #### 404 not found Page (NFP)
 
 | TestCase ID | Feature | Expected Outcome | Testing Performed | Result Chrome| Result FireFox | Comment |
 | ---| --- | --- | --- | --- |--- |
-| NFP-01 | Navigation to Game | Clicking "Back to the Game" redirects to the landing page | Click "Back to the Game" link| PASS  | PASS |--- |
-| NFP-02 | Feedback Link | Clicking "Let us know what went wrong!" redirects to the feedback form | Click feedback link | PASS  | PASS |--- |
-| NFP-03 | 404 Message Display | 404 page displays the custom error message correctly | Navigate to a non-existent URL| PASS | PASS |--- |
+| NFP-01 | Navigation to Game | Clicking "Back to the Game" redirects to the landing page | Click "Back to the Game" link| PASS  | PASS | |
+| NFP-02 | Feedback Link | Clicking "Let us know what went wrong!" redirects to the feedback form | Click feedback link | PASS  | PASS | |
+| NFP-03 | 404 Message Display | 404 page displays the custom error message correctly | Navigate to a non-existent URL| PASS | PASS | |
 
 #### Accessibility and Usability (AUS)
 
 | TestCase ID | Feature | Expected Outcome | Testing Performed | Result Chrome| Result FireFox | Comment |
 | ---| --- | --- | --- | --- |--- | --- |
 | AUS-01 | Keyboard Accessibility | All interactive elements are accessible via keyboard | Navigate and interact using keyboard only | Partial PASS  | Partial PASS | See "Failed  test cases  - now FIXED" |
-| AUS-02 | Screen Reader Compatibility | Screen readers correctly announce elements and actions | Use a screen reader to navigate the site | PASS  | PASS |---|
-| AUS-03 | Contrast Ratio Compliance | Text and background contrasts meet accessibility guidelines | Check contrast ratios with a tool | PASS  | PASS |--- |
-| AUS-04 | Responsive Font Sizes | Font sizes adjust appropriately for different screen sizes| Change browser zoom and screen resolutions | PASS  | PASS |--- |
+| AUS-02 | Screen Reader Compatibility | Screen readers correctly announce elements and actions | Use a screen reader to navigate the site | PASS  | PASS | |
+| AUS-03 | Contrast Ratio Compliance | Text and background contrasts meet accessibility guidelines | Check contrast ratios with a tool | PASS  | PASS | |
+| AUS-04 | Responsive Font Sizes | Font sizes adjust appropriately for different screen sizes| Change browser zoom and screen resolutions | PASS  | PASS | |
 
 #### General Test Cases (GEN)
 
 | TestCase ID | Feature | Expected Outcome | Testing Performed | Result Chrome| Result FireFox | Comment |
 | ---| --- | --- | --- | --- |--- |
-| GEN-01 | Clock Functionality | The digital clock displays the current time and updates every second | Observe the clock link| PASS  | PASS |C
-| GEN-02 | Responsive Design | The website layout adjusts correctly for mobile and desktop views | Resize browser window | PASS  | PASS |---|
-| GEN-03 | Cross-Browser Compatibility | All features work identically in both Chrome and Firefox | Perform all tests in both browsers | PASS | PASS |---|
-| GEN-04 | Page Load Time| Pages load within acceptable time frames | Measure load times using browser dev tools | PASS | PASS |---|
-| GEN-05 | HTTPS Redirect| Site redirects HTTP access to HTTPS | Access site with HTTP and observe redirect | PASS | PASS |---|
+| GEN-01 | Clock Functionality | The digital clock displays the current time and updates every second | Observe the clock link| PASS  | PASS | |
+| GEN-02 | Responsive Design | The website layout adjusts correctly for mobile and desktop views | Resize browser window | PASS  | PASS | |
+| GEN-03 | Cross-Browser Compatibility | All features work identically in both Chrome and Firefox | Perform all tests in both browsers | PASS | PASS | |
+| GEN-04 | Page Load Time| Pages load within acceptable time frames | Measure load times using browser dev tools | PASS | PASS | |
+| GEN-05 | HTTPS Redirect| Site redirects HTTP access to HTTPS | Access site with HTTP and observe redirect | PASS | PASS | |
 
 ### Failed  test cases  - now FIXED
 
@@ -190,7 +191,7 @@ All but one score-meter is in the green, achieving a scores from 99  till 100. M
 
 Using const is a common practice in modern JavaScript development because it provides a way to declare constants with block scope, but having stated this, jshint still issued a warning [ 'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).], on this code:
 
-![jshint esversion: 6](/documents/doc-images/jshint%20esversion%206.png)
+![jshint esversion: 6](/documentation/doc-images/jshint-esversion-6.png)
 
 #### Solution-Bug-01
 
