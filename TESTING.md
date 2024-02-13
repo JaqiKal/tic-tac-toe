@@ -73,13 +73,13 @@ All but one score-meter is in the green, achieving a scores from 99  till 100. M
 
 ![x](/documentation/doc-images/lighthouse-form.webp)
 
-* [Report on Form](/documentation/lighthouse-form.html)
+* [Report on Form](/documentation/lighthouse-form.pdf)
 
 #### Lighthouse 404 Not found page
 
 ![x](/documentation/doc-images/lighthouse-404.webp)
 
-* [Report on 404](/documentation/lighthouse-404.html)
+* [Report on 404](/documentation/lighthouse-404.pdf)
 
 ### JSHint
 
