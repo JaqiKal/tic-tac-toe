@@ -154,7 +154,7 @@ All but one score-meter is in the green, achieving a scores from 99  till 100. M
 #### 404 not found Page (NFP)
 
 | TestCase ID | Feature | Expected Outcome | Testing Performed | Result Chrome| Result FireFox | Comment |
-| ---| --- | --- | --- | --- |--- |
+| ---| --- | --- | --- | --- |--- |--- |
 | NFP-01 | Navigation to Game | Clicking "Back to the Game" redirects to the landing page | Click "Back to the Game" link| PASS  | PASS | |
 | NFP-02 | Feedback Link | Clicking "Let us know what went wrong!" redirects to the feedback form | Click feedback link | PASS  | PASS | |
 | NFP-03 | 404 Message Display | 404 page displays the custom error message correctly | Navigate to a non-existent URL| PASS | PASS | |
@@ -171,7 +171,7 @@ All but one score-meter is in the green, achieving a scores from 99  till 100. M
 #### General Test Cases (GEN)
 
 | TestCase ID | Feature | Expected Outcome | Testing Performed | Result Chrome| Result FireFox | Comment |
-| ---| --- | --- | --- | --- |--- |
+| ---| --- | --- | --- | --- |--- |---|
 | GEN-01 | Clock Functionality | The digital clock displays the current time and updates every second | Observe the clock link| PASS  | PASS | |
 | GEN-02 | Responsive Design | The website layout adjusts correctly for mobile and desktop views | Resize browser window | PASS  | PASS | |
 | GEN-03 | Cross-Browser Compatibility | All features work identically in both Chrome and Firefox | Perform all tests in both browsers | PASS | PASS | |
@@ -182,7 +182,7 @@ All but one score-meter is in the green, achieving a scores from 99  till 100. M
 
 | TestCase ID| Feature | Expected Outcome | Result | Result after correction|  Comment |
 | ---| --- | --- | --- | --- |---|
-| AUS-01 | Keyboard Accessibility | All interactive elements are accessible via keyboard | Not possible to navigate with keyboard and cells not accessible | PASS | See Bug-03 |
+| AUS-01 | Keyboard Accessibility | All interactive elements are accessible via keyboard | Not possible to navigate with keyboard and cells not accessible | PASS | PASS | See Bug-03 |
 | FOP-08 | text input placeholder | All placeholder text have font-family 'Open-Sans' | Two different font families not selected by me| PASS| See Bug-04 |
 
 ## BUGS
