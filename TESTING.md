@@ -65,19 +65,19 @@ All but one score-meter is in the green, achieving a scores from 99  till 100. M
 
 #### Lighthouse Index html
 
-[x](/documentation/doc-images/lighthouse-index.webp)
+![x](/documentation/doc-images/lighthouse-index.webp)
 
-* [Report on Index](/documentation/lighthouse-index.html)
+* [Report on Index](/documentation/lighthouse-index.pdf)
 
 #### Lighthouse Form html
 
-[x](/documentation/doc-images/lighthouse-form.webp)
+![x](/documentation/doc-images/lighthouse-form.webp)
 
 * [Report on Form](/documentation/lighthouse-form.html)
 
 #### Lighthouse 404 Not found page
 
-[x](/documentation/doc-images/lighthouse-404.webp)
+![x](/documentation/doc-images/lighthouse-404.webp)
 
 * [Report on 404](/documentation/lighthouse-404.html)
 
