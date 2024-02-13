@@ -1,12 +1,10 @@
 # Tic Tac Toe - A game for all times
 
-* REMEMEBER TO CHANGE PIC TO LATEST AND GREATEST!!!!
-
 ![The website shown on a variety of screen sizes](/documentation/doc-images/amiresponsive.webp)
 
 Visit the deployed site: [Tic-Tac-Toe](https://jaqikal.github.io/tic-tac-toe/index.html)
 
-Tic-Tac-Toe, also known as Noughts and Crosses, is a two-player game where the objective is to align three of your symbols (X or O) in a row, column, or diagonal to win the game. This web application manages player interactions, tracks the game state, and checks for win conditions or a draw.  It has a basic game logic. The aim was to make it functional, accessible and set a foundation for future enhancements.
+Tic-Tac-Toe, also known as Noughts and Crosses, is a two-player game where the objective is to align three of your symbols (X or O) in a row, column, or diagonal to win the game. This web application manages one player and computer interaction, tracks the game state, and checks for win conditions or a draw.  It has a basic game logic. The aim was to make it functional, accessible and set a foundation for future enhancements.
 
 Get set for Toe-to-Toe Tic-Tac-Toe! No need to gather pals—just choose your symbol and jump into the tic-tac-tussle. Are you ready for the challenge? Let's see who conquers the grid!
 
@@ -126,6 +124,10 @@ The design focuses on distinguishing game elements while maintaining a cohesive 
 
 ![x](/documentation/doc-images/acme-xo-400.webp)
 
+#### Landing page H1 - Mochiy Pop One: Regular 400
+
+![x](/documentation/doc-images/mochiy-pop-one-400.webp)
+
 ### Imagery
 
 Images were not utilized.
@@ -166,38 +168,41 @@ The website comprises
 
 ### Captured screenshots of the website
 
-* Home page / landing page
+#### The favicon
 
-Insert PIC!
+![x](/documentation/doc-images/favicon-on-tab.webp)
 
-* Form page
+#### The Navbar
 
-Insert PIC!
+![x](/documentation/doc-images/navbar-mob.webp)   ![x](/documentation/doc-images/navbar.webp)
 
-* A thank you note in the footer of the form page.
+#### The Logo
 
-Insert PIC!
+![x](/documentation/doc-images/logo.webp)
 
-* A 404 page for when user land on a non-existent page.
+#### Home page / landing page
 
-Insert PIC!
+![x](/documentation/doc-images/index-iph14-pro-max-430.webp)   ![x](/documentation/doc-images/index-dtop.webp)
 
-* The favicon
+##### Home modal
 
-Insert PIC!
+![x](/documentation/doc-images/index-modal-iph14-pro-max-430-m.webp)   ![x](/documentation/doc-images/index-modal-dtop.webp)
 
-* The Navbar
+#### Form with error messages and modal
 
-Insert PIC!
+![x](/documentation/doc-images/form-iph14-pro-max-430.webp)   ![x](/documentation/doc-images/form-dtop.webp)
 
-* Footer
-* * A 24 hour clock and a paragraph with different text is included in the footer of all the HTML pages
+##### Error messages
 
-Insert PIC!
+![x](/documentation/doc-images/form-error-iph14-pro-max-430.webp)   ![x](/documentation/doc-images/form-error-dtop.webp)
 
-* A Logo
+##### Modal
 
-Insert PIC!
+![x](/documentation/doc-images/form-modal-iph14-pro-max-430.webp)   ![x](/documentation/doc-images/form-modal-dtop.webp)
+
+#### A 404 page for when users land on a non-existent page
+
+![x](/documentation/doc-images/404-iph14-pro-max-430.webp)   ![x](/documentation/doc-images/404-dtop.webp)
 
 ### Future Implementations
 
@@ -320,15 +325,19 @@ I have used different sources to get more information and understand how to code
 * [Favicon.io](https://favicon.io/favicon-converter/): Used to create the site Favicon and provided the code in the head of all pages.
 * In landing  page I have amended code from:
   * Clock in footer [w3shools](https://www.w3schools.com/js/tryit.asp?filename=tryjs_timing_clock)
-  * yy
+  * Modal Dialog: [w3school](https://www.w3schools.com/w3css/w3css_modal.asp)
+  * Modal box: [w3school](https://www.w3schools.com/howto/howto_css_modals.asp)
+  
 * In form page I have amended code from:
   * Event Handlers: [elated-com](https://www.elated.com/events-and-event-handlers/)
   * Event Listeners: [w3school](https://www.w3schools.com/jsref/met_element_addeventlistener.asp)
   * Modal Dialog: [w3school](https://www.w3schools.com/w3css/w3css_modal.asp)
+  * Modal box: [w3school](https://www.w3schools.com/howto/howto_css_modals.asp)
   * Form validation: [blog](https://blog.bitsrc.io/you-have-been-doing-form-validation-wrong-8b36430d63f6)
   * Form validation: [w3school](https://www.w3schools.com/js/js_validation.asp)
   * For each loop: [w3school](https://www.w3schools.com/jsref/jsref_foreach.asp)
   * Tutor service helped me with a bit of psudocode and thoughts on how to trim whitespace in the form: ```if userInput.startsWith(" ") {action for error}```
+
 * The remaining code in script.js was developed by me, drawing inspiration and assistance from extensive online research, including searching on Google and examining other developers' code. I selected ideas and snippets that seemed promising, adapted them, and integrated these modified snippets into my own code to ensure they worked seamlessly with my project.
 
 ### Content
@@ -339,10 +348,12 @@ Website content crafted by the developer.
 
 Media were not utilized.
 
-###  Acknowledgments'
+###  Acknowledgments
 
 I would like to acknowledge the following people:
 
 * My mentor [Jubril Akolade](https://github.com/jubrillionaire/) for all his help and advice throughout the project.
 * The whole team at [Code Institute](https://codeinstitute.net) for their teaching and support.
 * To all engaged fellow student at all channels and a special shout out to slack channel community sweden.
+* My friends are playfully teasing me because they always manage to beat the computer at tic-tac-toe. :)
+* My darling who gives space when my frustration is skyrocketing and a shoulder to lean on when frustration has be replaced by <killall css or js>.

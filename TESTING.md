@@ -53,11 +53,15 @@ Mobile tested the site using Google chrome, version 121.0.6167.86 (Official Buil
 
 ### W3C Validator
 
-[W3C](https://validator.w3.org/) was used to validate the HTML on all pages of the website. It was also used to validate the CSS.
+[W3C](https://validator.w3.org/) was used to validate the HTML on all pages of the website.
 
-* [404.htm](/documentation/doc-image/w3-404.png) - Passed
-* [form.html](/documentation/doc-image/w3-contact.png) - Passed
-* [index.html](/documentation/doc-image/w3-css.png) - Passed
+* [index](/documentation/doc-image/w3-index.webp) - PASS
+* [form](/documentation/doc-image/w3-form.webp) - PASS
+* [404](/documentation/doc-image/w3-404.webp) - PASS
+
+[W3C](https://jigsaw.w3.org/css-validator/) was user to validate the CSS.
+
+* [style.css](/documentation/doc-images/w3-css.webp) - PASS
 
 - - -
 
