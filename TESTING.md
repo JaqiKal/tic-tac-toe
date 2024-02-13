@@ -238,9 +238,9 @@ I declared ```font-family: inherit;```  for  div class text-input and div id tex
 
 ### UNSOLVED Bugs
 
-|TestCase ID|Feature|Expected Outcome|Result|Result after correction|
-|---|---|---|---|---|
-|---|---|---|---|---|
+|ID|Feature|Expected Outcome|Result|
+|---|---|---|---|
+|---|---|---|---|
 
 ### KNOWN ISSUES
 
