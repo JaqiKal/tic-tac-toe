@@ -120,7 +120,7 @@ body {
   position: fixed;
   z-index: 1;
   /* Location of the box */
-  padding-top: 100px; 
+  padding-top: 100px;
   left: 0;
   top: 0;
   width: 100%;
@@ -380,18 +380,14 @@ main {
 /* Form container style */
 #formContainer {
   position: relative;
- max-width: 400px;
- width: 80%;
+  max-width: 400px;
+  width: 80%;
   height: auto;
   padding: 25px 10px;
   margin-top: 0;
   border-radius: 20px;
   background: #f3cefa;
-  box-shadow: 20px 20px 40px rgba(45, 1, 36, 0.3),
-              8px 8px 60px rgba(45, 1, 36, 0.3),
-              inset 4px 4px 8px rgba(45, 1, 36, 0.6),
-              inset 4px 4px 16px rgba(255, 255, 255, 0.4),
-              inset -4px -4px 12px rgba(45, 1, 36, 0.7);
+  box-shadow: 20px 20px 40px rgba(45, 1, 36, 0.3), 8px 8px 60px rgba(45, 1, 36, 0.3), inset 4px 4px 8px rgba(45, 1, 36, 0.6), inset 4px 4px 16px rgba(255, 255, 255, 0.4), inset -4px -4px 12px rgba(45, 1, 36, 0.7);
 }
 
 #feedbackForm h1,
@@ -591,14 +587,13 @@ body.not-found-page {
   /* FORM PAGE */
   #formContainer {
     margin: 25px 15px;
-    width: 275px;
+    width: 265px;
   }
 
   #feedbackForm,
   .text-input,
   #textMsg {
     width: 100%;
-
   }
 
   /* 404 NOT FOUND PAGE */
@@ -635,11 +630,10 @@ body.not-found-page {
 
   /*FORM PAGE */
   /* Form container style */
-    #formContainer {
-      margin: 25px 15px;
-      width: 320px;
-    }
-
+  #formContainer {
+    margin: 25px 15px;
+    width: 320px;
+  }
 
   #feedbackForm,
   .text-input,
@@ -671,11 +665,9 @@ body.not-found-page {
   }
 }
 
-
-
+/* Media query: medium phones (712px and up) */
 /* Media query: tablet & desktop (712px and up) */
 @media screen and (min-width: 712px) {
-
   /* Top navigation bar styles */
   .navBar {
     display: flex;
@@ -721,9 +713,9 @@ body.not-found-page {
     width: 600px;
     margin: 0 auto;
   }
-  
+
   /*FORM PAGE */
-  
+
   #formContainer {
     position: relative;
     margin: 25px 0;
@@ -750,7 +742,7 @@ body.not-found-page {
 
   .not-found-container {
     max-width: 600px;
-    }
+  }
 
   .not-found-container p {
     font-size: larger;
@@ -773,11 +765,11 @@ body.not-found-page {
   #head-container h1 {
     padding: 0 0 10px 0;
   }
-  
+
   /* Result modal content position */
   .modalResult-content {
     margin: 15% auto;
-   }
+  }
 
   /* FORM PAGE */
   /* Modal box width */
@@ -818,14 +810,16 @@ body.not-found-page {
   }
 }
 
+/* Media query: medium phones (1080px and up) */
 @media screen and (min-width: 1080px) {
   /* LANDING/GAME PAGE */
-   body, html {
+  body,
+  html {
     max-width: 100%;
   }
 
   body {
-    padding-top: 40px;
+    padding-top: 55px;
   }
 
   #navBar {
@@ -851,13 +845,13 @@ body.not-found-page {
   }
 
   #gameBoard {
-    max-width: 350px;
+    max-width: 300px;
   }
 
-.modalResult-content {
-  margin: 100px auto;
-  width: 35%;
-}
+  .modalResult-content {
+    margin: 100px auto;
+    width: 35%;
+  }
 
   #footerSection {
     margin-top: 5px;
@@ -870,7 +864,28 @@ body.not-found-page {
 
   /* FORM PAGE */
   #formBody {
-    margin: 50px 0 0;
+    margin: 55px 0 0;
   }
 
+  #formContainer {
+    position: relative;
+    padding: 15px 10px;
+  }
+}
+
+/* Media query: medium phones (1920px and up) */
+@media screen and (min-width: 1920px) {
+  #p-head {
+    margin-bottom: 60px;
+  }
+
+  #footerSection {
+    margin-top: 40px;
+    font-size: 0.9rem;
+  }
+
+  /* FORM PAGE */
+  #formBody {
+    margin: 55px 0 0;
+  }
 }
