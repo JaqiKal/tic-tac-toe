@@ -510,6 +510,11 @@ label {
   cursor: pointer;
 }
 
+#formFooter {
+  margin-top: 10px;
+}
+  
+
 /* 404 - NOT FOUND PAGE */
 /* General body styling */
 body.not-found-page {
