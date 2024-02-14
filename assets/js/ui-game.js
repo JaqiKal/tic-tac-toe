@@ -288,12 +288,8 @@ document.addEventListener("DOMContentLoaded", () => {
  * Clear the game state by filling it with empty strings.
  * Clear the text content of all cells.
  *
-function resetGame() {
-  gameActive = true;
-  gameState.fill("");
-  cells.forEach((cell) => (cell.innerText = ""));
-}
 */
+
 // Set the game as active. Reset the game state to empty
 function resetGame() {
   gameActive = true;
