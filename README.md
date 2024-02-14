@@ -170,31 +170,49 @@ The website comprises
 
 #### The favicon
 
+A favicon, short for "favorite icon", is a small image that represents a website. This image appears in various places, but most commonly in the browser tab next to the page title. It helps users identify a webpage at a glance, which can be particularly useful when multiple tabs are open.
+
 ![x](/documentation/doc-images/favicon-on-tab.webp)
-
-#### The Logo
-
-![x](/documentation/doc-images/logo.webp)
 
 #### The Navbar
 
+The navigation bar at the top allows users to switch between the game and a feedback form, emphasizing user interaction and improvement of the gaming experience. The navigation bar is structured with two main divisions: a logo and a menu. The menu division contains an unordered list with two list items. Each list item contains a link that redirects to a different page on the website. The first link redirects to the index page, the second link redirects to a feedback form page (form.html).
+
 ![x](/documentation/doc-images/navbar-mob.webp)   ![x](/documentation/doc-images/navbar.webp)
+
+#### The Logo
+
+The logo is visible on all three pages it contains a link that redirects to the index page when clicked. The link wraps an image that serves as the website's logo.
+
+![x](/documentation/doc-images/logo.webp)
+
 
 #### The Footer
 
-Landing page and  Form page footer
+Landing page and Form page footer
+
+The footer features a 24-hour clock, adding a playful touch to the site, and a thank you note in the form page footer.
 
 ![Landing](/documentation/doc-images/footer-index.webp)   ![Form](/documentation/doc-images/footer-form.webp)
 
 #### Home / landing page
 
+The main sections of the page include an introduction to the game, instructions on how to play, the game board itself, and buttons for restarting the game and submitting feedback. The "How to Play" section is initially hidden, with a button provided to show or hide the instructions, catering to both new and returning players by allowing them to access the game rules on demand.
+
+The game board is interactive, consisting of nine clickable cells where players take turns marking their symbols. The design emphasizes accessibility and user-friendly navigation, with each cell being keyboard accessible and labeled for screen readers.
+
+
 ![x](/documentation/doc-images/index-iph14-pro-max-430.webp)   ![x](/documentation/doc-images/index-dtop.webp)
 
 Home modal
 
+The page also includes a modal for displaying the outcome of the game (win, lose, or draw), enhancing the interactive gaming experience.
+
 ![x](/documentation/doc-images/index-modal-iph14-pro-max-430-m.webp)   ![x](/documentation/doc-images/index-modal-dtop.webp)
 
 #### Form with error messages and modal
+
+The form page includes a feedback form with fields for the user's first name, last name, email address, and a text area for the feedback message. Each input field has an associated error message container for form validation errors. Also a modal for displaying feedback submission confirmation.
 
 ![x](/documentation/doc-images/form-iph14-pro-max-430.webp)   ![x](/documentation/doc-images/form-dtop.webp)
 
@@ -207,6 +225,9 @@ Modal
 ![x](/documentation/doc-images/form-modal-iph14-pro-max-430.webp)   ![x](/documentation/doc-images/form-modal-dtop.webp)
 
 #### A 404 page for when users land on a non-existent page
+
+It is designed to handle requests for non-existent routes on the site. The section contains a navigation bar with links to the game page and the feedback form page. A main content area with a humorous message indicating that the user has navigated to a non-existent page, likening it to making a move outside the Tic-Tac-Toe grid. It encourages the user to return to the game or provide feedback if they're done playing.
+Links to navigate back to the game or to the feedback form and a thank you message.
 
 ![x](/documentation/doc-images/404-iph14-pro-max-430.webp)   ![x](/documentation/doc-images/404-dtop.webp)
 
@@ -361,5 +382,4 @@ I would like to acknowledge the following people:
 * My mentor [Jubril Akolade](https://github.com/jubrillionaire/) for all his help and advice throughout the project.
 * The whole team at [Code Institute](https://codeinstitute.net) for their teaching and support.
 * To all engaged fellow student at all channels and a special shout out to slack channel community sweden.
-* My friends are playfully teasing me because they always manage to beat the computer at tic-tac-toe. :)
-* My darling who gives space when my frustration is skyrocketing and a shoulder to lean on when frustration has be replaced by <killall css or js>.
+* My friends and family, who are playfully teasing me because they always manage to beat the computer at tic-tac-toe. :).
