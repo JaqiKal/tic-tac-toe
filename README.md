@@ -186,7 +186,6 @@ The logo is visible on all three pages it contains a link that redirects to the 
 
 ![x](/documentation/doc-images/logo.webp)
 
-
 #### The Footer
 
 Landing page and Form page footer
@@ -200,7 +199,6 @@ The footer features a 24-hour clock, adding a playful touch to the site, and a t
 The main sections of the page include an introduction to the game, instructions on how to play, the game board itself, and buttons for restarting the game and submitting feedback. The "How to Play" section is initially hidden, with a button provided to show or hide the instructions, catering to both new and returning players by allowing them to access the game rules on demand.
 
 The game board is interactive, consisting of nine clickable cells where players take turns marking their symbols. The design emphasizes accessibility and user-friendly navigation, with each cell being keyboard accessible and labeled for screen readers.
-
 
 ![x](/documentation/doc-images/index-iph14-pro-max-430.webp)   ![x](/documentation/doc-images/index-dtop.webp)
 
