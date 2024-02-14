@@ -71,6 +71,7 @@ p {
   display: flex;
   letter-spacing: 3px;
   font-weight: 600;
+  font-size: 0.8rem;
 }
 
 /* Styling of the anchor tags in menu */
@@ -103,7 +104,7 @@ body {
   font-family: "Open Sans", sans-serif;
   color: #1b0125;
   min-height: 100vh;
-  padding-top: 80px;
+  padding-top: 75px;
   padding-bottom: 0px;
   margin: 60px auto 0;
 }
@@ -580,7 +581,7 @@ body.not-found-page {
 
   /* FORM PAGE */
   #formContainer {
-    margin: 25px 15px;
+    margin: 25px auto;
     width: 265px;
   }
 
@@ -622,7 +623,6 @@ body.not-found-page {
   /*FORM PAGE */
   /* Form container style */
   #formContainer {
-    margin: 25px 15px;
     width: 320px;
   }
 
@@ -659,6 +659,9 @@ body.not-found-page {
 /* Media query: tablet (712px and up) */
 @media screen and (min-width: 712px) {
   /* Top navigation bar styles */
+  body {
+    padding-top: 0px
+  }
   .navBar {
     display: flex;
     flex-direction: row;
@@ -697,8 +700,6 @@ body.not-found-page {
   /*FORM PAGE */
 
   #formContainer {
-    position: relative;
-    margin: 25px 0;
     width: 340px;
   }
 
@@ -743,11 +744,7 @@ body.not-found-page {
   }
 
   /* FORM PAGE */
-  /* Modal box width */
-  #formBody {
-    margin: 30px;
-  }
-
+/* Modal box width */
   .modal-content {
     width: 30%;
   }
@@ -793,9 +790,8 @@ body.not-found-page {
   }
 
   #footerSection {
-    margin-top: 10px;
-    font-size: 0.9rem;
-  }
+    margin-top: 20px;
+ }
 
   #footerSection p {
     font-size: 0.9rem;
@@ -803,13 +799,18 @@ body.not-found-page {
 
   /* FORM PAGE */
   #formBody {
-    margin-top: 55px;
+    margin-top: 60px;
+    padding: 0;
   }
 
-  #formContainer {
-    position: relative;
-    padding: 15px 10px;
+  main {
+    margin: 0;  
   }
+
+  #form-container {
+    margin-top: 60px;
+  }
+
 }
 
 /* Media query: medium phones (1440px and up) */
