@@ -95,7 +95,6 @@ p {
 }
 
 body {
-  /*background: linear-gradient(#6f3ff59d, #f3cefa 80%);*/
   background: linear-gradient(#f3cefa, #6f3ff59d);
   display: flex;
   flex-direction: column;
@@ -106,7 +105,7 @@ body {
   min-height: 100vh;
   padding-top: 80px;
   padding-bottom: 0px;
-  margin: 60px;
+  margin: 60px auto 0;
 }
 
 /* Generic modal in Landing and Form */
@@ -167,8 +166,7 @@ footer {
   border-radius: 10px;
   background-color: rgba(243, 238, 243, 0.596);
   box-shadow: 4px 4px 60px rgba(45, 1, 63, 0.685);
-  font-weight: 600;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 #buttonSection {
@@ -773,6 +771,7 @@ body.not-found-page {
 @media screen and (min-width: 1080px) {
   /* LANDING - GAME PAGE */
   body {
+    margin-top: 45px;
     padding-top: 55px;
   }
 
@@ -785,8 +784,16 @@ body.not-found-page {
     width: 35%;
   }
 
+  #button-container {
+    display: flex;  
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+
   #footerSection {
-    margin-top: 50px;
+    margin-top: 10px;
     font-size: 0.9rem;
   }
 
@@ -796,7 +803,7 @@ body.not-found-page {
 
   /* FORM PAGE */
   #formBody {
-    margin: 55px 0 0;
+    margin-top: 55px;
   }
 
   #formContainer {
@@ -805,19 +812,11 @@ body.not-found-page {
   }
 }
 
-/* Media query: medium phones (1920px and up) */
-@media screen and (min-width: 1920px) {
-  .menu {
+/* Media query: medium phones (1440px and up) */
+@media screen and (min-width: 1440px) {
+    .menu {
     padding-right: 15px;
   }
-
-  #button-container {
-    display: flex;  
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-  
 
   /* LANDING - GAME PAGE */
   /* Result modal content position */
