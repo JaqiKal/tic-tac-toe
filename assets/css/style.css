@@ -48,7 +48,7 @@ p {
   width: 70px;
   height: auto;
   padding: 0;
-   /* Smooth transition for scaling */
+  /* Smooth transition for scaling */
   transition: transform 0.3s ease;
 }
 
@@ -306,7 +306,6 @@ footer {
   /* Adjust the value as needed */
   font-weight: 600;
 }
-
 
 /* Result modal content */
 .modalResult-content {
@@ -755,19 +754,17 @@ body.not-found-page {
   }
 
   /* 404 NOT FOUND PAGE */
+  body.not-found-page {
+    padding: 10px;
+    margin: 0 auto;
+  }
+
   .not-found-container {
     max-width: 800px;
   }
 
   .not-found-container p {
     line-height: 1.3rem;
-  }
-
-  /* 404 NOT FOUND PAGE */
-
-  body.not-found-page {
-    padding: 10px;
-    margin: 0 auto;
   }
 }
 
@@ -788,7 +785,7 @@ body.not-found-page {
   }
 
   #footerSection {
-    margin-top: 80px;
+    margin-top: 50px;
     font-size: 0.9rem;
   }
 
@@ -812,7 +809,7 @@ body.not-found-page {
   .menu {
     padding-right: 15px;
   }
-  
+
   /* LANDING - HOME PAGE */
   /* Result modal content position */
   .modalResult-content {
