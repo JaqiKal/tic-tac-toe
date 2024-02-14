@@ -816,11 +816,6 @@ body.not-found-page {
     margin: 14% auto;
   }
 
-  body {
-    zoom: 0.99; /* Adjust zoom level as needed */
-    transform-origin: top left;
-  }
-
   /* FORM PAGE */
   #formBody {
     margin: 55px 0 0;
