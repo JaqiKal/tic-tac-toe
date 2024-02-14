@@ -141,7 +141,7 @@ footer {
   margin: 15px;
 }
 
-/* LANDING PAGE */
+/* LANDING - GAME PAGE */
 #header section {
   padding: 80px 20px;
 }
@@ -810,7 +810,7 @@ body.not-found-page {
     padding-right: 15px;
   }
 
-  /* LANDING - HOME PAGE */
+  /* LANDING - GAME PAGE */
   /* Result modal content position */
   .modalResult-content {
     margin: 14% auto;
