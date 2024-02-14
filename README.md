@@ -109,7 +109,7 @@ The design focuses on distinguishing game elements while maintaining a cohesive 
 
 * Google Fonts was used to import the chosen fonts for use in the site. I used [Google Fonts](https://fonts.google.com/) as it doesn't require you to download the font.
 * My choice was based on readability and that I find the fonts to convey a neutral, easy to read feeling.
-* Chosen fonts are: Open Sans with fallback sans-serif for the Body, and for game board cell it is 'Acme', 'Open Sans', sans-serif.
+* Chosen fonts are: Open Sans with fallback sans-serif for the Body, and for game board cell it is 'Acme', 'Open Sans', sans-serif. The h1 on landing page is font Mochiy Pop One  .
 * I've included a few font weights to have the possibility of variation.
 
 #### Body - Opens Sans: Regular 400, Medium 500, Bold 700
@@ -124,7 +124,7 @@ The design focuses on distinguishing game elements while maintaining a cohesive 
 
 ![x](/documentation/doc-images/acme-xo-400.webp)
 
-#### Landing page H1 - Mochiy Pop One: Regular 400
+#### Landing page h1 - Mochiy Pop One: Regular 400
 
 ![x](/documentation/doc-images/mochiy-pop-one-400.webp)
 
@@ -182,8 +182,7 @@ The navigation bar at the top allows users to switch between the game and a feed
 
 #### The Logo
 
-The logo is visible on all three pages it contains a link that redirects to the index page when clicked. The link wraps an image that serves as the website's logo.
-
+The logo is visible on all three pages it contains a link that redirects to the index page when clicked. 
 ![x](/documentation/doc-images/logo.webp)
 
 #### The Footer

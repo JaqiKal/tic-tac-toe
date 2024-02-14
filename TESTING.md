@@ -99,8 +99,6 @@ I utilized Lighthouse in Chrome Developer Tools for evaluating the site's perfor
 
 This was done in both desktop and mobile environments.
 
-Main issues are related to lesser performance due to bad image handling.
-
 #### Lighthouse Index html
 
 * [Report on Index desktop](/documentation/lighthouse-index.pdf)
