@@ -48,12 +48,8 @@ p {
   width: 70px;
   height: auto;
   padding: 0;
-}
-
-/* Navbar logo hover effect */
-.logo img {
+   /* Smooth transition for scaling */
   transition: transform 0.3s ease;
-  /* Smooth transition for scaling */
 }
 
 .logo img:hover {
@@ -210,9 +206,8 @@ footer {
   grid-gap: 2px;
   /* Responsive width based on viewport width */
   width: 90vw;
-  max-width: 450px;
+  max-width: 300px;
   /* Maintain square aspect ratio for the board */
-  aspect-ratio: 1 / 1;
   margin: 20px;
   /* Allows to position child elements modal absolutely within */
   position: relative;
@@ -226,13 +221,13 @@ footer {
   box-shadow: inset 6px 6px 12px rgba(45, 1, 63, 0.753), inset -4px -4px 8px rgba(167, 7, 159, 0.2);
   border-radius: 10px;
   cursor: pointer;
-  aspect-ratio: 1 / 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-family: "Acme", "Open Sans", sans-serif;
   color: #2d013f;
+  aspect-ratio: 1 / 1;
 }
 
 /* Activated with a mouse or any mouse-emulating technology *
@@ -295,7 +290,7 @@ footer {
   margin: 30px 30px 15px;
   padding: 20px;
   font-size: 1rem;
-  width: 300px;
+  max-width: 600px;
 }
 
 #howtoplayContainer ul {
@@ -311,6 +306,7 @@ footer {
   /* Adjust the value as needed */
   font-weight: 600;
 }
+
 
 /* Result modal content */
 .modalResult-content {
@@ -567,15 +563,15 @@ body.not-found-page {
 }
 
 /* RESPONSIVENESS */
-/* Media query: medium phones (20px and up) */
+/* Media query: medium phones (250px and up) */
 @media screen and (min-width: 250px) {
   .logo img {
-    width: 50px;
-    height: auto;
+    width: 60px;
   }
 
+  /* LANDING - GAME PAGE */
   #howtoplayContainer {
-    width: 275px;
+    width: 260px;
     margin: 0 auto;
   }
 
@@ -614,17 +610,14 @@ body.not-found-page {
 /* Media query: medium phones (360px and up) */
 @media screen and (min-width: 360px) {
   .logo img {
-    width: 90px;
+    width: 80px;
     height: auto;
     padding: 0;
   }
 
-  body {
-    padding-top: 95px;
-  }
-
+  /* LANDING - GAME PAGE */
   #howtoplayContainer {
-    max-width: 90%;
+    width: 100%;
     margin: 0 auto;
   }
 
@@ -665,53 +658,42 @@ body.not-found-page {
   }
 }
 
-/* Media query: medium phones (712px and up) */
-/* Media query: tablet & desktop (712px and up) */
+/* Media query: tablet (712px and up) */
 @media screen and (min-width: 712px) {
   /* Top navigation bar styles */
   .navBar {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    flex-wrap: wrap;
     align-items: center;
-    position: fixed;
   }
 
   .logo img {
-    flex-grow: 1;
     width: 50%;
     height: auto;
     padding-left: 15px;
   }
 
   .menu {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-grow: 1;
     font-size: larger;
   }
 
-  body {
-    padding-top: 70px;
+  /* LANDING - GAME PAGE */
+  #headerSection {
+    margin-bottom: 20px;
   }
 
-  #headerSection {
-    margin-bottom: 40px;
+  #head-container {
+    max-width: 600px;
   }
 
   #head-container h1 {
-    padding: 0 0 20px 0;
+    padding-bottom: 15px;
   }
 
   #p-head {
+    max-width: 600px;
     font-size: large;
-  }
-
-  #howtoplayContainer {
-    width: 600px;
-    margin: 0 auto;
+    margin-bottom: 15px;
   }
 
   /*FORM PAGE */
@@ -752,23 +734,14 @@ body.not-found-page {
 
 /* Media query: tablet & desktop (1024px and up) */
 @media screen and (min-width: 1024px) {
-  .logo img {
-    width: 60%;
-    height: auto;
-    padding-left: 15px;
-  }
-
+  /* LANDING - GAME PAGE */
   #headerSection {
-    margin-bottom: 40px;
-  }
-
-  #head-container h1 {
-    padding: 0 0 10px 0;
+    margin-bottom: 20px;
   }
 
   /* Result modal content position */
   .modalResult-content {
-    margin: 15% auto;
+    margin: 14% auto;
   }
 
   /* FORM PAGE */
@@ -790,18 +763,6 @@ body.not-found-page {
     line-height: 1.3rem;
   }
 
-  .navBar {
-    height: 110px;
-  }
-
-  .menu {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-grow: 1;
-    font-size: larger;
-  }
-
   /* 404 NOT FOUND PAGE */
 
   body.not-found-page {
@@ -812,40 +773,13 @@ body.not-found-page {
 
 /* Media query: medium phones (1080px and up) */
 @media screen and (min-width: 1080px) {
-  /* LANDING/GAME PAGE */
-  body,
-  html {
-    max-width: 100%;
-  }
-
+  /* LANDING - GAME PAGE */
   body {
     padding-top: 55px;
   }
 
-  #navBar {
-    padding: 0 20px 0;
-  }
-
   #headerSection {
     margin-bottom: 0;
-  }
-
-  #head-container {
-    max-width: 900px;
-  }
-
-  #p-head {
-    max-width: 900px;
-    font-size: 0.9rem;
-  }
-
-  #howtoplayContainer {
-    width: 600px;
-    margin: 0 auto;
-  }
-
-  #gameBoard {
-    max-width: 300px;
   }
 
   .modalResult-content {
@@ -854,7 +788,7 @@ body.not-found-page {
   }
 
   #footerSection {
-    margin-top: 5px;
+    margin-top: 80px;
     font-size: 0.9rem;
   }
 
@@ -875,13 +809,14 @@ body.not-found-page {
 
 /* Media query: medium phones (1920px and up) */
 @media screen and (min-width: 1920px) {
-  #p-head {
-    margin-bottom: 60px;
+  .menu {
+    padding-right: 15px;
   }
-
-  #footerSection {
-    margin-top: 40px;
-    font-size: 0.9rem;
+  
+  /* LANDING - HOME PAGE */
+  /* Result modal content position */
+  .modalResult-content {
+    margin: 14% auto;
   }
 
   /* FORM PAGE */
