@@ -172,19 +172,25 @@ The website comprises
 
 ![x](/documentation/doc-images/favicon-on-tab.webp)
 
-#### The Navbar
-
-![x](/documentation/doc-images/navbar-mob.webp)   ![x](/documentation/doc-images/navbar.webp)
-
 #### The Logo
 
 ![x](/documentation/doc-images/logo.webp)
 
-#### Home page / landing page
+#### The Navbar
+
+![x](/documentation/doc-images/navbar-mob.webp)   ![x](/documentation/doc-images/navbar.webp)
+
+#### The Footer
+
+Landing page and  Form page footer
+
+![Landing](/documentation/doc-images/footer-index.webp)   ![Form](/documentation/doc-images/footer-form.webp)
+
+#### Home / landing page
 
 ![x](/documentation/doc-images/index-iph14-pro-max-430.webp)   ![x](/documentation/doc-images/index-dtop.webp)
 
-##### Home modal
+Home modal
 
 ![x](/documentation/doc-images/index-modal-iph14-pro-max-430-m.webp)   ![x](/documentation/doc-images/index-modal-dtop.webp)
 
@@ -192,11 +198,11 @@ The website comprises
 
 ![x](/documentation/doc-images/form-iph14-pro-max-430.webp)   ![x](/documentation/doc-images/form-dtop.webp)
 
-##### Error messages
+Error messages
 
 ![x](/documentation/doc-images/form-error-iph14-pro-max-430.webp)   ![x](/documentation/doc-images/form-error-dtop.webp)
 
-##### Modal
+Modal
 
 ![x](/documentation/doc-images/form-modal-iph14-pro-max-430.webp)   ![x](/documentation/doc-images/form-modal-dtop.webp)
 
@@ -228,7 +234,7 @@ While developing the website, I've focused on its accessibility. This goal was a
 * The CSS includes styles for :hover and :focus pseudo-classes on buttons and game cells
 * The CSS media queries for different screen sizes and the flexible grid layout for the game board ensure that the game is usable across a variety of devices, including those with screen magnifiers.
 * The game primarily uses textual content and CSS for styling, which naturally makes it more accessible.
-* The use of colors is considered for visibility, and meets WCAG guidelines for text and interactive elements.
+* The use of colors is considered for visibility.
 * No contrast errors were detected in the page;
 
   ![x](/documentation/doc-images/contrast-wave.webp)
