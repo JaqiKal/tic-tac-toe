@@ -51,9 +51,7 @@ const howtoplayContainer = document.getElementById("howtoplayContainer");
 // Get a reference to the 'toggleButtonfeedb' element in the HTML
 const feedbackButton = document.getElementById("toggleButtonfeedb");
 // Define symbols for the players in the game
-// Represents the player
 const playerSymbol = "X";
-// Represents the computer
 const computerSymbol = "O";
 // Select all the cell elements from the game board
 const cells = document.querySelectorAll(".cell");
@@ -261,16 +259,17 @@ function checkForOutcome() {
   currentPlayer = currentPlayer === playerSymbol ? computerSymbol : playerSymbol;
 }
 
-// Function to announce the outcome of the game
+/**
+ * Function to announce the outcome of the game
+ * Set the message inside the modal
+ * Show the modal
+ *  Close the modal on click
+ */
 function announceOutcome(message) {
   const outcomeModal = document.getElementById("outcomeModal");
   const outcomeMessage = document.getElementById("outcomeMessage");
-  // Set the message inside the modal
   outcomeMessage.innerText = message;
-  // Show the modal
   outcomeModal.style.display = "block";
-
-  // Close the modal on click
   outcomeModal.addEventListener("click", function () {
     outcomeModal.style.display = "none";
   });
@@ -289,13 +288,10 @@ document.addEventListener("DOMContentLoaded", () => {
  * Clear the text content of all cells.
  *
 */
-
-// Set the game as active. Reset the game state to empty
 function resetGame() {
   gameActive = true;
   gameState.fill("");
 
-  // Reset the text and re-enable each cell for interaction
   cells.forEach((cell) => {
     cell.innerText = "";
     cell.disabled = false; // Re-enable the cell if it was disabled
