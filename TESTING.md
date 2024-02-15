@@ -1,8 +1,8 @@
-# # Tic Tac Toe - A game for all times
+# Tic Tac Toe - A game for all times
 
 ![The website shown on a variety of screen sizes](/documentation/doc-images/amiresponsive.webp)
 
-Visit the deployed site: [Tic-Tac-To ToGo](https://jaqikal.github.io/tic-tac-toe/)
+Visit the deployed site: [Tic-Tac-Toe](https://jaqikal.github.io/tic-tac-toe/)
 
 - - -
 
