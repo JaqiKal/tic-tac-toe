@@ -232,6 +232,7 @@ Links to navigate back to the game or to the feedback form and a thank you messa
 
 In no specific priority order:
 
+* Implement a score meter.
 * Introduce an AI opponent with selectable difficulty levels (easy, medium, hard), making the game more challenging and engaging for single players.
 * Allow players to play against friends or random opponents over the internet, possibly using WebSockets for real-time gameplay.
 * Offer players the ability to customize the game board and symbols (X and O) with different themes or colors.
