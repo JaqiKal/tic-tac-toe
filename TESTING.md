@@ -8,7 +8,7 @@ Visit the deployed site: [Tic-Tac-To ToGo](https://jaqikal.github.io/tic-tac-toe
 
 ## CONTENTS
 
-* [AUTOMATED TESTING](#automated-testing)
+* [Automated Testing](#automated-testing)
   * [W3C Validator](#w3c-validator)
   * [JSHint](#jshint)
   * [Lighthouse](#lighthouse)
@@ -19,9 +19,8 @@ Visit the deployed site: [Tic-Tac-To ToGo](https://jaqikal.github.io/tic-tac-toe
   * [Unsolved issue](#unsolved-issue)
   * [Known issue](#known-issue)
 
-Testing was ongoing throughout the entire build. I utilised Chrome developer tools whilst building to pinpoint and troubleshoot any issues as I went along.
-During development I made use of google developer tools to ensure everything was working correctly and to assist with troubleshooting when things were not working as expected.
-I have used google chrome developer tools & Firefox inspector tool to ensure that each page is responsive on a variety of different screen sizes and devices.
+Testing was ongoing throughout the entire development. I utilised Chrome developer tools whilst building to pinpoint and troubleshoot any issues as I went along.
+I have used google Chrome developer tools & Firefox inspector tool to ensure that each page is responsive on a variety of different screen sizes and devices.
 
 ### Testing was performed on the following devices
 
@@ -32,7 +31,7 @@ I have used google chrome developer tools & Firefox inspector tool to ensure tha
 * Mobile Devices:
   * Samsung Galaxy S20
 
-### Browser compability
+### Browser compatibility
 
 Desktop device tested the site using the following browsers:
 
@@ -50,12 +49,13 @@ Mobile tested the site using Google chrome, version 121.0.6167.86 (Official Buil
 
 - - -
 
-## AUTOMATED TESTING
+## Automated Testing
 
 ### W3C Validator
 
 * [W3C](https://validator.w3.org/) was used to validate the HTML on all pages of the website. Result is PASS.
-* [W3C](https://jigsaw.w3.org/css-validator/) was user to validate the CSS. Result is PASS
+
+* [W3C](https://jigsaw.w3.org/css-validator/) was used to validate the CSS. Result is PASS
 
 #### Index - PASS
 
@@ -95,11 +95,11 @@ Mobile tested the site using Google chrome, version 121.0.6167.86 (Official Buil
 
 ### Lighthouse
 
-I utilized Lighthouse in Chrome Developer Tools for evaluating the site's performance, accessibility, best practices, and SEO. Additionally, I conducted sanity checks using Firefox DevTools.
+I used Lighthouse in Chrome Developer Tools for evaluating the site's performance, accessibility, best practices, and SEO. Additionally, I conducted sanity checks using Firefox DevTools.
 
 This was done in both desktop and mobile environments.
 
-#### Lighthouse Index html
+#### View the Lighthouse report for the desktop and mobile version of the Index page
 
 * [Report on Index desktop](/documentation/lighthouse-index.pdf)
 
@@ -120,7 +120,7 @@ After reviewing the elements that significantly impact the page's Cumulative Lay
 
 ![x](/documentation/doc-images/cls.webp)
 
-#### Lighthouse Form html
+#### View the Lighthouse report for the desktop version of the Form html
 
 * [Report on Form desktop](/documentation/lighthouse-form.pdf)
 
@@ -130,7 +130,7 @@ After reviewing the elements that significantly impact the page's Cumulative Lay
 
 ![x](/documentation/doc-images/lighthouse-form-m.webp)
 
-#### Lighthouse 404 Not found page
+#### View the Lighthouse report for the desktop version of the 404 Not found page
 
 * [Report on 404 desktop](/documentation/lighthouse-404.pdf)
 
@@ -219,7 +219,7 @@ After reviewing the elements that significantly impact the page's Cumulative Lay
 | ---| --- | --- | --- | --- |--- |---|
 | GEN-01 | Clock Functionality | The digital clock displays the current time and updates every second | Observe the clock link| PASS  | PASS | |
 | GEN-02 | Responsive Design | The website layout adjusts correctly for mobile and desktop views | Resize browser window | PASS  | PASS | |
-| GEN-03 | Cross-Browser Compatibility | All features work identically in both Chrome and Firefox | Perform all tests in both browsers | PASS | PASS | |
+| GEN-03 | Cross-Browser compatibility | All features work identically in both Chrome and Firefox | Perform all tests in both browsers | PASS | PASS | |
 | GEN-04 | Page Load Time| Pages load within acceptable time frames | Measure load times using browser dev tools | PASS | PASS | |
 | GEN-05 | HTTPS Redirect| Site redirects HTTP access to HTTPS | Access site with HTTP and observe redirect | PASS | PASS | |
 

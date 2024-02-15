@@ -1,4 +1,4 @@
-# Tic Tac Toe - A game for all times
+# Tic-Tac-Toe - A game for all times
 
 ![The website shown on a variety of screen sizes](/documentation/doc-images/amiresponsive.webp)
 
@@ -8,7 +8,7 @@ Tic-Tac-Toe, also known as Noughts and Crosses, is a two-player game where the o
 
 Get set for Toe-to-Toe Tic-Tac-Toe! No need to gather pals—just choose your symbol and jump into the tic-tac-tussle. Are you ready for the challenge? Let's see who conquers the grid!
 
-This is my second project, it has been built using HTML5, CSS3 & JavaScript for educational purposes as part of Code Institute’s Diploma in Web Application Development Course.
+This is my second project, it has been built using HTML5, CSS3, and JavaScript for educational purposes as part of Code Institute’s Diploma in Web Application Development Course.
 
 - - -
 
@@ -134,7 +134,7 @@ Images were not utilized.
 
 ### Wireframes
 
-Wireframese created for mobile, tablet and desktop using 'Balsamiq'
+Wireframes were created for mobile, tablet, and desktop using 'Balsamiq.'
 
 #### Mobile
 
@@ -250,7 +250,7 @@ While developing the website, I've focused on its accessibility. This goal was a
 * Using a hover state on all buttons on the site to make it clear to the user if they are hovering over a button.
 * Choosing a sans serif font for the site - these fonts are suitable for people with dyslexia.
 * The use of aria-labelledby and attributes in the game's buttons and player sections improves the accessibility of dynamic content and interactive elements for users with screen readers.
-* The CSS includes styles for :hover and :focus pseudo-classes on buttons and game cells
+* The CSS includes styles for :hover and :focus pseudo-classes on buttons and game cells.
 * The CSS media queries for different screen sizes and the flexible grid layout for the game board ensure that the game is usable across a variety of devices, including those with screen magnifiers.
 * The game primarily uses textual content and CSS for styling, which naturally makes it more accessible.
 * The use of colors is considered for visibility.
@@ -380,4 +380,4 @@ I would like to acknowledge the following people:
 * My mentor [Jubril Akolade](https://github.com/jubrillionaire/) for all his help and advice throughout the project.
 * The whole team at [Code Institute](https://codeinstitute.net) for their teaching and support.
 * To all engaged fellow student at all channels and a special shout out to slack channel community sweden.
-* My friends and family, who are playfully teasing me because they always manage to beat the computer at tic-tac-toe. :).
+* My friends and family, who are playfully teasing me because they always manage to beat the computer at Tic-Tac-Toe :).
