@@ -199,7 +199,7 @@ The main sections of the page include an introduction to the game, instructions 
 
 The game board is interactive, consisting of nine clickable cells where players take turns marking their symbols. The design emphasizes accessibility and user-friendly navigation, with each cell being keyboard accessible and labeled for screen readers.
 
-![x](/documentation/doc-images/index-iph14-pro-max-430.webp)   ![x](/documentation/doc-images/index-dtop.webp)   ![x](/documentation/doc-images/cell-hover.webp)
+![x](/documentation/doc-images/cell-hover.webp)   ![x](/documentation/doc-images/index-iph14-pro-max-430.webp)   ![x](/documentation/doc-images/index-dtop.webp)
 
 Home modal
 
